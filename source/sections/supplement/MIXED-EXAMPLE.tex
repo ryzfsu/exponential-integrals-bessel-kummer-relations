@@ -1,0 +1,25 @@
+\section{A mixed example}\label{sup:mixed-example}
+
+Let $\Gamma=\Z$. Take $e^z$, the tower levels
+$\Ein_k(z)$ ($1\le k\le3$), $\Ein_1(-2z)$, and the
+origin-normalized primitive
+\[
+ (F^E)'=(e^z-1-z)/z^2,\qquad F^E(0)=0.
+\]
+For the second-order part, use nine blocks. The representative Bessel parameters $(c,\nu)$ are
+$(1,0)$, $(i,0)$ and $(1,1/3)$. The representative Kummer parameters
+$(s,a)$ are $(-1,2/3)$ and $(2,1/3)$. Add $\operatorname{Bess}(1,1)$.
+Complete the list with the three Kummer parameters $(2,1/2)$, $(1,1/3)$ and $(1,4/3)$.
+Retain the four slots of the integer-order block.
+The residue vectors are $e_{(0,0)}-e_{(-1,0)}$,
+$e_{(0,0)}-e_{(2,0)}$, and $e_{(1,0)}-e_{(0,0)}$.
+They are independent and have total sum zero. Thus $e_{(0,0)}$ is outside
+their span. The logarithm is unlisted. Thus $d=1$, $\rho=3$, $\tau=2$ and
+\begin{equation}\label{eq:mixed-example-degree}
+ \trdeg_{\C(z)}K_{\rm coord}=1+3+2+3\cdot5=21.
+\end{equation}
+The list has $42$ coordinate slots. Adjoining $L$ raises the residue rank to
+four and the degree to $22$, in agreement with main-text Theorem~\ref{thm:main}.
+The ancillary script \texttt{anc/n1\_exact.py} and output
+\texttt{anc/n1\_exact.out} verify both presentations and their saturation
+in the formal coordinate ring over $\Q(z)$. See \texttt{anc/N1-README.md}.

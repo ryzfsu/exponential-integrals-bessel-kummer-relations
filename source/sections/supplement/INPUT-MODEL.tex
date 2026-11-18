@@ -1,0 +1,32 @@
+\section{The input model and computation}\label{sup:input-model}
+The complete definition, computability proposition and proof follow
+the overview below.
+A presented $k_0\subset\C$ has effective arithmetic and equality with a
+specified embedding. In model (M-alg), a minimal polynomial and isolating
+disc specify a number field. Model (M-gen) supplies pole factors and oracle (O1), returning
+a $\Z$-basis of integer relations in any finite input tuple.
+Rates, nodes, scales and Kummer parameters lie in $k_0$; Bessel orders
+are reduced rationals and kernels are polynomial pairs. Put $k_1=k_0(\text{poles})$. A base-point input specifies
+$F=\sum_{\sigma=(\mu,p)}e^{\mu p}\operatorname{res}(F)_\sigma\Phi_\sigma+r_F+\gamma_F$
+with $\gamma_F\in k_0$. At weight zero the polynomial part of $r_F$ has zero
+constant. Origin-normalized inputs instead determine the constant by the
+limit at zero. Accordingly, a fundamental residue relation has constant
+$c_j=\gamma_j-\sum_i\kappa_{ji}\gamma_i$ on the base-point side and
+$c_j=-\lim_0r_j(z,e^{\lambda_1z},\ldots,e^{\lambda_dz})$ on the origin side.
+Compatibility requires the two residue spans to intersect trivially after
+supplied exact normalization comparisons. These encode the base point. Thus $z_*$ is not used directly. Their correctness is assumed because
+analytic evaluation is excluded. For compatible inputs, integer/field
+linear algebra, rational reduction and Gr\"obner elimination compute
+$d,\rho,\tau,\#\mathcal C$, degrees, generators and all sublist ideals
+over $k_1(z)[\Theta^{\pm1}]$. Incompatible inputs return no ideal. Approximations alone are excluded. In model (M-alg), integer linear
+algebra supplies the integer relations. Thus no oracle is required.
+Values require (M-alg), $\alpha\in k_0^\times$ and main-text Theorem~\ref{thm:values}'s
+hypotheses. Retain distinct coordinates, emit duplicate graphs and $X_c-c$,
+include the half-integer exponential graphs with rates $\pm c$, then compute
+the saturated lattice, residues and normalization constants, and eliminate
+inverse variables using $\Theta_h\Theta_h^{-1}-1$.
+Contraction gives each sublist ideal and degree. All operations terminate
+in the specified field without analytic evaluation. Implementation details
+are supplementary. The value coefficient bounds are printed in
+main-text Appendix~\ref{app:arithmetic}.
+\input{sections/supplement/INPUT-ALGORITHM}

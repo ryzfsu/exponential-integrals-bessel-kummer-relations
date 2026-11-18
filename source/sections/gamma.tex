@@ -1,0 +1,161 @@
+\section{Mixed connection values}\label{sec:gamma}
+All nodes in this section are positive algebraic numbers; all logarithms
+are real. Put $\mathcal E=\operatorname{acl}_{\C}\Qbar(e^\beta:\beta\in\Qbar)$.
+Write $R_B(u)=\mathsf S(u)/I_0(u)$ and $R_a(t)=S_a(t)/f_a(t)$ for the
+argument-normalized functions of Section~\ref{sec:setup}.
+For $a\in\Q\setminus\Z$, write $a=\vartheta_a+k_a$, where
+$\vartheta_a=p_a/q_a\in(0,1)$ is reduced and $k_a\in\Z$. Define
+\[
+ G_\vartheta=\psi(\vartheta)+\gamma,\qquad
+ H(\vartheta,k)=\begin{cases}
+ \sum_{j=0}^{k-1}(\vartheta+j)^{-1},&k\ge0,\\
+ -\sum_{j=k}^{-1}(\vartheta+j)^{-1},&k<0.
+ \end{cases}
+\]
+\begin{theorem}[Mixed connection values]\label{thm:connection}\label{ct2:statement-start}
+Select $N\ge1$ rows of the following table, with positive algebraic
+nodes $x,u,t$, integer orders $m\ge0$ and rational nonintegral parameters $a$.
+Require distinct Ein nodes and distinct Bessel nodes.
+Exclude Kummer pairs at the same $t$ whose parameters differ by an integer.
+Also exclude Bessel--Kummer pairs with $t=2u$ and $a\in\tfrac12+\Z$.
+Put $\epsilon_m=(-1)^m$ and define
+\[
+\begin{gathered}
+ (p_0,v_0)=(1,0),\quad(p_1,v_1)=(0,1),\\
+ (p_{m+1},v_{m+1})=(p_{m-1},v_{m-1})-\frac{2m}{u}(p_m,v_m),
+ \quad\beta_m=-\frac{\epsilon_mv_m}{uI_0(u)I_m(u)}.
+\end{gathered}
+\]
+The denominators below are nonzero. The table defines $V=X-d$:
+\begin{equation}\label{eq:ct2-table}
+\begin{array}{c|c|c}
+ V_i&X_i&d_i\\ \hline
+ E_1(x)&\Ein(x)&\gamma+\log x\\
+ K_m(u)/I_m(u)&\epsilon_mR_B(u)+\beta_m(u)&
+       \epsilon_m\{\gamma+\log(u/2)\}\\
+ \Gamma(a)U(a,1,t)/f_a(t)&R_a(t)-H(\vartheta_a,k_a)&
+       \gamma+\log t+G_{\vartheta_a}
+\end{array}
+\end{equation}
+For an arbitrary integer Bessel order, use its absolute value. Set
+\[
+ B=\operatorname{acl}_{\C}\mathcal E
+ \bigl(I_0(u),I_1(u),f_a(t),f'_a(t):\text{selected rows}\bigr).
+\]
+Gauss's formula and multiplicative relations among the positive algebraic
+arguments of the logarithms express $d=A\mathbf c$, with $A\in M_{N,r_{\mathbf c}}(\Qbar)$
+and $r_{\mathbf c}$ the number of retained constants.
+Here $\mathbf c$ consists of $\gamma$, the required real logarithms, and $\pi$
+only if its coefficient is nonzero; logarithms are combined and unused entries omitted.
+For each $F=\mathcal E,B$,
+\begin{equation}\label{eq:ct2-actual-degree}
+ \trdeg_F F(\mathbf c,V_1,\ldots,V_N)\ge N.
+\end{equation}
+Thus these numbers contain an algebraically independent subset of
+size $N$ over either base field. If all entries of $\mathbf c$ are algebraic over
+$F$, the values $V_1,\ldots,V_N$ themselves are algebraically independent
+ over $F$.
+\label{ct2:statement-end}
+\end{theorem}
+\begin{proof}\label{ct2:proof-start}
+The connection expansions \cite[6.2.4, 10.28.2, 10.31.1, 13.2.9]{DLMF} give
+\begin{align*}
+ E_1(x)&=\Ein(x)-\gamma-\log x,\\
+ K_m(u)/I_m(u)&=\epsilon_m\{R_B(u)-\gamma-\log(u/2)\}+\beta_m(u),\\
+ \Gamma(a)U(a,1,t)&=S_a(t)-f_a(t)\{\log t+\psi(a)+2\gamma\}.
+\end{align*}
+The Bessel identity follows from $I_m=p_mI_0+v_mI_1$,
+$\epsilon_mK_m=p_mK_0-v_mK_1$ and $I_0K_1+I_1K_0=1/u$.
+In particular $I_m(u)>0$ and $\beta_m(u)\in B$.
+Theorem~\ref{thm:values}, applied to the closed normalized Kummer block
+at $z=1$, gives $f_a(t)\ne0$, including for negative rational $a$.
+This single-block class is its own representative, so its regular
+coordinate is $f_a(t)$ in \eqref{eq:value-nonzero}.
+The recurrence gives $\psi(a)+\gamma=G_{\vartheta_a}+H(\vartheta_a,k_a)$.
+Gauss's formula is
+\begin{equation}\label{eq:ct2-gauss}
+ G_{p/q}=-\log(2q)-\frac\pi2\cot\frac{\pi p}{q}
+ +2\sum_{j=1}^{\lfloor(q-1)/2\rfloor}
+       \cos\frac{2\pi pj}{q}\log\sin\frac{\pi j}{q}.
+\end{equation}
+Its coefficients and positive logarithm arguments are algebraic.
+Taking a multiplicative $\Q$-basis of the arguments proves $d=A\mathbf c$
+with the stated reduced constant column.
+
+The exclusions place the selected second-order blocks in distinct linkage classes.
+Distinct Ein nodes have independent residues $e_{(0,0)}-e_{(-x,0)}$.
+Apply closure, normalization and rate saturation.
+By Theorem~\ref{thm:values} and Corollary~\ref{cor:value-base}, the Ein values and one triple
+$(I_0,I_1,\mathsf S)$ or $(f_a,f'_a,S_a)$ per selected class are then jointly independent
+ over $\mathcal E$. Adjoin the regular pairs and divide by their nonzero
+regular coordinates. Then pass to the algebraic closure $B$.
+The remaining $N$ ratios are independent. Nonzero diagonal scalings and
+$B$-valued shifts show that $X_1,\ldots,X_N$ are independent over $B$,
+hence over $\mathcal E$.
+Since $X=V+A\mathbf c$ and $A$ is algebraic, $F(X)\subset F(\mathbf c,V)$ proves
+\eqref{eq:ct2-actual-degree}. A finite generating set contains a
+transcendence basis. If $\mathbf c$ is algebraic over $F$, it lies in $F$,
+since both permitted base fields are algebraically closed within $\C$.
+Then $V=X-A\mathbf c$ is an $F$-valued translation of $X$.
+\label{ct2:proof-end}
+\end{proof}
+
+\begin{corollary}\label{cor:gamma-gompertz}
+At least one of $\gamma$ and $E_1(1)$, equivalently at least one of
+$\gamma$ and $\delta=eE_1(1)=\int_0^\infty e^{-s}/(1+s)\,ds$,
+is transcendental over $\mathcal E$.
+\end{corollary}
+\begin{proof}
+Use the Ein row at $x=1$: $B=\mathcal E$, $\mathbf c=(\gamma)$ and
+$\Ein(1)=\gamma+E_1(1)$. Also $e\in\mathcal E^\times$.
+\end{proof}
+The stated alternative over the full field $\mathcal E$ is known.
+It follows from Shidlovskii's Chapter~7, \S1, Theorem~1
+\cite[pp.~232--233]{Shidlovskii1989}, applied after the finite-rate
+reduction in Supplementary Section~\ref{sup:classical-comparison}.
+Mahler announced an exponential-integral statement without proof
+\cite[\S23]{Mahler1968}. Rivoal proves the one-point result for
+algebraic $x\notin(-\infty,0]$ \cite[Theorem~2(ii), \S7]{Rivoal2012}.
+Theorem~\ref{thm:connection} assembles multi-node mixed families over $B$.
+The comparison with the sources is partial.
+
+\begin{example}\label{ex:ct2-mixed}
+Choose $x=1$, $(u,m)=(2,0)$ and $(t,a)=(1,1/2)$.
+The rows are admissible since the mixed linkage would require $t=4$.
+Here $\mathbf c=(\gamma,\log2)^t$ and
+\[
+ B_*=\operatorname{acl}_{\C}\mathcal E
+ (I_0(2),I_1(2),f_{1/2}(1),f'_{1/2}(1)).
+\]
+For each $F=\mathcal E,B_*$, the five numbers
+\[
+ \gamma,\quad\log2,\quad E_1(1),\quad
+ \frac{K_0(2)}{I_0(2)},\quad
+ \frac{\Gamma(1/2)U(1/2,1,1)}{f_{1/2}(1)}
+\]
+contain three algebraically independent numbers over $F$.
+Supplementary Section~\ref{sup:cancellation-remarks} computes $A$ and an explicit cancellation.
+\end{example}
+
+\begin{proposition}[Coefficient cancellation]\label{prop:coefficient-cancellation}\label{lem:coefficient-cancellation}
+Let $\kappa$ be the dimension of $\Span_B\{d_i+B\}$ in $\C/B$.
+Let $J,J_0$ have row bases of $\{\lambda:\lambda d\in B\}$ and
+$\{\lambda:\lambda d=0\}$ in $B^{1\times N}$.
+For independent indeterminates $Z$, put
+$\mathcal A_d=\{P\in B[Z]:P(Z-d)\in B[Z]\}$. Then
+\begin{equation}\label{eq:ct2-algebra}
+\begin{gathered}
+ \mathcal A_d=B[JZ],\qquad
+ \{P\in B[Z]:P(Z-d)=P(Z)\}=B[J_0Z],\\
+ B[JV]=B[JX],\qquad\trdeg_B B(JV)=N-\kappa,\qquad
+ N-\rank_{\Qbar}A\le N-\kappa\le N.
+\end{gathered}
+\end{equation}
+\end{proposition}
+Supplementary Section~\ref{sup:cancellation-remarks} proves the proposition in full.
+Neither $\kappa$ nor $J$ is claimed effective. Even whether $\gamma+\log x\in B$ is undecided.
+Accidental intersections $B[V]\cap B[X]$ and equalities $P(V)=P(X)$ are not classified.
+No independence of $\mathbf c$ or of $X$ over $B(\mathbf c)$ is assumed.
+Linked rows must be reduced first; higher Ein tails are excluded.
+The irrationality of Euler's constant remains open.
+\label{ct2:section-end}

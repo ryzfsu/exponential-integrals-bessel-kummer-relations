@@ -1,0 +1,91 @@
+\subsection{Exact input definition and computation}\label{sup:input-algorithm}
+\label{subsec:input}
+\begin{definition}\label{def:input}
+A presented field $k_0\subset\C$ has finite representations for its elements.
+Arithmetic and equality are computable. Its embedding is specified.
+Model (M-alg) supplies a number field $\Q(\theta)$.
+A minimal polynomial and isolating disc specify $\theta$.
+In model (M-gen), oracle (O1) takes any finite input tuple.
+It returns a $\Z$-basis of its integer relations.
+For number fields this oracle is supplied by integer linear algebra.
+To test $a\in\Z$, ask whether there is a relation $ma+n=0$ with
+$m\ne0$ and $m\mid n$.
+
+The rates, nodes, scales and Kummer parameters belong to $k_0$.
+Bessel orders are supplied as reduced rationals.
+Rational kernels are supplied as polynomial pairs.
+Model (M-gen) also supplies their linear denominator factors.
+In (M-alg), we compute a splitting field.
+Set $k_1=k_0(\text{poles})$. The value statements require (M-alg) and
+$\alpha\in k_0^\times$. The supplied constants $\gamma_F$ encode
+the chosen base-point normalization. Thus $z_*$ does not enter the computation.
+A base-point primitive is specified by $\gamma_F\in k_0$:
+\begin{equation}\label{eq:primitive-normalization}
+F=\sum_{\sigma=(\mu,p)}e^{\mu p}\operatorname{res}(F)_\sigma\Phi_\sigma+r_F+\gamma_F.
+\end{equation}
+At nonzero weights, rational reduction uniquely determines $r_F$.
+At weight zero, its polynomial part must have zero constant.
+Thus $\gamma_L=0$. Coordinates of type (B2$^E$) and towers instead use
+origin normalization. Let $\mathcal V_{{\rm res},0}$ be the origin-normalized first-level residue span.
+Write $\mathcal V_{{\rm res},*}$ for the base-point-normalized first-level residue span.
+The list is normalization-compatible when
+\begin{equation}\label{eq:compatibility}
+\mathcal V_{{\rm res},0}\cap\mathcal V_{{\rm res},*}=0,
+\end{equation}
+or after moving a specified origin subset to the base-point side using
+supplied $\gamma_G\in k_0$ satisfying \eqref{eq:primitive-normalization}.
+A supplied comparison is assumed correct; its constant is exact input.
+The algorithm does not evaluate the analytic primitive at the base point.
+Choose residue bases separately on the two
+normalization sides. Each fundamental coordinate-basis relation uses one normalization.
+An arbitrary relation decomposes into the two types.
+Compatibility holds if all coordinates except possibly $L$ are origin-normalized.
+Their residue vectors have $\sum_\mu v_{(\mu,0)}=0$.
+For $L$, $\operatorname{res}(L)=e_{(0,0)}$.
+It also holds if every coordinate uses the base point.
+\end{definition}
+
+\begin{proposition}\label{prop:algorithm}
+In both input models, the quantities $d,\rho,\tau,\#\mathcal C$ and the
+corresponding degrees are computable. For compatible lists, the generators
+and every sublist ideal are computable over $k_1(z)[\Theta^{\pm1}]$.
+Model (M-alg) requires no oracle, and (M-gen) uses (O1). For incompatible
+lists, the algorithm reports undetermined mixed constants and returns no
+ideal. Inputs supplied only by complex approximations are excluded.
+For values, the hypotheses of main-text Theorem~\ref{thm:values} are required.
+\end{proposition}
+\begin{proof}
+
+The algorithm first rejects inadmissible specifications. It then closes
+and normalizes the list, retaining one representative per coordinate.
+It emits $X_q-X_{\operatorname{rep}(q)}$ for every duplicate slot of every type.
+It emits $X_c-c$ for each listed constant $c\in k_1$.
+Only distinct higher levels are free.
+Half-integer Bessel coordinates retain main-text Section~\ref{sec:main-statement}'s exponential graphs.
+They also retain its derivative/order-shift graphs.
+The saturated lattice contains their rates $\pm c$.
+They contribute no class to $\mathcal C$.
+The algorithm preserves these graphs through closure and specialization.
+It also preserves them through saturation and contraction.
+It composes the linkage maps. Oracle (O1), followed by
+Hermite normal form, gives the minimal saturated lattice. Partial
+fractions and finite Taylor expansions determine the residues. Linear algebra then gives $\rho$, $\kappa_{ji}$ and the test for
+$e_{(0,0)}\in\mathcal V_{\rm res}$; $\tau=\sum_\eta(h_\eta-1)$ is the number of distinct retained levels $(\eta,k)$ with $k\ge2$. Rational reduction with the specified
+normalization gives
+\begin{equation}\label{eq:relation-constants}
+c_j=\begin{cases}\gamma_j-\sum_i\kappa_{ji}\gamma_i,&\text{base-point},\\
+-\lim_0r_j(z,e^{\lambda_1z},\ldots,e^{\lambda_dz}),&\text{origin}.
+\end{cases}
+\end{equation}
+Any supplied normalization comparisons are applied before this step.
+Next adjoin inverse variables with relations
+$\Theta_h\Theta_h^{-1}-1$, saturate, and eliminate. Contraction gives
+the sublist ideals and the degrees of the original coordinate lists.
+For values, specialize only $z=\alpha$.
+The procedure uses field arithmetic and equality, with (O1).
+It also uses Hermite normal form and Buchberger elimination.
+For compatible lists, these operations obtain all required constants.
+No analytic evaluation is used.
+\end{proof}
+
+The arithmetic coefficient bounds are printed in main-text Appendix~\ref{app:arithmetic}.

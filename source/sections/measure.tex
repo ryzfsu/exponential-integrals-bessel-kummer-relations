@@ -1,0 +1,230 @@
+\section{Proof of the explicit linear independence estimate}\label{sec:measure}
+
+\begin{explicitestimate}[Evaluated constants]\label{thm:measure}
+Put
+\begin{equation}\label{m4:constants}
+ A_*=311040\cdot2^{24001},\qquad N=A_*^8,\qquad H_0=N^N.
+\end{equation}
+For $(a,b,c,d)\in\Z^4\setminus\{0\}$ and
+$H=\max(|a|,|b|,|c|,|d|)\ge H_0$,
+\begin{equation}\label{m4:measure}
+ |a+be+ce^{-1}+d\Ein(1)|\ge\frac1{12}H^{-60}.
+\end{equation}
+\end{explicitestimate}
+
+We evaluate the construction of
+\cite[Proposition~3.1 and Lemma~3.2, pp.~12--15]{AdamczewskiFaverjon2026}
+at $\nu=\mu=4$. Below we prove linear independence over $\C(z)$
+and select rows by direct Wronskian cyclicity, replacing a generic zero estimate.
+
+\begin{lemma}\label{m4:matrix}
+For every integer $n\ge2^{16}$, the finite search and exact row selection below construct
+$Q_n\in M_4(\Z)$, with
+\begin{equation}\label{m4:matrix-bounds}
+ \det Q_n\ne0,\qquad
+ \max_{i,k}|(Q_n)_{i,k}|\le A_*^nn^{9n/8},\qquad
+ \|Q_nf(1)\|_\infty\le A_*^nn^{-23n/8},
+\end{equation}
+where $f=(1,e^z,e^{-z},\Ein_1(z))^t$.
+\end{lemma}
+
+\begin{proof}
+Write $f=(1,u,w,v)^t$, $D=d/dz$ and $\vartheta=zD$.
+The system and polynomial-row update are
+\begin{equation}\label{m4:system}
+ u'=u,\qquad w'=-w,\qquad v'=(1-w)/z,
+\end{equation}
+\begin{equation}\label{m4:row-update}
+ \vartheta(Pf)=\mathscr U(P)f,\quad
+ \mathscr U(P)=
+ (zP_0'+P_v,\ zP_+'+zP_+,\ zP_-'-zP_--P_v,\ zP_v').
+\end{equation}
+Clearing denominators and comparing growth at $\pm\infty$ proves
+independence of $1,u,w$ over $\C(z)$. If
+$v=r_0+r_+u+r_-w$ with rational $r_0,r_+,r_-$, differentiating and
+comparing constant coefficients gives $r_0'=1/z$, contradicting the
+zero residue of rational derivatives at $0$. Thus $1,u,w,v$ are independent.
+
+\emph{Integer polynomials.}
+Fix $n\ge2^{16}$, and put
+\begin{equation}\label{m4:parameters}
+\begin{gathered}
+ N_{\rm var}=4(n+1),\qquad m=4n+3-\lfloor n/240\rfloor,\\
+ C_4=2^{24001},\qquad B_n=(3N_{\rm var}\,8^{5n})^{1200}+1.
+\end{gathered}
+\end{equation}
+Write $f_i(z)=\sum_{t\ge0}a_{i,t}z^t/t!$.
+Here $a_{0,t}=\mathbf1_{t=0}$, $a_{+,t}=1$,
+$a_{-,t}=(-1)^t$, $a_{v,0}=0$, and
+$a_{v,t}=(-1)^{t+1}/t$ for $t\ge1$.
+Thus $|a_{i,t}|\le1$.
+With $L_m=\operatorname{lcm}(1,\ldots,m)$ impose
+\begin{equation}\label{m4:integer-system}
+ \sum_{i\in\{0,+,-,v\}}\sum_{j=0}^{\min(n,t)}
+ L_m\binom tj a_{i,t-j}p_{i,j}=0\qquad(0\le t<m).
+\end{equation}
+This gives $m$ integer equations in $N_{\rm var}$ unknowns. To bound their
+coefficients, we use $L_s\le4^s$, which follows by induction from
+\[
+ L_{2r}/L_r\mid\binom{2r}r,\qquad
+ L_{2r+1}/L_{r+1}\mid\binom{2r+1}r.
+\]
+The factorial valuation formula gives these divisibilities. Each new maximal prime power lies in the upper half. Induct from $L_1=1$ using
+$\binom{2r}r\le2^{2r}$ and $\binom{2r+1}r\le2^{2r}$.
+Each entry of \eqref{m4:integer-system} is therefore at most $8^m\le8^{5n}$.
+
+The integer image of $\{0,\ldots,B_n\}^{N_{\rm var}}$ has at most
+$(3N_{\rm var}8^{5n}B_n)^m$ elements. Also
+\[
+ N_{\rm var}-m>n/240,\qquad \frac m{N_{\rm var}-m}<1200,\qquad
+ B_n^{N_{\rm var}-m}>(3N_{\rm var}8^{5n})^m.
+\]
+There are more box vectors than images.
+Two distinct vectors have the same image.
+Their difference gives a nonzero solution with
+\begin{equation}\label{m4:box-bound}
+ \max|p_{i,j}|\le B_n\le2^{24000n}+1\le C_4^n,
+ \qquad 3N_{\rm var}\le15n\le2^{5n}.
+\end{equation}
+The image bound makes the lexicographic search of
+$[-B_n,B_n]^{N_{\rm var}}\cap\Z^{N_{\rm var}}$, excluding zero, terminate at a
+solution. Set
+\begin{equation}\label{m4:polynomials}
+ P_i=n!\sum_{j=0}^np_{i,j}z^j/j!\in\Z[z],\qquad
+ R=Pf\not\equiv0.
+\end{equation}
+Then $\deg P_i\le n$, $h(P_i)\le C_4^nn!$, and $\operatorname{ord}_0R\ge m$,
+where $h$ denotes maximum coefficient modulus.
+
+\emph{Cyclicity.}
+If $P_v=0$, the nonzero $R$ satisfies the monic constant-coefficient equation
+\[
+ D^{n+1}(D-1)^{n+1}(D+1)^{n+1}R=0.
+\]
+Its order-$3n+3$ Taylor recurrence gives
+$\operatorname{ord}_0R\le3n+2<m$, a contradiction. Thus $P_v\ne0$. Normalize $r=R/P_v=v+r_0+r_+u+r_-w$. Then
+\begin{equation}\label{m4:derivative}
+ \begin{aligned}
+ r'&=q_0+B_-w+B_+u,\qquad q_0=z^{-1}+r_0',\\
+ B_-&=-z^{-1}+r_-'-r_-,\qquad B_+=r_+'+r_+.
+\end{aligned}
+\end{equation}
+The residue at $0$ gives $q_0\ne0$. No rational function solves
+$r_-'-r_-=1/z$: differentiation increases any finite pole order, and
+polynomials cannot produce $1/z$. Thus $B_-\ne0$. The same pole argument
+and degree comparison give $B_+\ne0$ whenever $r_+\ne0$.
+
+For meromorphic functions, Wronskian vanishing is equivalent to constant
+dependence, by induction using
+\[
+ W(h_1,\ldots,h_k)
+ =h_1^kW\bigl((h_2/h_1)',\ldots,(h_k/h_1)'\bigr).
+\]
+Work locally where $h_1\ne0$, then continue meromorphically.
+If $P_+=0$, independence of $q_0,B_-w$ gives
+$\det\operatorname{coeff}_{(1,w)}(r',r'')=W(q_0,B_-w)/w\ne0$.
+Adding $r$ gives rank three on $(1,w,v)$.
+Multiplication by $P_v$ and replacement of $D^j$ by $\vartheta^j$
+are row operations over $\C(z)$. Both are invertible and triangular.
+Hence the coefficient determinant
+$\Delta_3$ of $R,\vartheta R,\vartheta^2R$ on $(1,w,v)$ is a nonzero polynomial
+of degree at most $3n+3$.
+Its adjugate, applied to the constant coordinate, gives
+$\Delta_3=\sum_{j=0}^2c_j\vartheta^jR$, with polynomial $c_j$.
+Hence $\operatorname{ord}_0\Delta_3\ge m>3n+3$, a contradiction.
+Therefore $P_+\ne0$.
+Now $q_0,B_-w,B_+u$ are independent over $\C$.
+Their Wronskian gives
+\[
+ \det\operatorname{coeff}_{(1,w,u)}(r',r'',r''')
+ =\frac{W(q_0,B_-w,B_+u)}{wu}\ne0.
+\]
+Adding $r$ and repeating the triangular operations gives independent
+coefficient rows for $R,\vartheta R,\vartheta^2R,\vartheta^3R$.
+
+\emph{Selection at $1$.}
+Put
+\[
+ \ell_0=P,\qquad \ell_{j+1}=\mathscr U(\ell_j),\qquad R_j=\ell_jf,\qquad
+ \Delta=\det(\ell_0,\ldots,\ell_3)\ne0.
+\]
+Each $R_j=\vartheta^jR$ has order at least $m$ at zero.
+The adjugate expresses $\Delta$ in their polynomial span, giving
+\begin{equation}\label{m4:determinant-orders}
+ \deg\Delta\le4n+6,\quad \operatorname{ord}_0\Delta\ge m,\quad
+ \chi:=\operatorname{ord}_1\Delta\le3+\lfloor n/240\rfloor.
+\end{equation}
+On $Y=(Y_0,Y_+,Y_-,Y_v)^t$, extend $\vartheta$ to
+\[
+ \mathcal D=z\partial_z+zY_+\partial_{Y_+}-zY_-\partial_{Y_-}
+ +(Y_0-Y_-)\partial_{Y_v}.
+\]
+Since $\mathcal D(\ell_jY)=\ell_{j+1}Y$, apply $\mathcal D^\chi$
+to the adjugate identity $\Delta Y_i=\sum_{j=0}^3c_{i,j}\ell_jY$.
+At $1$, Leibniz's rule gives
+\begin{equation}\label{m4:formal-selection}
+ (\vartheta^\chi\Delta)(1)Y_i
+ =\sum_{j=0}^3\sum_{s=0}^\chi\binom\chi s
+ (\vartheta^{\chi-s}c_{i,j})(1)\ell_{j+s}(1)Y.
+\end{equation}
+Lower derivatives vanish, but $(\vartheta^\chi\Delta)(1)=D^\chi\Delta(1)\ne0$.
+Hence $\ell_j(1)$, $0\le j\le J:=6+\lfloor n/240\rfloor$, span $\Q^4$.
+Gaussian elimination chooses their first invertible four-row subset as $Q_n$.
+
+\emph{Heights and tails.}
+For $j\le J$, row degrees are at most $n+j\le2n$.
+Update \eqref{m4:row-update} and evaluation at $1$ each cost at most $3n$ in height.
+Using $j+1\le n/240+7\le n/8$ gives
+\begin{equation}\label{m4:height}
+ \max_k|\ell_{j,k}(1)|\le(3n)^{j+1}C_4^nn!
+ \le(3C_4)^nn^{9n/8}.
+\end{equation}
+Write $R=\sum_{t\ge m}r_tz^t$.
+For $t\ge m\ge3n$ and $j\le J$, convolution and \eqref{m4:box-bound}
+give the coefficient bound and consecutive tail ratio
+\[
+\begin{gathered}
+ |r_t|\le\frac{4n!C_4^n}{t!}\sum_{j=0}^{\min(n,t)}\binom tj
+ \le4n!C_4^n\frac{2^t}{t!},\\
+ \frac2{t+1}(1+1/t)^j\le\frac{2e^{j/t}}{t+1}
+ \le\frac6{t+1}\le\frac12.
+\end{gathered}
+\]
+The geometric tail and $m!\ge(m/3)^m$ now give
+\begin{align}
+ |R_j(1)|&\le4n!C_4^n\sum_{t\ge m}\frac{t^j2^t}{t!}
+ \le8n!C_4^n\frac{m^j2^m}{m!}\notag\\
+ &\le8C_4^n6^{5n}n^{n+j-m}\notag\\
+ &\le(40\cdot6^5C_4)^nn^{-23n/8}.\label{m4:tail-final}
+\end{align}
+Here $\log(m!)\ge\int_1^m\log x\,dx$ justifies the factorial bound.
+Since $n\le m\le5n$ and $j\le n\le m$, use $m^{j-m}\le n^{j-m}$ in the second inequality.
+For $n\ge26$, $n+j-m\le-3n+n/120+3\le-23n/8$.
+Since $40\cdot6^5C_4=A_*\ge3C_4$, the height and tail bounds give \eqref{m4:matrix-bounds}.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:measure}]
+The least $n\ge N$ with $n^n\ge H^8$ satisfies $n>N$ and
+$(n-1)^{n-1}<H^8$, since $H\ge N^N$.
+For $n\ge4$, $(n/(n-1))^{n-1}<3$ and $(n-1)^{n-1}\ge3n$ give
+\begin{equation}\label{m4:height-transfer}
+ H\le n^{n/8},\qquad n^n\le(n-1)^{2(n-1)}<H^{16}.
+\end{equation}
+As $n\ge N=A_*^8>2^{16}$, $A_*\le n^{1/8}$.
+Lemma~\ref{m4:matrix} gives $B^*_n=A_*^nn^{9n/8}\le n^{5n/4}$
+and $E_n=A_*^nn^{-23n/8}\le n^{-11n/4}$.
+Three rows of invertible $Q_n$ complete $p=(a,b,c,d)\ne0$
+to an invertible integer matrix $M$ with first row $p$.
+Thus $|\det M|\ge1$.
+Put $\Lambda=pf(1)$. Cofactors have six terms, giving $6(B^*_n)^3$
+for $\Lambda$ and $6H(B^*_n)^2$ per other row.
+The first coordinate of $\operatorname{adj}(M)Mf(1)=(\det M)f(1)$ uses $f_0(1)=1$.
+Since $n\ge64$, $18n^{-n/8}<1/2$.
+Hence \eqref{m4:height-transfer} yields
+\begin{align}
+ 1&\le6(B^*_n)^3|\Lambda|+18H(B^*_n)^2E_n
+ \le6(B^*_n)^3|\Lambda|+18n^{-n/8},\label{m4:cofactor}\\
+ |\Lambda|&\ge\frac1{12(B^*_n)^3}\ge\frac1{12}n^{-15n/4}
+ >\frac1{12}H^{-60}.\notag\qedhere
+\end{align}
+\end{proof}

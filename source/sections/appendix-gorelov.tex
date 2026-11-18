@@ -1,0 +1,58 @@
+\section{Parameters in Gorelov's classification}\label{app:gorelov}
+Gorelov uses data $(l,q,p;\boldsymbol\nu,\boldsymbol\lambda,\alpha)$.
+His 2021 Lemmas~12 and~14 treat $p_1=p_2=1$ and arbitrary powers,
+respectively (statements p.~7; proofs p.~7 and \mbox{pp.}~8--9)
+\cite[Lemmas~12 and~14]{Gorelov2021}.
+The proof of Lemma~12 in \cite[p.~7]{Gorelov2021} invokes
+Lemma~14 of that article's reference~[5] (Gorelov, \emph{Math. Notes}
+94 (2013), 82--95), then Lemmas~1--2 of the citing article.
+His 2020 Theorem~2 gives mixed sufficiency
+\cite[p.~138]{Gorelov2020}, extending the 2019 identity
+\cite[(3), p.~260]{Gorelov2019}. The 2019 matrix form
+\cite[Theorem~1, p.~260]{Gorelov2019} assumes $2\lambda\notin\Z$
+and excludes our case $\nu_0=0$.
+Theorem~\ref{thm:linkage} uses
+\begin{equation*}
+\begin{gathered}
+\begin{array}{c|ccc|c|c|c}
+ &l&q&p&\boldsymbol\nu&\boldsymbol\lambda&\alpha\\ \hline
+ \operatorname{Bess}(c,\nu_0)&0&2&2&\varnothing&(1,1+\nu_0)&c^2/4\\
+ \operatorname{Kum}(s,a)&1&2&1&(a)&(1,1)&s
+\end{array}
+\end{gathered}
+\end{equation*}
+BBH Theorem~2.2(iv), p.~288, applies to Lemma~\ref{lem:groups}'s scalar
+extensions of $\SL_2$ \cite{BBH1988}. It supplies irreducible Siegel-normal
+homogeneous systems for Proposition~2.4, \mbox{pp.}~291--292, including logarithmic
+second solutions but excluding separately adjoined $L$ and E-parts;
+see Supplementary Section~\ref{sup:classical-comparison}. Admissibility conditions: \mbox{pp.}~280--281, 298--299;
+rational-value conclusion: Corollary~4.6, \mbox{pp.}~300--301.
+Gorelov records the Bessel--Kummer omission and corrected homogeneous condition
+\cite[Example~1 and (9), p.~3; Lemma~14, \mbox{pp.}~7--9]{Gorelov2021}.
+
+Scales are nonzero. Denominator parameters avoid $\Z_{\le0}$. Lemma~\ref{lem:groups} gives irreducibility. The formal data are
+\begin{equation*}
+\begin{gathered}
+\begin{array}{c|c|c|c}
+ \text{block}&\text{Wronskian, up to a constant}&
+   (\text{rate},\text{power})\text{ at }\infty&\text{exponents at }0\\ \hline
+ \operatorname{Bess}(c,0)&z^{-1}&(\pm c,-1/2)&0,0\text{ with log}\\
+ \operatorname{Bess}(c,\nu)&z^{-2\nu-1}&(\pm c,-\nu-1/2)&0,-2\nu\\
+ \operatorname{Kum}(s,a)&e^{sz}/z&(0,-a),(s,a-1)&0,0\text{ with log}
+\end{array}
+\end{gathered}
+\end{equation*}
+The powers follow from \cite[10.40.1, 13.7.2--13.7.3]{DLMF} and are
+preserved modulo $\Z$ by Lemma~\ref{lem:formal}. At zero, distinct
+nonresonant eigenvalues versus nontrivial resonant unipotence give
+Theorem~\ref{thm:linkage}'s exclusions.
+
+For the Bessel--Bessel necessity, use the convention
+$M_j\simeq M_i\otimes e^{\lambda z}z^\upsilon$.
+The rates at infinity give
+$\{c',-c'\}=\{c+\lambda,-c+\lambda\}$. Thus $\lambda=0$ and
+$c'=\pm c$. The powers then give $\upsilon\equiv\nu_0-\nu'_0\pmod\Z$.
+At zero, matching the exponent multisets requires
+$\{0,-2\nu'_0\}\equiv\{\upsilon,\upsilon-2\nu_0\}\pmod\Z$.
+If $\upsilon\equiv0$, the infinity congruence gives $\nu'_0\equiv\nu_0$. If $\upsilon\equiv2\nu_0$, it gives $\nu'_0\equiv-\nu_0$.
+In $[0,1/2)$ the first implies equality and the second forces both zero. Hence $\nu'_0=\nu_0$.

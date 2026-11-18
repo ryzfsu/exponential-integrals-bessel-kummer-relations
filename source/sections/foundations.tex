@@ -1,0 +1,175 @@
+\section{Foundational facts}\label{app:foundations}\label{subsec:foundations}
+An $E$-function is an entire series $\sum a_nz^n/n!$ with algebraic
+coefficients, $h(a_0,\ldots,a_n)=O(n)$ and a linear differential equation
+over $\Qbar[z]$ \cite[p.~369]{Beukers2006}.
+Here $h$ is the absolute logarithmic Weil height of $[1:a_0:\cdots:a_n]$.
+Our differential fields have characteristic zero and common algebraically
+closed constants $C_0$.
+\newcounter{foundation}\renewcommand{\thefoundation}{F\arabic{foundation}}
+\newcommand{\foundation}[1]{\par\noindent\refstepcounter{foundation}(\thefoundation)\label{fact:#1}\enspace}
+\foundation{F1}For $E$-functions $f'=Af$, $A\in M_n(\Qbar(z))$, and a
+common denominator $Q$ of $A$, every algebraic $\alpha$ with
+$\alpha Q(\alpha)\ne0$ satisfies
+\[
+\trdeg_{\Qbar}\Qbar(f(\alpha))=\trdeg_{\Qbar(z)}\Qbar(z)(f)
+\]
+\cite[Theorem~1.1, p.~370]{Beukers2006}.
+\foundation{F2}Under (F1), each homogeneous relation $P(f(\alpha))=0$
+lifts to $R\in\Qbar[z,X]$ homogeneous in $X$, with
+$R(z,f)=0$, $R(\alpha,X)=P$. Adjoin $1$ for inhomogeneous relations
+\cite[Theorems~1.2--1.3 and the intervening paragraph, p.~370]{Beukers2006}.
+\foundation{F3}If primitives with $y_i'\in F_{\rm b}$ are algebraically dependent
+over $F_{\rm b}$, a nonzero constant combination of them belongs to $F_{\rm b}$
+\cite[pp.~315--316]{Ostrowski1946}. For the differential-algebraic setting, see \cite{Kolchin1973};
+Lemma~\ref{lem:primitive} proves the same-constant meromorphic case.
+\foundation{F4}A subdirect Lie algebra in $\bigoplus\mathfrak{sl}_2$ is a
+sum of diagonal graphs (Lemma~\ref{lem:goursat} and
+Proposition~\ref{prop:product}). The factor automorphisms are inner,
+as proved below.
+\foundation{F5}A fundamental matrix generates a PV extension with
+$\trdeg(E/K)=\allowbreak\dim\Gal(E/K)$. Closed subgroups correspond to
+intermediate fields, normal subgroups to PV subextensions, and invariant
+subspaces for the full group to differential submodules. Our lower-unitriangular
+matrices satisfy $\sigma(F)=FC_\sigma$, so $C_\sigma=F^{-1}\sigma(F)$
+is lower unitriangular. The PV group is algebraic
+\cite[Observation~1.26(2), p.~19; Theorem~1.27(1), p.~20]{VanDerPutSinger2002Draft}.
+Each nonidentity element's powers have connected additive closure
+\cite[\S7.3, Remark, p.~106]{Borel1991}, proving unipotence and connectedness.
+Liouvillian PV
+extensions are exactly those with solvable Galois identity component \cite[Theorem~1.43, pp.~33--34]{VanDerPutSinger2002Draft}.
+\foundation{F6}The equation $x^2y''+xy'+(x^2-\nu^2)y=0$ has a nonzero
+Liouvillian solution exactly for $\nu\in\tfrac12+\Z$
+\cite[\S3.2, Example~2, p.~14; \S4.2, Example~2, pp.~19--20]{Kovacic1986}.
+Nonzero scaling and the algebraic gauges used here preserve this property
+by direct change of variables.
+\foundation{F7}The Laurent, logarithmic-derivative and polynomial-log
+reductions used here are proved in Lemmas~\ref{lem:reduction},
+\ref{lem:exponential-log} and~\ref{lem:twisted-obstruction}.
+\foundation{F8}Lemma~\ref{lem:primitive} proves the all-finite-pole criterion
+for $q=r'+\mu r$.
+\foundation{F9}Lemma~\ref{lem:formal} formally diagonalizes systems with
+distinct leading eigenvalues and proves invariance of powers modulo $\Z$.
+\foundation{F10}For $a_2y''+a_1y'+a_0y=0$, differentiating the Wronskian
+gives $W'=-(a_1/a_2)W$.
+\foundation{F11}Sums, products, derivatives, algebraic rescalings and
+primitives vanishing at zero preserve $E$-functions. The exponential,
+rational-parameter Kummer and ${}_0F_1$ instances satisfy the exact bounds
+and equations in Theorem~\ref{thm:values}'s proof.
+\foundation{F12}We use DLMF 10.29.1(a), 10.29.3(a)--(b), 10.39.5, 10.40.1, 13.2.9, 13.2.39,
+13.2.41, 13.3.17, 13.6.10 and 13.7.2--13.7.3 with their stated branches
+and sectors. Our equations also imply the linkage maps.
+\foundation{F13}Tensor products of geometrically integral algebras over a
+field are geometrically integral \cite[Proposition~(4.6.5)(ii), p.~69]{EGAIV2}.
+For a finitely generated integral $k$-algebra $A$, $\dim A=\trdeg_k A$
+\cite[Theorem~5.6, p.~34]{Matsumura1989}. Consequently, for primes
+$P\subset P'$ in a finitely generated $k$-algebra, equal quotient
+dimensions imply $P=P'$.
+We also use that free modules over domains are torsion-free and that
+field extensions are free as modules.
+\foundation{F14}Hermite normal form, number-field factorization and
+Gr\"obner elimination are effective over the specified fields
+\cite[\S\S2.4,3.6]{Cohen1993}, \cite{BeckerWeispfenning1993}.
+Appendix~\ref{app:algorithm} refers to Supplementary Section~\ref{sup:input-model} for model (M-gen).
+Its oracle (O1) gives integer-relation $\Z$-bases for finite tuples.
+\foundation{F15}Algebraic-group morphisms have closed image; $G^0$ is normal of finite index.
+Surjections preserve identity components
+\cite[Proposition~1.2(b), p.~46; Corollary~1.4(a)--(b), p.~47]{Borel1991}.
+In characteristic zero, $\dim G=\dim\Lie G$. This uses the smooth reduced-group
+convention of \cite[\S9.1, p.~65]{Humphreys1975} together with the dimension statement in
+\cite[Proposition~1.2(a), p.~46]{Borel1991}.
+Also $\Lie\ker\phi=\ker d\phi$ and $\Lie(H\cap K)=\Lie H\cap\Lie K$
+\cite[\S12.5, p.~85]{Humphreys1975};
+$\Lie(\phi G)=d\phi(\Lie G)$ uses
+\cite[\S7.2, proof, p.~105]{Borel1991}.
+For connected $H$, $H\subset K$ iff $\Lie H\subset\Lie K$
+\cite[\S13.1, Theorem, p.~87]{Humphreys1975}
+\cite[\S7.1(2), p.~105]{Borel1991}.
+For closed $H\subset G$, connected $G$ and $\dim H=\dim G$ imply $H=G$.
+Apply proper-closed-subset dimension drop to $H^0$ in irreducible $G$
+\cite[\S3.2, Proposition, p.~25]{Humphreys1975}
+\cite[Proposition~1.2 and following paragraph, \mbox{pp.}~46--47]{Borel1991}.
+Proper connected $\SL_2$ subgroups are solvable by
+\cite[Theorem~4.29, pp.~133--134]{VanDerPutSinger2002Draft}.
+In characteristic zero, nonidentity unipotent powers are dense in a connected
+additive subgroup \cite[\S2.1, p.~56; \S7.3, Remark, p.~106]{Borel1991}.
+
+
+For (F4), work over the algebraically closed characteristic-zero field
+$\C$. Put $h=\operatorname{diag}(1,-1)$, $e=E_{12}$ and $f=E_{21}$.
+For a Lie automorphism $\varphi$, $\operatorname{ad}\varphi(h)$ has
+eigenvalues $0,2,-2$. A traceless $2\times2$ matrix with eigenvalues
+$\lambda,-\lambda$ has adjoint eigenvalues $0,2\lambda,-2\lambda$. A nilpotent matrix has nilpotent adjoint. Thus $\varphi(h)$ has
+eigenvalues $1,-1$. Inner conjugation makes $\varphi(h)=h$.
+The weight spaces give $\varphi(e)=ae$, $\varphi(f)=bf$. Brackets give $ab=1$. Choosing $t\in\C^\times$ with $t^2=a$ identifies the
+remaining automorphism as conjugation by $\operatorname{diag}(t,t^{-1})$.
+
+For (F15), let $G\subseteq\operatorname{GL}_2(\C)$ be a connected reductive
+algebraic subgroup in its defining representation, and put $H=G\cap\SL_2$.
+If $H^0$ is proper, it lies in a Borel subgroup or torus and is solvable.
+The connected commutator $[G,G]$ lies in $H^0$. Since $G/H$ is abelian,
+Corollary~A.38 makes $G$ solvable. Lie--Kolchin and complete reducibility
+give an invariant line and complement. Thus $G$ is conjugate to a connected
+diagonal subgroup, hence a torus. A non-torus $G$ therefore contains $\SL_2$.
+The solvability and invariant-line inputs
+are \cite[Corollary~A.38, p.~364; Theorem~A.46, p.~367]{VanDerPutSinger2003}.
+Complete reducibility is stated in the unnumbered paragraph after
+Definition~2.37, p.~59, of the July 2002 draft
+\cite{VanDerPutSinger2002Draft}.
+
+\subsection{Formal comparison}\label{app:formal}
+\begin{lemma}\label{lem:formal}
+For rank-two $A=A_0+O(z^{-1})$ with distinct leading eigenvalues,
+rational isomorphisms preserve those eigenvalues and formal powers modulo
+$\Z$, and conjugate finite local monodromy.
+\end{lemma}
+\begin{proof}
+In an eigenbasis solve $AP-P'=PB$, with $P=1+\sum P_nz^{-n}$ and
+diagonal $B$, recursively by
+\begin{equation}\label{eq:core-formal-recursion}
+\begin{gathered}
+R_n=A_n+\sum_{j=1}^{n-1}(A_jP_{n-j}-P_{n-j}B_j)+(n-1)P_{n-1},\\
+B_n=\operatorname{diag}R_n,\quad(P_n)_{ij}=-(R_n)_{ij}/(\omega_i-\omega_j).
+\end{gathered}
+\end{equation}
+Take $P_n$ with zero diagonal. A nonzero intertwiner entry has logarithmic
+derivative $\omega_i-\omega_j+(\vartheta_i-\vartheta_j)/z+O(z^{-2})$,
+versus $n/z+O(z^{-2})$ for a Laurent series. Invertibility pairs entries. Rational gauges are single-valued at finite points.
+\end{proof}
+
+\subsection{Arithmetic coefficient bounds}\label{app:arithmetic}
+For the $E$-function bounds, write each coordinate as $\sum a_nz^n/n!$,
+with coefficients in one number field and conjugates of modulus $e^{O(n)}$.
+For an algebraic tuple $a$, $\operatorname{den}(a)$ is the least positive
+integer $m$ making every entry of $ma$ an algebraic integer. For
+$G=\sum g_jz^j/j!$, put $G_{\le m}=(g_0,\ldots,g_m)$.
+Put $L_n=\operatorname{lcm}(1,\ldots,n)=e^{O(n)}$. Common denominators
+through the indicated degree divide
+\[
+\begin{array}{c|c}
+\Ein_k(\eta z),\ n&\operatorname{den}(\eta)^nL_n^k\\
+I_c,S_c,\ 2n&4^n\operatorname{den}(c)^{2n}L_n\\
+z^{-N}G,\ n\ (G=O(z^N))&\operatorname{den}(G_{\le n+N})L_{n+N}^N.
+\end{array}
+\]
+For the order-zero Bessel coordinates, the coefficients are $\binom{2m}m(c/2)^{2m}$ and its product
+with $\mathsf H_m$. The third table row also gives the $(\mathrm{B2}^E)$ bounds by zero-origin
+integration. For Kummer $a=p/q$ in lowest terms with $q>0$, $(a)_m/m!$ has denominator dividing
+$q^{2m}$. Primes not dividing $q$ cancel $v_\ell(m!)$ in the progression
+$p+jq$, and $v_\ell(m!)<m$ for $\ell\mid q$. The denominator of
+$h_m=2\mathsf H_m-\sum_{j<m}q/(p+jq)$ divides $L_{qm+|p|}$.
+For nonresonant Bessel, with $\nu+1=p/q$, $\gcd(p,q)=1$ and $q>0$,
+\begin{equation}\label{eq:bessel-normalized-coefficient}
+a_{2m}=c^{2m}(1/2)_m/(\nu+1)_m,\qquad a_{2m+1}=0.
+\end{equation}
+Let $d_m$ be the denominator of $(1/2)_m/(\nu+1)_m$ in lowest terms.
+For odd $\ell\nmid q$, denominator and odd-numerator progression counts
+differ by at most one at each $\ell^e$. Odd $\ell\mid q$ give no denominator.
+At $2$, $2^{-m}$ and $\sum\lfloor m/2^e\rfloor\le m$ give
+\begin{equation}\label{eq:bessel-common-denominator}
+d_m\mid4^mL_{|p|+qm},\quad
+\operatorname{den}(a_0,\ldots,a_{2n})\mid
+\operatorname{den}(c)^{2n}4^nL_{|p|+qn}.
+\end{equation}
+Replacing $\nu$ by $-\nu$ gives the other solution. The Pochhammer ratio grows polynomially. This gives the conjugate bounds. Differentiation shifts $m$ to $m+1$ in the Kummer coefficient formulas
+and preserves the $e^{O(n)}$ conjugate and denominator bounds.
+

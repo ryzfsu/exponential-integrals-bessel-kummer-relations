@@ -1,0 +1,57 @@
+\section{A first example}\label{sup:first-example}
+For $c\ne0$, the normalized maps and determinant in the introductory
+example are
+\[
+\begin{gathered}
+ f_{1/2}(2cz)=e^{cz}I_c(z),\qquad
+ S_{1/2}(2cz)=e^{cz}S_c(z),\\
+ z(I_cW_c-V_cS_c)-I_c^2+1=0.
+\end{gathered}
+\]
+Their derivatives identify $\operatorname{Bess}(c,0)$ and
+$\operatorname{Kum}(2c,1/2)$ as one class. The following formulas use $c=1$.
+Put $\mathsf H_0=0$ and $\mathsf H_n=\sum_{j=1}^n1/j$. Consider the four entire functions
+\begin{equation}\label{eq:supp-intro-series}
+\begin{aligned}
+ I(z)&=\sum_{n\ge0}\frac{(z/2)^{2n}}{(n!)^2},&
+ \mathsf S(z)&=\sum_{n\ge0}\frac{\mathsf H_n(z/2)^{2n}}{(n!)^2},\\
+ f_a(u)&=\sum_{n\ge0}\frac{(a)_nu^n}{(n!)^2},&
+ S_a(u)&=\sum_{n\ge0}\frac{(a)_nh_n(a)u^n}{(n!)^2},
+\end{aligned}
+\end{equation}
+where $(a)_0=1$, $(a)_n=a(a+1)\cdots(a+n-1)$, and
+$h_n(a)=2\mathsf H_n-\sum_{j=0}^{n-1}(j+a)^{-1}$. The parameter $a$ is
+nonintegral. The half-Kummer identities are
+\begin{equation}\label{eq:supp-intro-half}
+ f_{1/2}(2z)=e^zI(z),\qquad S_{1/2}(2z)=e^z\mathsf S(z).
+\end{equation}
+These classical identities \cite[10.39.5,13.2.9,13.6.10]{DLMF}
+are proved by operators in main-text Section~\ref{sec:linkage}.
+
+These identities also explain cancellation of Euler's constant. Suppose $x>0$.
+The standard Bessel function $K_0$ and Kummer function $U$ satisfy
+\begin{equation}\label{eq:supp-intro-connection}
+\begin{aligned}
+ \frac{K_0(x)}{I(x)}
+   &=\frac{\mathsf S(x)}{I(x)}-\gamma-\log(x/2),\\
+ \frac{\sqrt\pi\,U(1/2,1,2x)}{f_{1/2}(2x)}
+   &=\frac{S_{1/2}(2x)}{f_{1/2}(2x)}-\gamma-\log(x/2).
+\end{aligned}
+\end{equation}
+With the normalizations of \cite[10.31.2, 13.2.9, 13.6.10]{DLMF},
+the denominators are positive. Subtraction cancels both connection terms:
+\begin{equation}\label{eq:supp-intro-gamma-free}
+ \frac{\sqrt\pi\,U(1/2,1,2x)}{f_{1/2}(2x)}
+ -\frac{K_0(x)}{I(x)}
+ =\frac{S_{1/2}(2x)}{f_{1/2}(2x)}-\frac{\mathsf S(x)}{I(x)}=0.
+\end{equation}
+Put $D=d/dz$. The determinant relation
+\begin{equation}\label{eq:supp-intro-determinant}
+ z\{I\,D\mathsf S-(DI)\mathsf S\}-I^2+1=0
+\end{equation}
+leaves three independent Bessel coordinates. Put
+\[ (Q_1,Q_2,Q_3)=(f_{1/2}(2z),D[f_{1/2}(2z)],S_{1/2}(2z)). \]
+Thus $\C(z)(I,DI,\mathsf S,Q_1,Q_2,Q_3)=\C(z)(e^z,I,DI,\mathsf S)$ by
+\eqref{eq:supp-intro-half} and its derivative. Its degree is four over
+$\C(z)$ and three over $T=\C(z)(e^z)$.
+The blocks form one linkage class.

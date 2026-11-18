@@ -1,0 +1,96 @@
+\documentclass{amsart}
+\usepackage{amssymb,mathtools,mathrsfs,array,longtable}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Relations among exponential integrals, Bessel and Kummer functions},
+  pdfauthor={Ruiyi Zhang},
+  pdfsubject={Primary 11J91; Secondary 12H05, 33C10, 33C15},
+  pdfkeywords={algebraic independence, E-functions, differential Galois theory, exponential integral, Bessel functions, confluent hypergeometric functions}
+}
+\input{macros}
+
+\begin{document}
+
+\title[Exponential integrals, Bessel and Kummer functions]{Relations among exponential integrals, Bessel and Kummer functions}
+\author{Ruiyi Zhang}
+\address{Independent Researcher, Columbia, Maryland, USA}
+\email{ryzfsu@gmail.com}
+\date{November 17, 2026}
+\subjclass[2020]{Primary 11J91; Secondary 12H05, 33C10, 33C15}
+\keywords{algebraic independence, E-functions, differential Galois theory, exponential integral, Bessel functions, confluent hypergeometric functions}
+
+\begin{abstract}
+We determine algebraic relations among finite families of special functions.
+The families contain rational-exponential primitives and iterated entire exponential integrals.
+They also contain Bessel functions of rational order and Kummer functions.
+The Kummer functions have nonintegral first parameter and second parameter one.
+We give the transcendence degree and generators of the relation ideal.
+Explicit maps for normalized entire functions complement Gorelov's 2019--2021 classification of second-order equations.
+We then specialize the relations at nonzero algebraic points.
+Over explicit base fields, we obtain a lower bound for the transcendence degree of mixed
+connection values together with Euler's constant, logarithmic constants and,
+when required, pi.
+We also prove a linear independence estimate with explicit constants for all sufficiently large heights.
+It concerns one, the exponential of one, the reciprocal of that exponential and the entire exponential integral at one.
+The qualitative results use differential Galois theory and E-function specialization.
+The estimate uses integer polynomial approximations and derivative selection.
+\end{abstract}
+
+\maketitle
+
+\input{sections/introduction}
+\input{sections/setup}
+\input{sections/main-statement}
+\input{sections/core-proof}
+\input{sections/linkage}
+\input{sections/values}
+\input{sections/gamma}
+
+\section*{Use of AI tools}
+The author devised the methods and the main arguments. Codex (OpenAI, GPT-6 Astra)
+checked the derivations and the cited sources, and ran the exact computations of the
+supplementary sections. Claude Code (Anthropic, Claude Fable 5) checked the arguments
+and the references. The author checked every step of the proofs, every computation and
+every reference, and takes full responsibility for the content of the paper.
+
+\section*{Declarations}
+
+\textbf{Competing interests.} The author has no competing interests.
+
+\textbf{Funding.} No funding was received for this work.
+
+\textbf{Data availability.} The ancillary script and its exact output are in
+\texttt{anc/} within the source directory; see \texttt{anc/N1-README.md}.
+
+\label{page:body-end}
+\clearpage
+\appendix
+\label{page:appendix-start}
+\input{sections/foundations}
+\input{sections/appendix-algorithm}
+\input{sections/appendix-gorelov}
+\input{sections/measure}
+\input{sections/appendix-detailed-proofs}
+\label{page:appendix-end}
+\clearpage
+\section*{Supplementary material}
+\setcounter{section}{0}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\theHsection}{supplement.\arabic{section}}
+This supplementary material contains the mixed example, exact input model,
+measure comparison, normalized-function example, source comparison and
+coefficient-cancellation details.
+\input{sections/supplement/MIXED-EXAMPLE}
+\input{sections/supplement/INPUT-MODEL}
+\input{sections/supplement/MEASURE-COMPARISON}
+\input{sections/supplement/FIRST-EXAMPLE}
+\input{sections/supplement/CLASSICAL-COMPARISON}
+\input{sections/supplement/CANCELLATION-REMARKS}
+\clearpage
+\bibliographystyle{amsplain}
+\label{page:references-start}
+\bibliography{refs}
+\label{page:references-end}
+\label{page:main-end}
+
+\end{document}

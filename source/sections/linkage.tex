@@ -1,0 +1,118 @@
+\section{The linkage classification}\label{sec:linkage}
+
+Gorelov classified cogredience and contragredience, equivalently rank-one-twist
+isomorphism, of irreducible equations $L(\nu;\lambda;\alpha z^p)y=0$
+\cite[Lemma~12 and proof, p.~7; Lemma~14, p.~7, proof pp.~8--9]{Gorelov2021}.
+The mixed Bessel--Kummer case is condition~(9)
+\cite[p.~3]{Gorelov2021}. Its sufficiency is
+\cite[Theorem~2, condition~(5), p.~138; proof pp.~141--142]{Gorelov2020}.
+Theorem~\ref{thm:linkage} specializes this classification.
+Below we prove normalized E-part maps and composition for the classical regular-solution transformations.
+
+For these links, the regular solutions and their normalized E-parts satisfy
+\begin{equation}\label{eq:link-kummer}
+\begin{aligned}
+ f_a(u)&=e^u f_{1-a}(-u),\\
+ S_a(u)&=e^u S_{1-a}(-u),
+\end{aligned}
+\end{equation}
+\begin{equation}\label{eq:link-contiguity}
+\begin{aligned}
+ a f_{a+1}(u)&=u f'_a(u)+af_a(u),\\
+ aS_{a+1}(u)&=uS'_a(u)+aS_a(u)-f_a(u)+f_{a+1}(u),
+\end{aligned}
+\end{equation}
+\begin{equation}\label{eq:link-half}
+\begin{aligned}
+ f_{1/2}(2cz)&=e^{cz}I_c(z),\\
+ S_{1/2}(2cz)&=e^{cz}S_c(z).
+\end{aligned}
+\end{equation}
+For $\nu\in\Q\setminus\Z_{\le0}$, the series-defined functions satisfy
+\begin{equation}\label{eq:link-order}
+ f_{\nu+1,c}=\frac{2(\nu+1)}{c^2z}f'_{\nu,c},\qquad
+ f_{\nu-1,c}=f_{\nu,c}+\frac{z}{2\nu}f'_{\nu,c},
+\end{equation}
+and integer orders are given by Lemma~\ref{lem:integer}. Write
+$\operatorname{Sol}(M)$ for the solution space of $M$. For an oriented
+resonant link, let $\Phi_{ij}:\operatorname{Sol}(M_i)\to
+\kappa_{ij}\operatorname{Sol}(M_j)$ be the induced map, with
+$\kappa_{ij}=\kappa_1$ and the convention
+\begin{equation}\label{eq:link-composition-convention}
+\Phi_{ik}=\kappa_{ij}\Phi_{jk}\kappa_{ij}^{-1}\circ\Phi_{ij}.
+\end{equation}
+Multiplication by $\kappa_{ij}$ identifies the target with the twisted
+solution space. When $\Gamma$ is saturated for the list,
+$\kappa_{ij}\in T^\times$. For every composed resonant link, written as $Q$,
+\begin{equation}\label{eq:link-composed}
+ Qy_i=\kappa_1y_j,\qquad QJ_i=\kappa_1(J_j+\theta y_j),\quad\theta\in\C.
+\end{equation}
+Here $(\kappa_1,\theta)$ is $(e^{sz},0)$, $(1,-1/a)$, or
+$(e^{cz},0)$ for the following oriented maps. The first is the identity from
+$\operatorname{Kum}(s,a)$ to $\operatorname{Kum}(-s,1-a)$.
+The second is the contiguity operator $Q=(zD+a)/a$ from $\operatorname{Kum}(s,a)$ to
+$\operatorname{Kum}(s,a+1)$. The third is the identity from
+$\operatorname{Kum}(2c,1/2)$ to $\operatorname{Bess}(c,0)$.
+For the identical order-zero Bessel operators, $(\kappa_1,\theta)=(1,0)$.
+Along a path the twist factors multiply and the constants add. Reversing
+an elementary link replaces them by $(\kappa_1^{-1},-\theta)$.
+For a nonresonant link, the rational gauges and the algebraic power twist
+$z^\upsilon\in T'=T(z^{1/\ell})$ give the corresponding map over $T'$. The twist need not belong to $T$. The listed $f_{-\nu,c}$ omits the
+factor $z^{-2\nu}$. Thus induced coordinate maps lie over $k\subset T$.
+There is no logarithmic solution $J$
+in this case, and $\ell$ clears the denominators of $2\nu_0$.
+Differentiation gives the derivative-coordinate maps, using Section~\ref{sec:setup}'s convention.
+\begin{proof}[Proof of Theorem~\ref{thm:linkage}]
+The parameter substitution in Appendix~\ref{app:gorelov} identifies the
+homogeneous cases with Gorelov's classification. The same-power case of
+\cite[Lemma~14, using Lemma~12, p.~7]{Gorelov2021} gives
+\eqref{eq:link-bb}--\eqref{eq:link-kk}. Its mixed condition~(9)
+\cite[p.~3]{Gorelov2021} gives
+$2\nu_0\in\Z$, $s^2=4c^2$ and $2a\in\Z$. Thus
+\eqref{eq:link-bk} follows. The mixed sufficiency is also
+\cite[Theorem~2, p.~138]{Gorelov2020}. Lemmas~\ref{lem:formal}
+and~\ref{lem:twist} give the rates and powers.
+
+For the contiguity calculation assume $a\notin\Z$ and take $s=1$. Thus $u=z$ and $D=d/du$.
+The operator $(uD+a)/a$ has matrix and inverse
+\begin{equation}\label{eq:contiguity-matrix}
+ \frac1a\begin{pmatrix}a&u\\a&u+a\end{pmatrix},\qquad
+ \frac1a\begin{pmatrix}u+a&-u\\-a&a\end{pmatrix}.
+\end{equation}
+Its determinant is $1$. A nonzero kernel element would be proportional to $u^{-a}$.
+This function is no solution for $a\notin\Z$. For the other links, use
+\[
+ \mathscr K_{s,a}(e^{sz}y)=e^{sz}\mathscr K_{-s,1-a}y,\qquad
+ \mathscr K_{2c,1/2}(e^{cz}y)=e^{cz}\mathscr B_{c,0}y.
+\]
+Normalization at zero gives the regular Kummer identities.
+For $f_{\pm1/2,c}$ and the order maps, compare the defining series directly:
+$n!(3/2)_n=(2n+1)!/4^n$ and $n!(1/2)_n=(2n)!/4^n$ give
+$f_{1/2,c}=\sinh(cz)/(cz)$ and $f_{-1/2,c}=\cosh(cz)$;
+normalization at zero alone does not fix the order $-1/2$ solution.
+Changing $\nu$ to $-\nu$ introduces $z^{2\nu}$. The recurrences
+\eqref{eq:link-order} and Lemma~\ref{lem:integer} give the order maps.
+
+To obtain the normalized E-parts, write $J=\Sigma-yL$.
+Monodromy preserves the invariant line. Thus the image of $J$ has the form
+\eqref{eq:link-composed}. Under the two exponential conjugations, the
+E-parts have equal forcing. Their difference is a homogeneous holomorphic solution vanishing at zero. This proves the corresponding identities. For contiguity, direct differentiation gives
+\[
+ \frac{uD+a}{a}(S_a-f_aL)
+ =\frac{uS'_a+aS_a-f_a}{a}-f_{a+1}L,
+\]
+whose holomorphic part at zero is $-1/a$. Equivalently,
+$a(a+1)_n=(a+n)(a)_n$ and
+$h_n(a+1)=h_n(a)+1/a-1/(a+n)$. These prove the E-part maps and
+constants. For composition, suppose $Q^{(1)}$ gives
+$\kappa_1(y_m,J_m+\theta_1y_m)$ and $Q^{(2)}$ gives
+$\kappa_2(y_j,J_j+\theta_2y_j)$. The transported operator in
+\eqref{eq:link-composition-convention} sends the pair to
+$\kappa_1\kappa_2(y_j,J_j+(\theta_1+\theta_2)y_j)$.
+The inverse transported map is
+$Q^{(1),\rm rev}(v)=\kappa_1^{-1}(Q^{(1)})^{-1}(\kappa_1v)$, which gives
+$(\kappa_1^{-1},-\theta_1)$. This proves both orientation rules.
+\end{proof}
+
+The regular identities are DLMF~13.3.17, 13.2.39 and 10.39.5.
+After normalization, DLMF~13.2.9, 13.2.41 and 13.6.10 also give the E-parts \cite{DLMF}.

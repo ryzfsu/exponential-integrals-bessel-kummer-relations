@@ -1,0 +1,159 @@
+\section{Values at algebraic points}\label{sec:values}
+Use the arithmetic hypotheses and notation of Theorem~\ref{thm:values}.
+The $(\mathrm{B2}^E)$ residue vectors have
+$\sum_\mu v_{(\mu,0)}=0$, which implies $e_{(0,0)}\notin\mathcal V_{\rm res}$.
+Lemma~\ref{lem:integer} reduces integer-order blocks; Supplementary Section~\ref{sup:classical-comparison} compares earlier value inputs.
+
+\begin{proof}[Proof of Theorem~\ref{thm:values} and Corollary~\ref{cor:value-base}]
+A detailed proof is given in Appendix~\ref{app:detailed-proofs}.
+The finite list's data lie in one number field.
+Appendix~\ref{app:arithmetic}'s estimates give the $E$-function arithmetic bounds
+after order-zero reduction. The primitives' entire derivatives and
+zero-origin normalization remove the apparent pole at zero.
+
+Consider the $\Qbar(z)$-linear system with coordinates
+\begin{equation}\label{eq:value-system}
+\begin{gathered}
+1,\quad e^{\pm\lambda_hz},\quad e^{\mu z}\ (\mu\text{ kernel rate or }-\eta),\\
+\text{all primitives, tower levels and block coordinates}.
+\end{gathered}
+\end{equation}
+Its only possible finite pole is zero. In addition to the recurrences
+already given, its equations include
+\[
+I''=c^2I-I'/z,\quad S''=c^2S-S'/z+2I'/z,\quad
+F''=(s-z^{-1})F'+asF/z,
+\]
+\[
+\Sigma''=(s-z^{-1})\Sigma'+as\Sigma/z+(2F'-sF)/z,\quad
+f''_{\nu,c}=c^2f_{\nu,c}-(2\nu+1)f'_{\nu,c}/z.
+\]
+Successive-derivative dependence gives scalar equations over $\Qbar[z]$,
+completing the $E$-function hypotheses of (F1).
+Every $\alpha\ne0$ is ordinary. Put $R=\Qbar[z^{\pm1}][\Theta^{\pm1}]$.
+By \eqref{eq:link-bb}--\eqref{eq:link-bk}, two blocks of one class are
+joined by a finite path of the displayed maps.
+Scale sign $c\mapsto-c$ and order sign $\nu\mapsto-\nu$ use
+identities or permutations.
+Order shifts use \eqref{eq:link-order} and Lemma~\ref{lem:integer}.
+Contiguity and its inverse have determinant $1$.
+The Kummer transformation and half link multiply by $e^{\pm sz}$ and
+$e^{\pm cz}$. These are monomials in $\Theta$ because the rates lie
+in $\Gamma$.
+The corresponding E-part identities are
+\eqref{eq:link-kummer}--\eqref{eq:link-half}.
+Each map and its inverse on $(y,y',\Sigma,\Sigma')$ has entries in $R$
+and determinant a unit of $R$. Hence every type-4 generator lies in $R[X]$.
+For the shift $\nu\to\nu+1$, the $2\times2$ map on $(f_{\nu,c},f'_{\nu,c})$ has
+determinant $-4(\nu+1)^2/(c^2z^2)$, whereas the full $4\times4$
+coordinate map has determinant $(\nu+1)^2/\nu^2$.
+Normalization excludes zero parameter factors, so each inverse specializes at $\alpha$.
+Linkage elimination inverts no coordinate value.
+
+For type 2, $\kappa_{ji}\in\Qbar$ since residue vectors are algebraic;
+\[
+ D\Bigl(F_j-\sum_i\kappa_{ji}F_i\Bigr)
+   =\sum_\mu q_\mu e^{\mu z},\qquad
+ q_\mu\in\Qbar[z^{\pm1}],\qquad
+ \Res_0 e^{\mu z}q_\mu=0.
+\]
+On $\Qbar[z^{\pm1}]$, the map $g\mapsto g'+\mu g$ has image exactly
+the kernel of $q\mapsto\Res_0e^{\mu z}q$ (triangular on $z^n$, $n\ge0$,
+and $z^{-m-1}\equiv(\mu/m)z^{-m}$ modulo the image), so $r_j\in R$.
+All first-level coordinates vanish at zero, hence
+$c_j=-\lim_0r_j\in\Qbar$.
+This finite Laurent--exponential constant coefficient keeps the affine graph in $R[X]$.
+Types 1, 3, half-order, duplicate and constant graphs visibly lie in $R[X]$.
+
+Duplicate and constant graphs specialize unchanged. Integer-order blocks
+are first replaced by the order-zero blocks in Lemma~\ref{lem:integer}. Its matrix and inverse are regular at $\alpha\ne0$. Adjoin these blocks,
+apply the following argument, and eliminate them afterwards.
+After graph elimination at $\alpha$, the determinant shifts are regular.
+They give
+\begin{equation}\label{eq:specialized-quadric}
+\begin{gathered}
+R_\Theta[X]/\mathfrak P_\alpha\simeq
+R_\Theta[\rho^E+\tau\text{ free variables}]\otimes_{R_\Theta}
+\bigotimes_{\mathfrak c}Q_{u_{\mathfrak c}/\alpha},\\
+u_{\mathfrak c}/\alpha\in\{1/\alpha,\Theta^{v_s}/\alpha,2\nu/\alpha\}.
+\end{gathered}
+\end{equation}
+Lemma~\ref{lem:quadric} gives freeness over $R_\Theta$ and injects the selected polynomial subring.
+Freeness prevents localization torsion, so the quotient injects into its generic fibre.
+The quadric parameters are units; Lemma~\ref{lem:quadric} and (F13) make
+that fibre geometrically integral. The quotient is therefore a domain of
+dimension $d+\rho^E+\tau+3\#\mathcal C$. Its generators vanish under evaluation.
+Theorem~\ref{thm:main} and (F1) on \eqref{eq:value-system} give the same dimension for $I_\alpha$.
+Extra system exponentials are monomials in the basis exponentials.
+Thus $\mathfrak P_\alpha\subset I_\alpha$ are prime with equal quotient
+dimensions; (F13) excludes strict inclusion.
+The selected subring still injects under evaluation, proving independence
+and \eqref{eq:value-nonzero} without division by the regular coordinate.
+
+A relation over $\mathcal E$ has coefficients in a finite algebraic
+extension of $\Qbar(e^{\beta_1},\ldots,e^{\beta_s})$. Adjoin the rates
+$\beta_i/\alpha$ to $\Gamma$, saturate for the enlarged list, and list
+the resulting basis exponentials.
+Its residue rank, higher-level count and classes are unchanged. The proved
+result, localized over $K_E=\Qbar(e^{\lambda'_h\alpha}:h)$ for the
+enlarged rate basis $(\lambda'_h)$, gives the same degree.
+It contains every $e^{\beta_i}$; only the exponential basis and count change.
+In $K_E[X]$, substitution of each exponential variable by its value is a
+retraction to $K_E[X_{\rm ne}]$. It kills the type 1 generators. Thus the
+contracted ideal is generated by types 2--4, the half-integer exponential
+graphs and their derivative and order-shift graphs, duplicate graphs and
+listed-constant graphs. These are the stated nonexponential generators. The generic fibre is
+geometrically integral. Let $K'/K_E$ be a finite algebraic extension
+containing the relation's coefficients. The extended ideal in
+$K'[X_{\rm ne}]$ remains prime by geometric integrality. Equivalently,
+it is the contraction after specializing the exponential variables in
+$K'[X]$. Its evaluation kernel in $K'[X_{\rm ne}]$ has the same dimension;
+(F13) proves equality: algebraic coefficients change neither transcendence
+degree nor the geometrically integral model's dimension.
+Every relation over $\mathcal E$ occurs in such a finite enlargement.
+This proves \eqref{eq:value-exponential-base}
+and its ideal assertion. For an infinite family, a polynomial relation involves finitely many values. Close that finite list by adding lower tower levels and the
+four coordinates of each chosen block. The listed first-level residue
+vectors are independent. Thus extend them to a residue basis of the closure.
+The higher-level pairs remain distinct, and the chosen triples represent
+different classes. Thus the original finite family is a subset of the
+selected independent set for that closure. The finite theorem excludes
+the proposed relation. For values $q_i(\alpha_i)$ at several $\alpha_i\in\Qbar^\times$,
+replace $q_i$ by $q_i(\alpha_i z)$. Nodes, scales and rates are then multiplied
+by $\alpha_i$, and $(\mathrm{B2}^E)$ kernels $q(z)$ become
+$\alpha_iq(\alpha_i z)$. A residue indexed by $(\mu,p)$ is
+reindexed by $(\alpha_i\mu,p/\alpha_i)$ with the same value, and each derivative
+coordinate is multiplied by $\alpha_i$. Apply the selection conditions
+(residue independence, distinct $(\eta\alpha_i,k)$, one triple per class)
+to the rescaled list at $z=1$. The derivative factors are invertible
+algebraic scalars. Joint closure and saturation retain any collisions
+introduced by rescaling before the theorem is applied.
+\end{proof}
+
+\begin{lemma}\label{lem:integer}
+For $n\ge1$,
+\begin{equation}\label{eq:integer-bessel-matrix}
+\begin{gathered}
+\begin{pmatrix}I_{n,c}\\I'_{n,c}\\P_{n,c}\\P'_{n,c}\end{pmatrix}
+=\begin{pmatrix}M_n&0\\N_n&M_n\end{pmatrix}
+\begin{pmatrix}I_c\\V_c\\S_c\\W_c\end{pmatrix},\\
+M_n,N_n\in M_2(\Q[c^{\pm1},z^{-1}]),\qquad\det M_n=(-1)^n.
+\end{gathered}
+\end{equation}
+It is invertible at every nonzero algebraic $\alpha$ when $c$ is algebraic.
+\end{lemma}
+\begin{proof}
+From \eqref{eq:bessel-integer},
+\[
+M_n=\begin{pmatrix}a_n&b_n\\a'_n+c^2b_n&a_n+b'_n-b_n/z\end{pmatrix}.
+\]
+Differentiating $P_{n,c}$ with $S''=c^2S-W/z+2V/z$ gives $N_n$.
+The recurrence \mbox{sends} $(I_0,K_0)$ to $(I_n,(-1)^nK_n)$. Their Wronskians
+are $-1/z$ and $(-1)^n(-1/z)$ \cite[10.28.2,10.29.1(a),10.29.3(a)--(b)]{DLMF}. This proves the
+determinant. For example,
+\[ M_1=\begin{pmatrix}0&1/c\\c&-1/(cz)\end{pmatrix}. \]
+The integer-order and order-zero blocks therefore generate the same
+fields. To obtain the integer-order ideal, adjoin the order-zero block,
+specialize this invertible map, and eliminate the added coordinates.
+This procedure also applies when $P_{n,c}$ has a pole at zero.
+\end{proof}

@@ -1,0 +1,42 @@
+% Shared notation. Ordinary amsart dimensions and font sizes are retained.
+\DeclareTextCommand{\textsection}{OT1}{\UseTextSymbol{OMS}{\textsection}}
+\allowdisplaybreaks[1]
+\makeatletter
+\g@addto@macro\@adjustvertspacing{%
+  \setlength{\abovedisplayskip}{1pt plus 1pt minus 1pt}%
+  \setlength{\belowdisplayskip}{1pt plus 1pt minus 1pt}%
+  \setlength{\jot}{1pt}}
+\makeatother
+\normalsize
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{explicitestimate}{Theorem}
+\renewcommand{\theexplicitestimate}{4}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}[lemma]{Proposition}
+\newtheorem{corollary}[lemma]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[lemma]{Definition}
+\newtheorem{example}[lemma]{Example}
+\numberwithin{equation}{section}
+\numberwithin{table}{section}
+
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Qbar}{{\overline{\mathbb{Q}}}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\DeclareMathOperator{\Ein}{Ein}
+\DeclareMathOperator{\trdeg}{trdeg}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator*{\Res}{Res}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\Lie}{Lie}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Span}{span}
+
+\makeatletter
+\newcommand{\equationalias}[1]{\begingroup
+  \protected@edef\@currentlabel{\p@equation\theequation}\label{#1}\endgroup}
+\makeatother

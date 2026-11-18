@@ -1,0 +1,681 @@
+\section{Proof of Theorem~\ref{thm:main}}\label{sec:proof}
+\subsection{Primitives and towers}
+Put $F_0=\C(z)$, $F_1=\C(z,L)$, $R_i=F_i[t^{\pm1}]$. On $F_1$, $D=\partial_z+z^{-1}\partial_L$.
+\begin{lemma}\label{lem:exponential-log}
+The $t_h$ are algebraically independent over $F_1$, and $L$ is
+transcendental over $T$. For $q\in F_i^\times$, $i=0,1$,
+$Dq/q\in\C$ forces $q\in\C^\times$.
+\end{lemma}
+\begin{proof}
+Suppose distinct exponentials satisfy a rational linear relation with the
+fewest terms. Divide by one term, making its coefficient $1$, and
+differentiate. The resulting relation has fewer terms. Thus all its
+coefficients vanish. A remaining coefficient would give
+$q'/q=-\mu\ne0$ for rational $q$. This is impossible, since a rational
+logarithmic derivative tends to zero at infinity. Distinct monomials in
+the $t_h$ have distinct weights. They are therefore linearly independent
+over $F_0$. This proves algebraic independence of the $t_h$.
+
+A polynomial relation of least positive degree $n$ for $L$ over $T$
+can be continued around zero. Its coefficients return to their original
+values, while $L$ changes to $L+2\pi i$. Subtraction gives a relation of
+degree $n-1$, with leading coefficient $2\pi in$ times the former leading
+coefficient. This is a contradiction. Thus $L$ is transcendental over
+$T$, and the $t_h$ remain independent over $F_1$.
+
+For $p=L^N+c_{N-1}L^{N-1}+\cdots$, $Dp$ has degree $N-1$ and coefficient
+$c'_{N-1}+N/z\ne0$: a rational derivative has zero residue at zero.
+For monic irreducible $p$ of positive degree this gives $p\nmid Dp$.
+Factor $q\in F_1^\times$ over $\C(z)[L]$. Every nonzero factor exponent
+then contributes an uncancelled pole to $Dq/q$. If $Dq/q$ is constant,
+no such factor occurs. Thus $q\in F_0^\times$. Its logarithmic derivative
+tends to zero at infinity. It is therefore zero, and $q\in\C^\times$.
+This also proves the assertion for $i=0$.
+\end{proof}
+
+\begin{lemma}\label{lem:reduction}
+A positive-degree monic irreducible $p\in\C(z)[L]$ satisfies
+$p\nmid Dp\ne0$. No nonunit irreducible $p\in R_i$, $i=0,1$, divides
+$Dp$. Consequently $y\in\operatorname{Frac}R_i$ and $Dy\in R_i$
+imply $y\in R_i$.
+\end{lemma}
+\begin{proof}
+The first assertion was proved above. Suppose $Dp=hp$ in $R_i$.
+Differentiation does not enlarge the monomial support of $p$.
+If $Dp\ne0$, the Newton polytope of $hp$ is the sum of those of $h$
+and $p$. Its containment in the polytope of $p$ forces $h\in F_i$.
+The same conclusion holds with $h=0$ when $Dp=0$.
+For two nonzero coefficients $a_v,a_w$ of distinct weights
+$\omega_v,\omega_w$, coefficient comparison now gives
+\[
+ \frac{D(a_v/a_w)}{a_v/a_w}=\omega_w-\omega_v\ne0.
+\]
+Lemma~\ref{lem:exponential-log} excludes this. Thus $p$ is a monomial,
+which is a unit of $R_i$.
+
+Let a denominator factor of $y$ have order $s>0$ at $p$.
+In the localization at $(p)$ write $y=wp^{-s}$, with $w$ a unit. Then
+\[
+ D(wp^{-s})=\frac{pDw-swDp}{p^{s+1}}.
+\]
+The numerator is nonzero modulo $p$, because $p\nmid Dp$.
+Thus $Dy$ has valuation $-s-1$ at $p$. This contradicts $Dy\in R_i$,
+and removes every denominator factor.
+\end{proof}
+
+\begin{lemma}\label{lem:twisted-obstruction}
+For $\mu\ne0$, $g\in\C(z)$ and nonconstant $P\in\C[L]$, the equation
+$Du+\mu u=P(L)/z+g$ has no solution in $F_1$.
+\end{lemma}
+\begin{proof}
+The denominator argument of Lemma~\ref{lem:reduction} also applies to $(D+\mu)u$. Take an irreducible $L$-denominator of order $s>0$. Then $Du$ has pole order $s+1$. In contrast, $\mu u$ has order $s$.
+Hence $u\in\C(z)[L]$. Write $u=\sum_{j=0}^nu_jL^j$ and
+$P=\sum_{j=0}^mp_jL^j$, where $m\ge1$ and $p_m\ne0$.
+If $n>m$, its highest coefficient gives $u_n'+\mu u_n=0$,
+excluded by Lemma~\ref{lem:exponential-log}. If $n<m$, the coefficient
+of $L^m$ cannot match. Hence $n=m$, and
+\[
+ u_n'+\mu u_n=p_n/z,\qquad p_n\ne0.
+\]
+A finite pole of $u_n$ would increase order under differentiation,
+including at zero, where the right side has only a simple pole.
+Thus $u_n$ is polynomial, whose image under $D+\mu$ cannot equal $p_n/z$.
+\end{proof}
+
+\begin{lemma}[Residues and Ostrowski's trace argument]\label{lem:primitive}
+For $F_j'=\sum q_{j,\mu}e^{\mu z}$ with rates in $\Gamma$, the
+field generated over $T$ by these meromorphic primitives has constant
+field $\C$: it introduces no new constants on the fixed domain above
+Theorem~\ref{thm:main}. Then
+\begin{equation}\label{eq:core-residue-criterion}
+\sum b_jF_j\in T\iff\sum b_j\operatorname{res}(F_j)=0\quad(b_j\in\C).
+\end{equation}
+The combination then equals $r+c$, $r\in R_0$, $c\in\C$.
+A residue basis is independent over $T$ and its affine relations generate
+the full ideal.
+\end{lemma}
+\begin{proof}
+For rational $q$,
+\begin{equation}\label{eq:core-rational-residue}
+(D+\mu)r=q\ (r\in\C(z))\iff\rho_{\mu,p}(q)=0\quad(p\text{ finite}).
+\end{equation}
+Necessity follows by differentiating $e^{\mu(z-p)}r$. For sufficiency,
+subtract images of $-c(z-p)^{1-m}/(m-1)$ for $m\ge2$ successively. The
+remaining simple-pole coefficients are the zero residues. On polynomials,
+$D+\mu$ is bijective if $\mu\ne0$. If $\mu=0$, take a polynomial primitive.
+Lemma~\ref{lem:reduction} reduces combinations in $T$ to Laurent form. Weight comparison proves \eqref{eq:core-residue-criterion}.
+
+We use Ostrowski's trace argument (F3). Let dependent same-constant
+primitives over $F_{\rm b}$ have a maximal algebraically independent
+subfamily $y_1,\ldots,y_q$.
+Put $E=F_{\rm b}(y_1,\ldots,y_q)$ and choose a remaining primitive $y$.
+It is algebraic over $E$. Derivation commutes with trace. Thus $v=\operatorname{Tr}_{E(y)/E}(y)/[E(y):E]$ satisfies $Dv=Dy\in F_{\rm b}$.
+Thus $y-v\in\C$. The partial $\partial_i=\partial/\partial y_i$
+fixing $F_{\rm b}$ commutes with $D$, since each $Dy_j$ belongs to $F_{\rm b}$.
+It follows that $D(\partial_iv)=\partial_i(Dv)=0$. Thus $\partial_iv=c_i\in\C$. A rational function with all these partials
+zero lies in $F_{\rm b}$. Therefore $v-\sum c_iy_i\in F_{\rm b}$, giving a nonzero
+constant linear combination of the primitives in $F_{\rm b}$. Apply this with
+$F_{\rm b}=T$ and use \eqref{eq:core-residue-criterion}.
+The affine quotient is the polynomial ring on a residue basis. In particular,
+\begin{equation}\label{eq:core-reference}
+F=\sum_{(\mu,p)}e^{\mu p}\operatorname{res}(F)_{(\mu,p)}\Phi_{\mu,p}+r_F+c_F.
+\end{equation}
+\end{proof}
+
+Put
+\begin{equation}\label{eq:core-G}
+G_{\eta,k}=L^k/k!-\Ein_k(\eta z),\quad
+DG_{\eta,1}=e^{-\eta z}/z,\quad DG_{\eta,k}=G_{\eta,k-1}/z.
+\end{equation}
+For this proof choose $\Phi_{-\eta,0}=G_{\eta,1}$.
+This changes only the reference constants. The specified coordinates
+and their additive constants retain their original values.
+\begin{lemma}\label{lem:tower}
+For distinct nonzero $\eta_j$, $h_j\ge1$, and a finite residue support
+$\mathfrak S$ containing $(0,0),(-\eta_j,0)$ with rates in $\Gamma$, the
+generators of
+$\mathcal N_h=T(\Phi_\sigma:\sigma\in\mathfrak S;
+G_{\eta_j,k}:2\le k\le h_j)$ are independent. This meromorphic field
+has constant field $\C$, so it introduces no new constants on the fixed
+domain above Theorem~\ref{thm:main}. For $P_j\in\C[L]$, not all
+zero,
+\begin{equation}\label{eq:core-NP}
+\sum_jP_j(L)G_{\eta_j,h_j}/z\notin D\mathcal N_h.
+\end{equation}
+The solvable coordinates have degree $\rho+\tau$ and only their first-level
+residue relations.
+\end{lemma}
+\begin{proof}
+A detailed proof is given in Appendix~\ref{app:detailed-proofs}.
+Induct on $\sum h_j$. At each depth first prove independence, then
+\eqref{eq:core-NP}. When all $h_j=1$, the residue vectors of the
+$\Phi_\sigma$ are nonzero multiples of distinct coordinate vectors.
+Lemma~\ref{lem:primitive} gives independence, with $\Phi_{0,0}=L$.
+The other coordinates therefore form a rational function field over $T(L)$.
+
+Suppose $Dy$ equals the sum in \eqref{eq:core-NP} at this depth.
+For $\sigma\ne(0,0)$ take the partial in $\Phi_\sigma$, fixing $T(L)$.
+It commutes with $D$, because $D\Phi_\sigma\in T$.
+For $\sigma=(-\eta_j,0)$ this gives
+\[
+ D(\partial_{-\eta_j,0}y)=P_j(L)/z,
+ \qquad \partial_{-\eta_j,0}y=Q_j(L),\quad Q_j'=P_j.
+\]
+Absorb constants in $Q_j$; every other partial is constant.
+Subtract $Q_j\Phi_{-\eta_j,0}$ and the other $c_\sigma\Phi_\sigma$.
+All partials vanish, leaving
+$y_0\in T(L)$ with
+\[
+ Dy_0=-\sum_jQ_j(L)e^{-\eta_jz}/z-\sum_{\sigma}c_\sigma\phi_\sigma.
+\]
+The second sum contains the other residue coordinates.
+Lemma~\ref{lem:reduction} puts $y_0$ in $R_1$.
+Its coefficient of weight $-\eta_j$ satisfies
+$Du-\eta_ju=-Q_j(L)/z+g$, with $g\in\C(z)$.
+Some $P_j\ne0$ makes $Q_j$ nonconstant. Distinct nodes have distinct
+weights; the other residue terms contribute only rational $g$.
+Lemma~\ref{lem:twisted-obstruction} excludes this equation.
+
+Now let some $h_j\ge2$, and put $\widetilde h_j=h_j-1$,
+$\widetilde h_i=h_i$ for $i\ne j$.
+The generators of $\mathcal N_{\widetilde h}$ are independent by induction.
+Adjoin $Y=G_{\eta_j,h_j}$, with
+$DY=G_{\eta_j,\widetilde h_j}/z\in\mathcal N_{\widetilde h}$.
+If $Y$ were algebraic over this field, its normalized trace would be
+$v\in\mathcal N_{\widetilde h}$ with $Dv=DY$, by
+Lemma~\ref{lem:primitive}: derivation commutes with trace, and $Y-v\in\C$.
+Formula~\eqref{eq:core-NP} at
+$\widetilde h$, with coefficient $1$ for $j$ and $0$ otherwise,
+excludes this. Thus adjoining $Y$ preserves independence.
+
+To prove \eqref{eq:core-NP} at $h$, put $J=\{j:h_j\ge2\}$.
+Put $h''_j=h_j-1$ for $j\in J$, and $h''_j=1$ otherwise.
+The independence just proved identifies
+$\mathcal N_h=\mathcal N_{h''}(Y_j:j\in J)$ as a rational function field,
+where $Y_j=G_{\eta_j,h_j}$ and $DY_j=G_{\eta_j,h''_j}/z$.
+The partials $\partial_j=\partial/\partial Y_j$ fixing
+$\mathcal N_{h''}$ commute with $D$ because every $DY_j$ lies in that field.
+If $y$ were the alleged primitive, then
+$D(\partial_jy)=P_j(L)/z=DQ_j(L)$ for a polynomial $Q_j$ with
+$Q_j'=P_j$. Since all constants are $\C$, an additive constant makes
+$\partial_jy=Q_j(L)$. Hence
+$y_0=y-\sum_{j\in J}Q_jY_j$ has every $\partial_jy_0=0$.
+A rational function with these partials zero lies in the coefficient
+field $\mathcal N_{h''}$. Differentiation gives
+\[
+\sum_{h_j=1}P_j\Phi_{-\eta_j,0}/z-
+\sum_{h_j\ge2}Q_jG_{\eta_j,h_j-1}/z.
+\]
+If a nonzero $P_j$ has $h_j=1$, it survives in the first sum.
+Otherwise some $Q_j$ in the second sum is nonconstant.
+Disjoint node indices prevent cancellation. This contradicts
+\eqref{eq:core-NP} at the strictly smaller height $h''$.
+
+Finally choose $\mathfrak S$ to contain every first-level support.
+Over $T(\Phi_\sigma:\sigma\in\mathfrak S)$, replacing each higher
+$G_{\eta,k}$ by $\Ein_k(\eta z)=L^k/k!-G_{\eta,k}$ preserves independence.
+A residue basis has degree $\rho$, and these higher coordinates add
+$\tau$. This triangular replacement has an inverse over the same field;
+reference changes affect only constants, preserving the specified primitives.
+Every remaining first-level coordinate is its affine combination
+by Lemma~\ref{lem:primitive}. This proves the degree and ideal assertions.
+\end{proof}
+
+\subsection{Groups and twists}
+Let $\ell$ be the lcm of nonresonant $2\nu_0$ denominators ($\ell=1$ if
+none), and $T'=T(z^{1/\ell})$. All constants remain $\C$.
+\begin{lemma}\label{lem:groups}
+The groups are $\SL_2$ for order-zero Bessel, have identity component
+$\SL_2$ for nonresonant Bessel, and are $\GL_2$ for nonintegral Kummer.
+\end{lemma}
+\begin{proof}
+Bessel has algebraic Wronskian. Thus $G^0\subset\SL_2$.
+The algebraic gauge $z^\nu$ and $x=icz$ reduce to (F6), which excludes
+a nonzero Liouvillian solution. If $G^0$ were solvable, the Liouvillian criterion in (F5) would make
+the Picard--Vessiot (PV) field Liouvillian \cite[Theorem~1.43, pp.~33--34]{VanDerPutSinger2002Draft}. Every solution would then be Liouvillian. Thus $G^0$ is
+not solvable. By (F15), every proper connected subgroup of $\SL_2$
+is solvable. Thus $G^0=\SL_2$. In order zero its Wronskian
+is rational. Hence $G=\SL_2$.
+For Kummer rescale $s=1$. A rational invariant line would give
+\begin{equation}\label{eq:core-Riccati}
+r'+r^2+(z^{-1}-1)r-a/z=0.
+\end{equation}
+Its nonzero finite poles have residue $1$. Zero cannot be a pole.
+At infinity $r=\epsilon+m/z+O(z^{-2})$, $\epsilon=0$ or $1$, with
+$m\ge0$ the number of finite poles. Substitution gives $m=-a$ or $a-1$,
+contrary to $a\notin\Z$. Thus $G$ is irreducible.
+At zero the indicial equation is $r^2=0$, with resonant exponents $(0,0)$.
+The local solution $J=S_a-f_aL$, with $f_a(0)=1$, changes to
+$J-2\pi i f_a$ around zero. This gives a nonidentity unipotent in $G$. The Zariski closure of its powers is connected by (F15). Thus it lies in
+$G^0$. If $G^0$ fixed a line, this
+would be its unique fixed line and normality would make it $G$-stable.
+So $G^0$ is irreducible. Its unipotent radical is normal
+\cite[\S11.21, p.~157]{Borel1991}.
+Its representation image is unipotent \cite[\S4.5, p.~85]{Borel1991}
+and has a nonzero fixed vector \cite[\S17.5, Theorem, p.~112]{Humphreys1975}.
+Normality makes this fixed space $G^0$-stable by conjugation.
+Irreducibility makes it the full solution space, so the faithful radical
+action is trivial. By (F15), $G^0\supset\SL_2$.
+For the original scale $s$, the determinant is $e^{sz}/z$.
+Its transcendence makes the determinant character of $G$ surjective
+onto $\mathbb G_m$. Together with $G^0\supset\SL_2$, this gives $G=\GL_2$.
+\end{proof}
+The formal comparison used below is Lemma~\ref{lem:formal}, proved in
+Appendix~\ref{app:foundations}.
+\begin{lemma}\label{lem:goursat}
+A subdirect Lie algebra in $\mathfrak{sl}_2\oplus\mathfrak{sl}_2$ is
+either the full sum or the graph of an inner automorphism.
+\end{lemma}
+\begin{proof}
+Its intersections with the two factors are ideals in those factors.
+If either intersection is nonzero, simplicity and surjectivity give
+the full sum. Otherwise both projections are isomorphisms. Thus the
+subalgebra is the graph of an automorphism. The elementary proof after
+(F15) shows that every automorphism of $\mathfrak{sl}_2$ is inner.
+\end{proof}
+
+\begin{lemma}\label{lem:twist}
+The joint projective Lie algebra for two blocks is proper subdirect
+exactly when their modules differ by a rank-one twist over $k$.
+The twist may be written $e^{\lambda z}z^\upsilon$.
+\end{lemma}
+\begin{proof}
+Let $G$ be the joint PV group, with solution representations $\pi_i,
+\pi_j$ on $V_i,V_j$. Lemma~\ref{lem:groups} and (F15) make the
+projective Lie algebra subdirect. If it is proper,
+Lemma~\ref{lem:goursat} writes it as the graph of $\operatorname{Ad}A$.
+The projective image of $G^0$ is closed and connected. It has the same
+Lie algebra as $\{(x,AxA^{-1}):x\in\PGL_2\}$.
+By (F15) the two connected groups are equal. Hence, on $G^0$,
+$\pi_j=\chi A\pi_iA^{-1}$ for a scalar character $\chi$.
+
+The representation on $\operatorname{Hom}(V_i,V_j)$ is therefore
+$(1\oplus\operatorname{ad})\otimes\chi$.
+Its unique one-dimensional invariant subspace is $\C A$. The traceless summand is the irreducible adjoint representation of $\mathfrak{sl}_2$.
+The full group normalizes $G^0$. Thus it preserves this unique line.
+By (F5) the line descends to a rank-one differential submodule over $k$.
+Write $Y_i'=A_iY_i$, $Y_j'=A_jY_j$. A rational basis of that line is
+an invertible matrix $B_0$ satisfying
+\[
+ B_0'+B_0A_i-A_jB_0=rB_0,\qquad
+ B_0=wY_jAY_i^{-1},\qquad w'/w=r.
+\]
+Invertibility follows from the displayed expression. Multiplication by
+a scalar solution of $v'/v=-r$ turns $B_0$ into an intertwiner.
+Thus the twist coefficient is $r_t=-r$.
+Conversely, a rank-one twist gives the same projective representation. Thus its joint projective Lie algebra is a graph.
+
+For the shape of the twist, put $w_i=\operatorname{tr}A_i
+=\sigma_i+e_i/z$ and $f=\det B_0$. Taking traces gives
+\begin{equation}\label{eq:core-twist-shape}
+2r_t=w_j-w_i-f'/f,\qquad f\in k^\times.
+\end{equation}
+Both block systems are ordinary at every finite $p\ne0$.
+Their trivial local monodromy forces the twist monodromy to be trivial,
+as in Lemma~\ref{lem:formal}. Formula~\eqref{eq:core-twist-shape}
+therefore excludes odd $\operatorname{ord}_p f$.
+Factoring $f$ gives $f=\kappa z^ng^2$, with $g\in k^\times$.
+The same formula now reads
+\[
+ r_t=\lambda+\upsilon/z-g'/g.
+\]
+A rational gauge removes $g^{-1}$, leaving the scalar solution
+$e^{\lambda z}z^\upsilon$.
+\end{proof}
+Theorem~\ref{thm:linkage} now gives exactly the classes. Choose representative
+matrices $Y_{\mathfrak c}$ with columns $(y,J=\Sigma-yL)$ or
+$(f_\nu,z^{-2\nu}f_{-\nu})$ and their derivatives. The maps give
+\begin{equation}\label{eq:core-block-transport}
+Y_i=B_iY_{\mathfrak c}w_iC_i,\quad B_i\in\GL_2(k),\ C_i\in\GL_2(\C),\quad
+w_i=e^{\lambda_i z}z^{\upsilon_i}\in T'.
+\end{equation}
+The saturation of $\Gamma$ includes each rate $\lambda_i$.
+The choice of $\ell$ includes the required algebraic powers. Thus every
+scalar $w_i$ belongs to $T'$.
+
+\subsection{The full joint group}
+Let $\mathcal U/T'$ be generated by $L$, the required $\Phi_\sigma$ and
+$G_{\eta,k}$. Primitive matrices are
+\[
+ \begin{pmatrix}1&0\\\Phi&1\end{pmatrix}.
+\]
+A node matrix has first column $(1,G_1,\ldots,G_h)^t$ and
+\begin{equation}\label{eq:core-unipotent-matrix}
+Z_{kj}=L^{k-j}/(k-j)!\ (1\le j\le k\le h),\qquad Z_{kj}=0\ (k<j).
+\end{equation}
+Its equations are $x_0'=0$, $x_1'=e^{-\eta z}x_0/z$, $x_k'=x_{k-1}/z$.
+Together with the logarithm matrix these generate $\mathcal U$, a PV field
+with connected unipotent group $\mathsf G_{u,\mathcal U}$. Put $Q=k(Y_i)$,
+$G_Q=\Gal(Q/k)$ and $\Omega=\mathcal U Q$. Over $k$, add the exponential
+and algebraic rank-one systems, and use first columns
+$(e^{\mu z},\Phi_{\mu,p})^t$ and $(e^{-\eta z},G_1,\ldots,G_h)^t$.
+They exhibit $\Omega/k$ as PV.
+
+We record explicitly the base change from $k$ to $T'$.
+The latter is PV for the exponential and algebraic rank-one systems;
+its group is a subgroup of $\mathbb G_m^d\times\mu_\ell$, hence abelian.
+For a block PV field $\mathcal P_i/k$, restriction identifies its group over
+$T'$ with $\Gal(\mathcal P_i/(\mathcal P_i\cap T'))$. This is normal in the block group
+and has abelian quotient. It therefore contains the derived group of
+the identity component. For Bessel this is $\SL_2$; for Kummer,
+every abelian quotient of $\GL_2$ factors through the determinant,
+whose kernel is $\SL_2$. Each block Wronskian lies in $T'$:
+it is a constant multiple of $1/z$, $z^{-2\nu-1}$ or $e^{sz}/z$.
+Thus the base-changed group is also contained in $\SL_2$.
+In particular, its identity component remains $\SL_2$.
+\begin{proposition}\label{prop:product}
+Consider the differential Galois group of the compositum $\Omega$ over $T'$.
+It is a direct product of the unipotent primitive group and the
+second-order factors. Each linkage class supplies one $\SL_2$ factor.
+More precisely,
+\begin{equation}\label{eq:core-product}
+\Gal(\Omega/T')=\mathsf G_{u,\mathcal U}\times\prod_{\mathfrak c}\SL_2^{(\mathfrak c)}.
+\end{equation}
+Each class factor acts through the conjugations $C_i$ in
+\eqref{eq:core-block-transport}.
+\end{proposition}
+\begin{proof}
+A detailed proof is given in Appendix~\ref{app:detailed-proofs}.
+Write $\sigma(Y_i)=Y_i\pi_i(\sigma)$ and put
+$N_{\rm ss}=\Gal(QT'/T')$. Restriction embeds $N_{\rm ss}$ in $G_Q$,
+because the entries of the $Y_i$ generate $QT'$ over $T'$. Let $\psi$
+be the projection from $\prod_i\GL_2$ to $\prod_i\PGL_2$. Its kernel
+consists of tuples of scalar matrices and is central.
+Base change supplies individual $\SL_2$ projections; class independence remains to be proved.
+
+Every differential $k$-automorphism of $QT'$ or $\Omega$ preserves $T'$. It sends
+$t_h\mapsto c_ht_h$ and $z^{1/\ell}\mapsto\zeta z^{1/\ell}$,
+where $c_h\in\C^\times$ and $\zeta^\ell=1$. This follows by taking
+derivatives of the ratios. Two such differential $k$-automorphisms commute on $T'$.
+The commutator of these differential $k$-automorphisms therefore fixes $T'$ pointwise.
+
+In \eqref{eq:core-block-transport}, the scalar $w_i$ also belongs to $Q$:
+the identity
+$w_i\mathbf1=Y_{\mathfrak c}^{-1}B_i^{-1}Y_iC_i^{-1}$ proves this.
+Its logarithmic derivative lies in $k$. Hence
+\begin{equation}\label{eq:core-character}
+ \pi_i(\sigma)=\chi_i(\sigma)C_i^{-1}\pi_{\mathfrak c}(\sigma)C_i,
+ \qquad \chi_i=\sigma(w_i)/w_i,\qquad \chi_i|_{N_{\rm ss}}=1.
+\end{equation}
+Let $P$ be the subgroup with representative coordinates in $\SL_2$
+and all other coordinates their conjugates by $C_i$. Thus
+$P\simeq\prod_{\mathfrak c}\SL_2$, and
+$\bar P:=\psi(P)\simeq\prod_{\mathfrak c}\PGL_2$. Both groups are closed
+and connected, of dimension $3\#\mathcal C$.
+Equation~\eqref{eq:core-character} gives $\psi(G_Q)\subset\bar P$.
+
+Restriction from $G_Q$ to the group of each block is onto. The field $Q$ is the compositum of their PV fields. By (F15), the identity components
+and their Lie algebras also map onto. Thus the projective Lie algebra
+$\mathfrak h$ projects onto each $\mathfrak{sl}_2$.
+Surjectivity makes each radical image a solvable ideal in a simple factor,
+hence zero. The joint inclusion is injective, so the radical vanishes
+and $\mathfrak h$ is semisimple.
+
+Decompose $\mathfrak h$ into simple summands. A nonzero projection of one summand is an ideal in $\mathfrak{sl}_2$. Hence it is all of it. The projection is injective by simplicity. Two summands cannot both
+project nontrivially to one factor, since their images commute.
+Each coordinate therefore selects exactly one summand, isomorphically.
+Every summand occurs in some coordinate, since the joint inclusion is faithful.
+Coordinates selecting the same summand form a diagonal graph, as in
+Lemma~\ref{lem:goursat}. By Lemma~\ref{lem:twist}, two such blocks are
+linked. Different classes select different summands, giving
+$\dim\mathfrak h\ge3\#\mathcal C$. The reverse inequality follows
+from $\psi(G_Q)\subset\bar P$. Equality of dimensions in the connected
+group $\bar P$, by (F15), gives
+\begin{equation}\label{eq:core-projective-group}
+ \psi(G_Q^0)=\psi(G_Q)=\bar P.
+\end{equation}
+
+We prove $N_{\rm ss}=P$ as groups, retaining finite components.
+The Wronskians listed in the base-change paragraph belong to $T'$.
+Thus $N_{\rm ss}$ has determinant one in every block, and
+\eqref{eq:core-character}
+gives $N_{\rm ss}\subset P$.
+
+The extension $QT'/k$ is PV for the block and rank-one systems.
+By (F5), restriction $\Gal(QT'/k)\to G_Q$ is onto.
+Thus any $g,h\in G_Q$ have lifts $\widetilde g,\widetilde h$.
+Their commutator fixes $T'$ because their restrictions to $T'$ commute.
+It therefore belongs to $N_{\rm ss}$, and its restriction to $Q$ is
+$[g,h]$. Hence $[g,h]\in N_{\rm ss}$ under the restriction embedding.
+This uses lifts in the full PV group, without discarding finite components.
+
+For $x,y\in P$, \eqref{eq:core-projective-group} supplies $g,h\in G_Q$ with
+$\psi(g)=\psi(x)$ and $\psi(h)=\psi(y)$.
+The factors $z_1=x^{-1}g$, $z_2=y^{-1}h$ belong to the central kernel
+of $\psi$. Thus $g=xz_1$, $h=yz_2$ and central factors cancel in
+$[x,y]=[g,h]\in N_{\rm ss}$.
+The group $\SL_2(\C)$ is generated by upper and lower elementary
+unipotents. Each upper elementary matrix is a commutator:
+\[
+ \begin{pmatrix}1&b\\0&1\end{pmatrix}
+ =\left[\begin{pmatrix}t&0\\0&t^{-1}\end{pmatrix},
+         \begin{pmatrix}1&b/(t^2-1)\\0&1\end{pmatrix}\right]
+ \qquad(t^2\ne1).
+\]
+The lower case is identical. Thus $P$ is perfect. This proves $P\subset
+N_{\rm ss}$. Both inclusions concern the full groups. Thus $N_{\rm ss}=P$ also determines every finite component.
+
+Restriction embeds $\Gal(\Omega/T')$ as a subdirect subgroup
+$H\subset \mathsf G_{u,\mathcal U}\times P$. Put
+$A_{\rm u}=\{u:(u,1)\in H\}$ and $A_P=\{g:(1,g)\in H\}$.
+Surjectivity of the two projections permits conjugation by lifts,
+showing that $A_{\rm u}\triangleleft \mathsf G_{u,\mathcal U}$ and $A_P\triangleleft P$.
+The assignment $uA_{\rm u}\mapsto gA_P$, for $(u,g)\in H$, is well defined:
+two lifts of $u$ differ by $(1,g^{-1}g')\in H$. Changing $u$ by $A_{\rm u}$
+does not change the target coset. It is onto by the projection to $P$.
+If its image is trivial, multiply by $(1,g)^{-1}\in H$ to obtain
+$(u,1)\in H$. This proves injectivity. Multiplication of lifts proves that
+it is a group isomorphism. Its source is solvable, since
+$\mathsf G_{u,\mathcal U}$ is unipotent, and its target is perfect, as a quotient
+of $P$. A solvable perfect group is trivial: its derived series is
+constant by perfectness and terminates by solvability.
+Hence $A_{\rm u}=\mathsf G_{u,\mathcal U}$,
+$A_P=P$, and the subdirect subgroup is the full product.
+\end{proof}
+
+\subsection{The logarithm and the ideal}
+Put $K^D=K_{\rm full}T'$ and let $K_{\rm sol}$ be its solvable-coordinate
+field over $T'$.
+\begin{lemma}\label{lem:stabilizer}
+For $u\in\Gal(\mathcal U/K_{\rm sol})$, put $u(L)=L+t(u)$. Then
+\begin{equation}\label{eq:core-stabilizer}
+\Gal(\Omega/K^D)=\{(u,\chi(u))\},\qquad
+\chi(u)_{\mathfrak c}=\begin{cases}
+\begin{pmatrix}1&-t(u)\\0&1\end{pmatrix},&\text{resonant},\\
+1,&\text{nonresonant}.
+\end{cases}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Use the product coordinates of Proposition~\ref{prop:product}.
+An automorphism fixing $K^D$ restricts to
+$u\in\Gal(\mathcal U/K_{\rm sol})$.
+Since $DL=1/z$, its action on $L$ is $L\mapsto L+t(u)$, with
+$t(u)\in\C$. In a resonant representative, fixing $y$ and
+$\Sigma=J+yL$ gives
+\[
+ y\longmapsto y,\qquad J\longmapsto J-t(u)y.
+\]
+In the ordered columns $(y,J)$ this is the matrix in
+\eqref{eq:core-stabilizer}. In a nonresonant representative both
+homogeneous solutions are fixed: the algebraic factor $z^{-2\nu}$
+belongs to $T'$. Its matrix is therefore the identity.
+
+Conversely, take any $u$ fixing $K_{\rm sol}$ and these class matrices.
+The product formula supplies an automorphism of $\Omega$.
+It fixes the representative coordinates by the preceding calculations.
+For a composed resonant link,
+$Qy_i=\kappa_1y_j$ and $QJ_i=\kappa_1(J_j+\theta y_j)$.
+Here $\kappa_1\in T'$ and $\theta\in\C$ are fixed. Thus subtracting
+$t(u)y_i$ is transported to subtracting $t(u)y_j$.
+Thus the same shift fixes the entire parts in every linked block.
+The nonresonant linkage coefficients belong to $T'$ and are fixed as
+well. All derivative coordinates are fixed because the automorphisms
+commute with $D$. These coordinates and $K_{\rm sol}$ generate $K^D$. This proves the converse and the stated graph.
+\end{proof}
+Projection onto $\Gal(\mathcal U/K_{\rm sol})$ is an isomorphism.
+By (F5) and Lemma~\ref{lem:tower},
+$\dim \mathsf G_{u,\mathcal U}-\dim\Gal(\mathcal U/K_{\rm sol})
+=\trdeg_{T'}K_{\rm sol}=\rho+\tau$.
+The finite algebraic extension $T'/T$ does not change this degree.
+Applying (F5) once more gives
+\begin{equation}\label{eq:core-degree}
+\trdeg_{T'}K^D=\dim \mathsf G_{u,\mathcal U}+3\#\mathcal C-
+\dim\Gal(\mathcal U/K_{\rm sol})=\rho+\tau+3\#\mathcal C.
+\end{equation}
+Algebraicity of $T'/T$ gives $\trdeg_TK_{\rm full}$, and the $d$
+independent basis exponentials give the degree over $\C(z)$.
+Over $T'$, the selected first-level basis generates the solvable
+coordinates together with the higher levels. Each selected triple
+recovers its fourth coordinate from the determinant equation.
+The regular solution has value $1$ at zero. Thus division by it in the
+function field is valid. The linkage maps recover the other blocks.
+These recovery formulas show that the selected coordinates generate
+$K^D$ over $T'$. Their number is $\rho+\tau+3\#\mathcal C$, which equals
+its transcendence degree by \eqref{eq:core-degree}. A dependent generating
+set would have smaller transcendence degree. They are therefore
+independent over $T'$. Hence they are independent over $T$.
+
+Adjoining $L$ adds the residue vector $e_{(0,0)}$.
+The same calculation increases the degree by one exactly when
+$e_{(0,0)}\notin\mathcal V_{\rm res}$. Then $L$ is transcendental over
+$K_{\rm full}$, and the selected basis remains independent over $T(L)$.
+Otherwise a constant combination of first-level coordinates has the
+residue vector of $L$. Lemma~\ref{lem:primitive} expresses their
+difference as an element of $R_0+\C$. Thus $L\in K_{\rm full}$.
+
+The coefficient recurrences give
+\begin{equation}\label{eq:core-inhomogeneous}
+\mathscr B_{c,0}S_c=2I_c',\quad \mathscr K_{s,a}\Sigma_{s,a}=2F_{s,a}'-sF_{s,a}.
+\end{equation}
+For Bessel use $4(n+1)^2c_{n+1}=c^2c_n$ and $\mathsf H_{n+1}-\mathsf H_n=1/(n+1)$. For Kummer use $c_n=(a)_ns^n/(n!)^2$,
+$(n+1)^2c_{n+1}=s(n+a)c_n$ and
+$h_{n+1}-h_n=2/(n+1)-1/(n+a)$. Direct differentiation of $yL$
+gives the same right-hand side as the corresponding normalized entire part.
+Abel's formula and $y(0)=1$, $J\sim-L$ give Wronskians $-1/z$,
+$-e^{sz}/z$. For nonresonant Bessel the series gives
+$\operatorname{wr}(f_\nu,z^{-2\nu}f_{-\nu})=-2\nu z^{-2\nu-1}$.
+These prove \eqref{eq:determinant-relations}. To obtain the common form,
+keep the first three coordinates and use a distinct shifted fourth coordinate:
+\[
+ (X,Y,S,\widetilde W)=\begin{cases}
+ (I,V,S_c,W_c-I/z),&\operatorname{Bess}(c,0),\\
+ (F,F',\Sigma,\Sigma'-F/z),&\operatorname{Kum}(s,a),\\
+ (f_\nu,f'_\nu,f_{-\nu},f'_{-\nu}-2\nu f_{-\nu}/z),
+   &\operatorname{Bess}(c,\nu)\text{ nonresonant}.
+ \end{cases}
+\]
+For Bessel, $\widetilde W=W_c-I/z$ and the raw coordinate is $W_c=S_c'$.
+The other shifts are given in the display; the last subtracted term contains
+$f_{-\nu}$. Each determinant becomes
+\begin{equation}\label{eq:core-quadric}
+X\widetilde W-YS+u/z=0,\qquad u=1,e^{sz},2\nu.
+\end{equation}
+For Bessel this is $I\widetilde W-VS_c+1/z=0$; the raw relation is
+$z(IW_c-VS_c)-I^2+1=0$.
+
+In the next lemma $W$ is an independent polynomial variable corresponding
+to the shifted coordinate $\widetilde W$.
+\begin{lemma}\label{lem:quadric}
+Let $A$ be a domain and let $v$ be a unit of $A$.
+The ring $Q_v=A[X,W,Y,S]/(XW-YS+v)$ is a free $A$-module whose
+basis consists of the monomials not divisible by $XW$.
+The natural map $A[X,Y,S]\to Q_v$ is injective.
+If $A$ is a characteristic-zero field, $Q_v$ is geometrically integral
+and has dimension three.
+\end{lemma}
+\begin{proof}
+Use lexicographic order $X>Y>S>W$. The relation is monic with leading
+monomial $XW$. Division by this monic polynomial gives unique normal forms over $A$. Thus the monomials not divisible by $XW$ form a free basis.
+In particular the monomials in $X,Y,S$ remain independent.
+Over an algebraic closure of a characteristic-zero field, a nontrivial
+factorization would have two linear factors. Their quadratic part has
+rank at most two. In contrast, $XW-YS$ has rank four.
+The polynomial is therefore geometrically irreducible, and its quotient
+is geometrically integral of dimension three.
+\end{proof}
+\begin{lemma}\label{lem:ideal}
+The generators in Theorem~\ref{thm:main} generate the full kernels of
+coordinate evaluation over $T$ and over
+$\mathscr A_{\exp}=\C(z)[\Theta^{\pm1}]$. Both kernels are prime.
+The same assertions hold over a coefficient field containing all data
+of the generators and their fundamental residue constants.
+\end{lemma}
+\begin{proof}
+A detailed proof is given in Appendix~\ref{app:detailed-proofs}.
+All displayed generators vanish on the functions. First eliminate duplicate
+and constant slots using their monic graphs. The exponential, residue and linkage generators are also graphs. Each eliminates one variable in terms of retained variables. Its coefficient on that variable is $1$.
+Successive substitution therefore gives isomorphisms of quotient rings.
+After these eliminations and the invertible fourth-coordinate shifts
+in \eqref{eq:core-quadric}, the quotient is
+\begin{equation}\label{eq:core-relation-ring}
+ T[Z_1,\ldots,Z_{\rho+\tau}]
+ \otimes_T\bigotimes_{\mathfrak c}Q_{u_{\mathfrak c}/z}.
+\end{equation}
+Here the $Z_i$ are the residue-basis and distinct higher-tower variables.
+Lemma~\ref{lem:quadric} and (F13) make this a domain of dimension
+$\rho+\tau+3\#\mathcal C$.
+Evaluation maps this quotient to the coordinate algebra, whose fraction
+field is $K_{\rm full}$. Its kernel is prime, and the image has the same
+dimension by \eqref{eq:core-degree}. If the kernel were nonzero, its prime would strictly contain the zero prime. By (F13), the quotient dimension would decrease. Thus evaluation is injective. This proves the
+ideal assertion over $T$.
+
+Over $\mathscr A_{\exp}=\C(z)[\Theta^{\pm1}]$, the identical graph eliminations are
+$\mathscr A_{\exp}$-linear, and every $u_{\mathfrak c}/z$ remains a unit. The quotient
+has the same tensor presentation over $\mathscr A_{\exp}$. The polynomial factor has
+its monomial basis, and each quadric factor has the free basis of
+Lemma~\ref{lem:quadric}. Products of these basis elements form an
+$\mathscr A_{\exp}$-basis of the tensor product.
+Write $I$ for the generated ideal and
+$B=\mathscr A_{\exp}[X]/I$ for this quotient. If a class $b\in B$ becomes
+zero in its generic fibre, some nonzero $a\in\mathscr A_{\exp}$ satisfies
+$ab=0$. Freeness forces $b=0$. Thus $B$ injects into that fibre.
+By Lemma~\ref{lem:exponential-log}, $\Theta_h\mapsto t_h$ identifies
+$\operatorname{Frac}\mathscr A_{\exp}$ with $T$. The generic fibre is
+exactly \eqref{eq:core-relation-ring}. Evaluation on it is injective by
+the preceding paragraph. Any Laurent polynomial vanishing on the functions has zero class in the generic fibre. Hence its class in $B$ is zero. It belongs to $I$. This proves that the Laurent evaluation kernel is
+exactly the stated ideal.
+The quotient embeds in a field. Thus it is a domain. Its fraction field
+has degree $d+\rho+\tau+3\#\mathcal C$ over $\C(z)$, giving the
+asserted prime dimension.
+
+For clarity, its contraction is an explicit elimination ideal. Introduce
+new variables $V_h$ and equations $\Theta_hV_h-1$. Rewrite all Laurent
+generators using $V_h$ for $\Theta_h^{-1}$, obtaining an ideal $J$ in
+$\C(z)[X,\Theta,V]$. Then
+\[
+ \ker\bigl(\C(z)[X]\longrightarrow K_{\rm coord}\bigr)
+   =J\cap\C(z)[X].
+\]
+This equality follows from the quotient isomorphism with $\mathscr A_{\exp}[X]$ and
+restriction of evaluation. Equivalently, clear Laurent denominators,
+saturate by $\prod_h\Theta_h$, and eliminate $\Theta$. Substituting listed
+exponential variables requires saturation by their product as well.
+These inverses encode the fact that every exponential is nonzero.
+
+Let $k_1$ contain all coefficients, listed constants and fundamental residue constants.
+The same free bases define the quotient over
+$\mathscr A_{\exp,k_1}=k_1(z)[\Theta^{\pm1}]$.
+The graph eliminations and monic divisions use only these coefficients.
+Thus extension to $\mathscr A_{\exp}$ sends each basis element to the identical basis
+element. As $\mathscr A_{\exp,k_1}\hookrightarrow \mathscr A_{\exp}$, this extension is injective.
+Composing with evaluation over $\mathscr A_{\exp}$ embeds the original quotient in the
+function field. Its defining ideal is therefore the contraction of the
+complex-coefficient kernel and is prime.
+
+The free variables and every triple $(X,Y,S)$ remain independent over
+$\mathscr A_{\exp,k_1}$ by the same monomial basis. In the fraction field the fourth
+coordinate is $W=(YS-u/z)/X$. The fraction field is consequently
+rational in these selected variables over $k_1(z)(\Theta)$.
+After evaluation it is $k_1(z)(t,\mathcal F)$, with degree
+$d+\rho+\tau+3\#\mathcal C$. This proves coefficient-field descent
+and the stated degree.
+
+For compatible input, Appendix~\ref{app:algorithm} points to the two
+formulas of Supplementary Section~\ref{sup:input-model}. They put the fundamental residue constants in
+$k_1$. Each chosen basis relation uses one normalization. Arbitrary
+relations are combinations of them. Each listed constant adds $X_c-c$.
+Duplicate graphs are retained before closure and in every saturation or
+contraction. Eliminating an auxiliary representative transfers its graph
+to the retained original slots by substitution.
+\end{proof}

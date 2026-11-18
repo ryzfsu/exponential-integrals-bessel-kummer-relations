@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please cite the paper by its title and author."
+type: dataset
+title: "Relations among exponential integrals, Bessel and Kummer functions"
+authors:
+  - family-names: Zhang
+    given-names: Ruiyi
+preferred-citation:
+  type: unpublished
+  title: "Relations among exponential integrals, Bessel and Kummer functions"
+  authors:
+    - family-names: Zhang
+      given-names: Ruiyi

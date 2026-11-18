@@ -1,0 +1,271 @@
+\section{Introduction}\label{sec:introduction}
+
+The transcendence degree of Siegel's $E$-functions \cite{Siegel1929}
+is preserved under specialization at nonzero algebraic ordinary points \cite{Shidlovskii1989}.
+Beukers lifts relations \cite[Theorems~1.1--1.3]{Beukers2006}
+using Andr\'e's $E$-operators \cite{Andre2000I,Andre2000II}.
+
+Parameter coincidences, Wronskians and shared logarithmic companions
+produce mixed relations. We determine their ideal, retaining normalized
+additive constants. Nonclosed lists are treated by closure, specialization and elimination below.
+
+\subsection{A first example}
+Take $c\ne0$ and the linked blocks $\operatorname{Bess}(c,0)$ and
+$\operatorname{Kum}(2c,1/2)$. They form one linkage class and leave three independent coordinates
+over $T=\C(z)(e^{cz})$ and four over $\C(z)$.
+Supplementary Section~\ref{sup:first-example} gives the maps, determinant, series and connections.
+
+\subsection{The main results}\label{subsec:normalization}
+The following data conventions define all terms in Theorem~\ref{thm:main}.
+Work over $k=\C(z)$ with $D=d/dz$ and a finite admissible coordinate list
+$\mathcal F$, including repeated input slots. Fix a simply connected
+$\Omega_{\rm an}\subset\C^\times$ avoiding the finite poles of the data,
+a point $z_*\in\Omega_{\rm an}$ and a branch $L=\log z$ there.
+All functions are meromorphic on this domain, with differential constant
+field $\C$. Set $\phi_{\mu,p}=e^{\mu(z-p)}/(z-p)$,
+$\Phi'_{\mu,p}=\phi_{\mu,p}$, $\Phi_{\mu,p}(z_*)=0$ for
+$(\mu,p)\ne(0,0)$, and $\Phi_{0,0}=L$.
+A prime on a coordinate denotes $D$; on a function of its own argument
+it denotes that derivative, so $D[f_a(sz)]=sf'_a(sz)$.
+
+The coordinate dictionary in Section~\ref{subsec:blocks} specifies five types:
+exponentials $e^{\lambda z}$; specified first-level primitives of finite sums
+$\sum_\mu q_\mu e^{\mu z}$ with $q_\mu\in\C(z)$ and arbitrary complex
+additive constants, together with the finite towers $\Ein_k(\eta z)$
+($\eta\ne0$, $1\le k\le h_\eta$) of \eqref{eq:ein-tower};
+Bessel blocks of nonzero scale $c$ and rational order, with the four
+coordinates in \eqref{eq:bessel-zero}--\eqref{eq:bessel-nonresonant};
+Kummer blocks $(F,F',\Sigma,\Sigma')$ of nonzero scale $s$ and
+$a\notin\Z$, defined by \eqref{eq:kummer-block}; and $L$.
+The integer-order Bessel coordinates use \eqref{eq:bessel-integer} and
+their derivatives; for $\nu\in\Q\setminus\Z$ the coordinates are
+$(f_{\nu,c},f'_{\nu,c},f_{-\nu,c},f'_{-\nu,c})$.
+The additional $(\mathrm{B2}^E)$ restrictions belong to the arithmetic statements.
+A \emph{closed} list contains every lower tower level
+and each second-order block's four coordinates. It adds no (B2)
+derivatives, which already lie in the exponential base.
+
+\emph{Normalization} uses \eqref{eq:bessel-integer} and
+\eqref{eq:link-order} to reduce $\nu\equiv\pm\nu_0\pmod\Z$,
+$0\le\nu_0\le1/2$. The endpoint $\nu_0=1/2$ reduces to exponentials;
+remaining second-order representatives have $0\le\nu_0<1/2$.
+Choose one scale from $\{c,-c\}$ and retain explicit expressions for the
+original coordinates. Half-order rates are $\pm c$.
+For the second-order differential modules $M_i$ of these blocks,
+linkage means $M_j\simeq M_i\otimes\Lambda$ over $k$ for rank-one
+$\Lambda$, with a twist representative $e^{\lambda z}z^\upsilon$.
+The set of linkage classes is $\mathcal C$.
+Theorem~\ref{thm:linkage} decides when two blocks are linked.
+A finitely generated $\Gamma\subset(\C,+)$ is \emph{saturated} for the
+list when it contains the listed rates, kernel rates, every $-\eta$,
+Kummer scales, half-order rates $\pm c$ and linkage twist rates.
+Choose a $\Z$-basis and put
+\begin{equation}\label{eq:exponential-field}
+\Gamma=\bigoplus_{h=1}^d\Z\lambda_h,\quad t_h=e^{\lambda_hz},\quad
+T=k(t_1,\ldots,t_d),\quad t^v=\prod t_h^{v_h}.
+\end{equation}
+The weight of $t^v$ is $\sum_hv_h\lambda_h$.
+Put $K_{\rm coord}=k(\mathcal F)$ and $K_{\rm full}=T(\mathcal F)$;
+the latter is differential for a closed list and equals $K_{\rm coord}$
+when the basis exponentials are listed.
+
+First-level coordinates are primitives with rational-exponential
+derivative, including $\Ein_1(\eta z)$. For
+$F'=\sum q_\mu e^{\mu z}$ define the finite-support vector
+\begin{equation}\label{eq:residue-vector}
+\operatorname{res}(F)=(\rho_{\mu,p}(q_\mu))_{(\mu,p)},\qquad
+\rho_{\mu,p}(q)=\Res_{z=p}e^{\mu(z-p)}q(z)\,dz.
+\end{equation}
+Here $e_{(\mu,p)}$ is the unit vector at that pair and
+$\operatorname{res}(\Phi_{\mu,p})=e^{-\mu p}e_{(\mu,p)}$. Put
+\begin{equation}\label{eq:rank-data}
+\mathcal V_{\rm res}=\Span_\C\{\operatorname{res}(F):F\text{ first-level}\},\quad\rho=\dim\mathcal V_{\rm res},
+\quad\tau=\sum_{\eta}(h_\eta-1).
+\end{equation}
+Thus $\tau$ counts distinct higher pairs $(\eta,k)$, $k\ge2$.
+For example, $\operatorname{res}(\Ein(\eta z))=e_{(0,0)}-e_{(-\eta,0)}$.
+
+Let $X=(X_q)$ index every listed input slot, including repeated coordinates
+such as $(\eta,k)$. For each repeated coordinate $q$, let
+$\operatorname{rep}(q)$ choose one representative slot. The duplicate graph
+$X_q-X_{\operatorname{rep}(q)}$ is a relation in the declared polynomial ring.
+A \emph{constant coordinate} is identically $c\in\C$, with graph $X_c-c$.
+Subscripts name coordinates, not values; generators may use coordinate names
+as variables. \emph{Selected} coordinates mean a first-level residue basis,
+all distinct higher levels and one triple per linkage class, specified in
+Section~\ref{sec:main-statement}.
+The dimension of a prime ideal means the Krull dimension of its quotient
+ring. For \emph{Laurent saturation}, clear negative powers of the
+exponential variables. Then replace the resulting ideal $J$ by
+$J:m^\infty=\{f:m^kf\in J\text{ for some }k\ge0\}$, where $m$ is
+the product of these variables. Elimination then gives relations among the listed coordinates.
+Residue constants are additive; $\mathbf c$ denotes the connection column
+of Section~\ref{sec:gamma}, and unindexed $\pi$ denotes the circle constant.
+
+\begin{theorem}\label{thm:main}
+Let $\mathcal F$ be closed and normalized as above, and let $\Gamma$
+be saturated for it. All first-level primitive kernels are rational-exponential
+functions with complex coefficients; higher tower coordinates are defined by
+$(\mathrm{B2}^\tau)$ in \eqref{eq:ein-tower}. All Bessel orders are rational.
+Bessel and Kummer scales are nonzero; Kummer first parameters are nonintegral.
+Put $r=\rho+\tau+3\#\mathcal C$. Then
+\begin{equation}\label{eq:main-degree}
+\trdeg_TK_{\rm full}=r,\qquad\trdeg_{\C(z)}K_{\rm full}=d+r.
+\end{equation}
+The second degree is that of $K_{\rm coord}$ when the basis exponentials
+are listed. The full prime relation ideal over $T$ has dimension
+$\rho+\tau+3\#\mathcal C$. Its generators include affine
+first-level residue relations and one Wronskian determinant per linkage class.
+They also include linear coordinate identities for linked blocks and listed exponentials.
+Equality graphs identify duplicate slots of every type.
+A listed constant $c$ has relation $X_c-c$.
+Half-integer Bessel coordinates have the exponential graphs of
+Section~\ref{sec:main-statement}, with $\pm c\in\Gamma$.
+These generators and a transcendence basis are given
+explicitly in Section~\ref{sec:main-statement}. Over $\C(z)$ the full
+coordinate ideal is obtained by Laurent saturation and elimination.
+\end{theorem}
+
+\begin{theorem}[Normalized linkage maps]\label{thm:linkage}
+All Kummer blocks here are ${}_1F_1(a;1;\cdot)$.
+After normalization, $0\leq\nu_0<1/2$. For second-order blocks, a rank-one
+twist is possible precisely when
+\begin{align}
+ \operatorname{Bess}(c,\nu_0)&\sim\operatorname{Bess}(c',\nu'_0)
+ &&\Longleftrightarrow c'^2=c^2,\quad\nu'_0=\nu_0,\label{eq:link-bb}\\
+ \operatorname{Kum}(s,a)&\sim\operatorname{Kum}(s',a')
+ &&\Longleftrightarrow
+ \begin{cases}s'=s,\ a'-a\in\Z,\\s'=-s,\ a'+a\in\Z,\end{cases}\label{eq:link-kk}\\
+ \operatorname{Bess}(c,\nu_0)&\sim\operatorname{Kum}(s,a)
+ &&\Longleftrightarrow\nu_0=0,\ s=\pm2c,\ a\in\tfrac12+\Z.\label{eq:link-bk}
+\end{align}
+A nonresonant Bessel block is not linked to a resonant one. Every such
+twist has a representative $e^{\lambda z}z^\upsilon$ after a rational gauge.
+Its rate is $0$ for Bessel links
+and contiguity, $\pm s$ for the Kummer transformation, and $\pm c$
+for the mixed link. Its power satisfies $\upsilon\in\Z$ in resonant
+classes, $\upsilon\equiv0$ or $\pm2\nu_0\pmod\Z$ otherwise. Here $\upsilon$
+compares the original blocks; normalized representatives have
+$\upsilon\equiv0\pmod\Z$.
+Section~\ref{sec:linkage} gives explicit identities for regular solutions,
+normalized entire parts (E-parts) and derivative coordinates.
+Their compositions obey \eqref{eq:link-composition-convention} and
+\eqref{eq:link-composed}. That section fixes the constants and orientation rules.
+\end{theorem}
+The equivalences underlying this statement are due to Gorelov
+\cite[Lemmas~12 and~14, p.~7]{Gorelov2021}; our contribution is the explicit
+normalized maps.
+
+Gorelov's rescaled, exponentially twisted identity uses
+${}_1F_1(\nu+\tfrac12;2\nu+1;\cdot)$ \cite[(3), p.~260]{Gorelov2019}.
+Its second parameter is one only at $\nu=0$.
+Appendix~\ref{app:algorithm} refers to Supplementary Section~\ref{sup:input-model}
+for generators, maps and constants.
+
+Use Section~\ref{sec:setup}'s $E$-coordinates and $(\mathrm{B2}^E)$ primitives,
+with bounds in Appendix~\ref{app:arithmetic}. Let $X$ index coordinates.
+Let $\rho^E$ be the primitive residue rank, including level-one exponential integrals. Put
+$\mathcal E=\operatorname{acl}_{\C}\Qbar(e^\beta:\beta\in\Qbar)$,
+where algebraic closure is taken within $\C$.
+Section~\ref{sec:main-statement} selects coordinates; $y_{\mathfrak c}$ is
+the representative's regular first coordinate.
+Independent invertible indeterminates $\Theta=(\Theta_1,\ldots,\Theta_d)$
+represent basis exponentials; put $R_\Theta=\Qbar[\Theta^{\pm1}]$.
+Types 2--4 are Section~\ref{sec:main-statement}'s affine residue relations,
+determinants and linkage identities.
+
+\begin{theorem}\label{thm:values}
+Let $\mathcal F$ be closed and normalized, with $\Gamma$ saturated.
+All rates, nodes, scales and listed constants are algebraic.
+All Bessel/Kummer parameters are rational.
+The coordinates are $E$-coordinates, apart from integer-order Bessel blocks
+reduced to order zero by Lemma~\ref{lem:integer}.
+For $\alpha\in\Qbar^\times$, put $X(\alpha)=(q(\alpha))_{q\in\mathcal F}$
+and specialize only
+$z=\alpha$ in Theorem~\ref{thm:main}'s generators over
+$\Qbar[z^{\pm1}][\Theta^{\pm1}]$, obtaining $\mathfrak P_\alpha$ in
+$R_\Theta[X]$. Suppose the basis exponentials are listed.
+Define the evaluation map
+\[
+ \operatorname{ev}_\alpha:R_\Theta[X]\longrightarrow\C,
+ \qquad \Theta_h\longmapsto e^{\lambda_h\alpha},\quad
+ X_q\longmapsto q(\alpha).
+\]
+Let $I_\alpha=\ker(\operatorname{ev}_\alpha)$. Then
+\begin{equation}\label{eq:value-ideal}
+I_\alpha=\mathfrak P_\alpha,\qquad
+\trdeg_{\Qbar}\Qbar(X(\alpha))=d+\rho^E+\tau+3\#\mathcal C.
+\end{equation}\equationalias{eq:intro-value-degree}
+The selected coordinates and basis exponentials are independent.
+In particular,
+\begin{equation}\label{eq:value-nonzero}
+y_{\mathfrak c}(\alpha)\ne0.
+\end{equation}
+For several algebraic evaluation points $\alpha_i\ne0$, the same
+assertions apply to the combined list of functions $q_i(\alpha_i z)$
+at $z=1$, after closure, normalization and saturation. Nodes, scales
+and rates are rescaled, derivative factors are retained, and all
+selection conditions are tested on this combined list.
+\end{theorem}
+
+\begin{corollary}\label{cor:value-base}
+Under the hypotheses of Theorem~\ref{thm:values}, write $X_{\rm ne}$ for the variables of nonexponential coordinates.
+For these coordinates,
+\begin{equation}\label{eq:value-exponential-base}
+\trdeg_{\mathcal E}\mathcal E(X_{\rm ne}(\alpha))
+=\rho^E+\tau+3\#\mathcal C.
+\end{equation}
+The ideal in $\mathcal E[X_{\rm ne}]$ has the nonexponential generators
+of $\mathfrak P_\alpha$, with $\Theta_h=e^{\lambda_h\alpha}$.
+These include types 2--4 and the half-integer exponential graphs,
+together with their derivative and order-shift graphs.
+They also include all duplicate graphs and $X_c-c$ for listed algebraic constants.
+Equivalently, extend the full ideal to $\mathcal E[X]$ under this
+substitution, then contract to $\mathcal E[X_{\rm ne}]$.
+The selected values are independent over $\mathcal E$.
+At $\alpha=1$, choose first-level values with jointly independent residue vectors.
+Add distinct higher levels $(\eta,k)$ and one selected triple per class.
+Every finite subcollection is independent over $\mathcal E$.
+The degree and ideal assertions apply to each finite closed sublist.
+For mixed points $q_i(\alpha_i)$, apply the conditions to the combined
+rescaled list $q_i(\alpha_i z)$.
+Require independent residues, distinct higher pairs $(\eta\alpha_i,k)$
+and one selected triple per class.
+Conditions on the unrescaled lists alone do not suffice.
+\end{corollary}
+
+For nonclosed lists, close, normalize, adjoin basis exponentials, saturate,
+specialize and eliminate auxiliary coordinates, retaining duplicate/constant graphs.
+The enlarged list of values need not have the same transcendence degree as the original list.
+
+Theorem~\ref{thm:measure} in Appendix~\ref{sec:measure} gives a linear independence estimate
+for $1,e,\allowbreak e^{-1},\Ein(1)$ with evaluated constants.
+\setcounter{theorem}{4}
+Our $H^{-60}/12$ estimate is weaker than the classical one
+and applies for $H\ge H_0$.
+Supplementary Section~\ref{sup:measure-comparison} compares the classical exponent and
+effectiveness and gives a cruder bound for $1\le H<H_0$.
+
+Theorem~\ref{thm:connection} gives a multi-node, mixed-family bound over
+$\mathcal E$ and the regular-value base $B$.
+The one-point consequence over the full $\mathcal E$ is known
+\cite[Ch.~7, \S1, Theorem~1, pp.~232--233]{Shidlovskii1989};
+Supplementary Section~\ref{sup:classical-comparison} gives the finite-rate reduction and distinguishes
+Mahler's announcement from Rivoal's proof.
+We claim no novelty for the mixed formulation over $B$.
+Section~\ref{sec:gamma} states the bound and cancellation limitations.
+
+\subsection{Relation to earlier work}
+For primitive and homogeneous antecedents see Supplementary Section~\ref{sup:classical-comparison} and Appendix~\ref{app:gorelov}
+\cite{Ostrowski1946,Kolchin1973,BBH1988,Gorelov2021}.
+Mahler also proved that $\pi Y_0(2)/(2J_0(2))-\gamma$ is transcendental
+\cite[Theorem~3 and its consequence, pp.~169--170]{Mahler1968},
+a precedent for the Bessel connection row.
+Fischler--Rivoal give a general relation-ideal algorithm
+\cite[Theorem~4(i)--(ii), pp.~2--3 of the arXiv version]{FischlerRivoal2019}.
+Supplementary Section~\ref{sup:classical-comparison} compares the regular families,
+their normalizations and the restricted inhomogeneous results.
+
+Twisted residues, integration and $\SL_2$ factors determine the pointwise
+stabilizer of the coordinate field (Lemma~\ref{lem:stabilizer}).
+Integral quotients and equal dimensions then identify the full ideals.

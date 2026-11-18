@@ -1,0 +1,108 @@
+SYMPY 1.14.0
+FIELD QQ(z); all constants in N1 generators are rational; base change to C(z) is allowed
+ORDER lex; earlier variables are larger
+VARIABLES b1_I,b1_V,b1_S,b1_W,kh_I,kh_V,kh_S,kh_W,kp_I,kp_V,kp_S,kp_W,kc_I,kc_V,kc_S,kc_W,b0_W,b0_I,b0_V,b0_S,bi_W,bi_I,bi_V,bi_S,bn_W,bn_I,bn_V,bn_S,km_W,km_I,km_V,km_S,k2_W,k2_I,k2_V,k2_S,e,E1,E2,E3,Eminus2,FE
+INPUT_GOOD count= 21
+g01 = -b0_V + b1_I
+g02 = -b0_I + b0_V/z + b1_V
+g03 = b0_I/z - b0_W + b1_S
+g04 = -b0_I/z**2 - b0_S - b0_V/z + b0_W/z + b1_W
+g05 = -b0_I*e + kh_I
+g06 = -b0_I*e - b0_V*e + kh_V
+g07 = -b0_S*e + kh_S
+g08 = -b0_S*e - b0_W*e + kh_W
+g09 = -e*km_I + kp_I
+g10 = -e*km_I - e*km_V + kp_V
+g11 = -e*km_S + kp_S
+g12 = -e*km_S - e*km_W + kp_W
+g13 = -3*e*km_I*z - e*km_I - 3*e*km_V*z + kc_I
+g14 = -3*e*km_I*z - 2*e*km_I - 3*e*km_V*z - e*km_V + kc_V
+g15 = -9*e*km_I*z - 3*e*km_S*z - e*km_S - 9*e*km_V*z - 3*e*km_W*z + kc_S
+g16 = -9*e*km_I*z - 6*e*km_I - 3*e*km_S*z - 2*e*km_S - 9*e*km_V*z - 6*e*km_V - 3*e*km_W*z - e*km_W + kc_W
+g17 = -b0_I**2 + z*(b0_I*b0_W - b0_S*b0_V) + 1
+g18 = -bi_I**2 + z*(bi_I*bi_W - bi_S*bi_V) + 1
+g19 = -2*bn_I*bn_S/3 + z*(bn_I*bn_W - bn_S*bn_V) + 2/3
+g20 = e*(-km_I**2 + z*(km_I*km_W - km_S*km_V)) + 1
+g21 = e**2 - k2_I**2 + z*(k2_I*k2_W - k2_S*k2_V)
+REDUCED_GB_GOOD count= 21
+GB01 = -b0_V + b1_I ; LM=b1_I
+GB02 = -b0_I + b0_V/z + b1_V ; LM=b1_V
+GB03 = b0_I/z - b0_W + b1_S ; LM=b1_S
+GB04 = -b0_I/z**2 - b0_S - b0_V/z + b0_W/z + b1_W ; LM=b1_W
+GB05 = -b0_I*e + kh_I ; LM=kh_I
+GB06 = -b0_I*e - b0_V*e + kh_V ; LM=kh_V
+GB07 = -b0_S*e + kh_S ; LM=kh_S
+GB08 = -b0_S*e - b0_W*e + kh_W ; LM=kh_W
+GB09 = -e*km_I + kp_I ; LM=kp_I
+GB10 = -e*km_I - e*km_V + kp_V ; LM=kp_V
+GB11 = -e*km_S + kp_S ; LM=kp_S
+GB12 = -e*km_S - e*km_W + kp_W ; LM=kp_W
+GB13 = e*km_I*(-3*z - 1) - 3*e*km_V*z + kc_I ; LM=kc_I
+GB14 = e*km_I*(-3*z - 2) + e*km_V*(-3*z - 1) + kc_V ; LM=kc_V
+GB15 = -9*e*km_I*z + e*km_S*(-3*z - 1) - 9*e*km_V*z - 3*e*km_W*z + kc_S ; LM=kc_S
+GB16 = e*km_I*(-9*z - 6) + e*km_S*(-3*z - 2) + e*km_V*(-9*z - 6) + e*km_W*(-3*z - 1) + kc_W ; LM=kc_W
+GB17 = -b0_I**2/z + b0_I*b0_W - b0_S*b0_V + 1/z ; LM=b0_I*b0_W
+GB18 = -bi_I**2/z + bi_I*bi_W - bi_S*bi_V + 1/z ; LM=bi_I*bi_W
+GB19 = -2*bn_I*bn_S/(3*z) + bn_I*bn_W - bn_S*bn_V + 2/(3*z) ; LM=bn_I*bn_W
+GB20 = -e*km_I**2/z + e*km_I*km_W - e*km_S*km_V + 1/z ; LM=e*km_I*km_W
+GB21 = e**2/z - k2_I**2/z + k2_I*k2_W - k2_S*k2_V ; LM=k2_I*k2_W
+INPUT_REDUCES_TO_ZERO True
+PAIRWISE_COPRIME_LEADING_MONOMIALS True
+ALL_210_S_POLYNOMIALS_REDUCE_TO_ZERO True
+E_UNIT_CERTIFICATE e*(-q(km)) = 1 mod I; remainder= 0
+GOOD_SATURATION_GB_EQUALS_GOOD_GB True
+INPUT_ALTERNATIVE count= 21
+a01 = -b0_V + b1_I
+a02 = -b0_I + b0_V/z + b1_V
+a03 = b0_I/z - b0_W + b1_S
+a04 = -b0_I/z**2 - b0_S - b0_V/z + b0_W/z + b1_W
+a05 = -b0_I*e + kh_I
+a06 = -b0_I*e - b0_V*e + kh_V
+a07 = -b0_S*e + kh_S
+a08 = -b0_S*e - b0_W*e + kh_W
+a09 = kc_I - kp_I - 3*kp_V*z
+a10 = kc_V - kp_I - 3*kp_V*z - kp_V
+a11 = kc_S - kp_S - 9*kp_V*z - 3*kp_W*z
+a12 = kc_W - kp_S - 9*kp_V*z - 6*kp_V - 3*kp_W*z - kp_W
+a13 = e*km_I - kp_I
+a14 = e*km_V + kp_I - kp_V
+a15 = e*km_S - kp_S
+a16 = e*km_W + kp_S - kp_W
+a17 = -b0_I**2 + z*(b0_I*b0_W - b0_S*b0_V) + 1
+a18 = -bi_I**2 + z*(bi_I*bi_W - bi_S*bi_V) + 1
+a19 = -2*bn_I*bn_S/3 + z*(bn_I*bn_W - bn_S*bn_V) + 2/3
+a20 = e - kp_I**2 + z*(kp_I*kp_W - kp_S*kp_V)
+a21 = e**2 - k2_I**2 + z*(k2_I*k2_W - k2_S*k2_V)
+ALTERNATIVE_GB count= 21
+ALTERNATIVE_GB_DIFF_FROM_GOOD
+-e**2*km_I**2/z + e**2*km_I*km_W - e**2*km_S*km_V + e/z
+ALTERNATIVE_SATURATION_EQUALS_GOOD True
+ALTERNATIVE_GOOD_CERTIFICATE_REMAINDER -e*km_I**2 + e*km_I*km_W*z - e*km_S*km_V*z + 1
+ALT_ZERO_DIVISOR_PRODUCT_REMAINDER 0
+ALT_E_REMAINDER e
+EXTRA_COMPONENT_GB count= 21
+Z0 -b0_V + b1_I
+Z0 -b0_I + b0_V/z + b1_V
+Z0 b0_I/z - b0_W + b1_S
+Z0 -b0_I/z**2 - b0_S - b0_V/z + b0_W/z + b1_W
+Z0 kh_I
+Z0 kh_V
+Z0 kh_S
+Z0 kh_W
+Z0 kp_I
+Z0 kp_V
+Z0 kp_S
+Z0 kp_W
+Z0 kc_I
+Z0 kc_V
+Z0 kc_S
+Z0 kc_W
+Z0 -b0_I**2/z + b0_I*b0_W - b0_S*b0_V + 1/z
+Z0 -bi_I**2/z + bi_I*bi_W - bi_S*bi_V + 1/z
+Z0 -2*bn_I*bn_S/(3*z) + bn_I*bn_W - bn_S*bn_V + 2/(3*z)
+Z0 -k2_I**2/z + k2_I*k2_W - k2_S*k2_V
+Z0 e
+ALTERNATIVE_EQUALS_INTERSECTION_OF_GOOD_AND_ZERO_COMPONENT True
+N3_ELIMINATION_EQUALS_MINOR_IDEAL True
+N3_REDUCED_GB [A*U + A*V - B*U, -A*P + C*U, A*P - B*P + C*V]
+ALL_ASSERTIONS_PASSED

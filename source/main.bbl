@@ -1,0 +1,214 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{10}
+
+\bibitem{AdamczewskiFaverjon2026}
+Boris Adamczewski and Colin Faverjon, \emph{The {Siegel--Shidlovskii} method
+  revisited}, Preprint, arXiv:2611.02907v1, 2026,
+  \url{https://doi.org/10.48550/arXiv.2611.02907}.
+
+\bibitem{Andre2000I}
+Yves Andr{\'e}, \emph{S{\'e}ries {Gevrey} de type arithm{\'e}tique, {I}.
+  {Th{\'e}or{\`e}mes} de puret{\'e} et de dualit{\'e}}, Ann. of Math. (2)
+  \textbf{151} (2000), no.~2, 705--740, \url{https://doi.org/10.2307/121045}.
+
+\bibitem{Andre2000II}
+\bysame, \emph{S{\'e}ries {Gevrey} de type arithm{\'e}tique, {II}.
+  {Transcendance} sans transcendance}, Ann. of Math. (2) \textbf{151} (2000),
+  no.~2, 741--756, \url{https://doi.org/10.2307/121046}.
+
+\bibitem{BeckerWeispfenning1993}
+Thomas Becker and Volker Weispfenning, \emph{Gr{\"o}bner bases: A computational
+  approach to commutative algebra}, Graduate Texts in Mathematics, vol. 141,
+  Springer, New York, 1993, In cooperation with Heinz Kredel.
+  \url{https://doi.org/10.1007/978-1-4612-0913-3}.
+
+\bibitem{Belogrivov1970}
+I.~I. Belogrivov, \emph{Transcendence and algebraic independence of the values
+  of some hypergeometric {$E$}-functions}, Math. USSR-Sb. \textbf{11} (1970),
+  no.~3, 355--376, \url{https://doi.org/10.1070/SM1970v011n03ABEH002073}.
+
+\bibitem{Belogrivov1971}
+\bysame, \emph{On transcendence and algebraic independence of the values of
+  {Kummer}'s functions}, Siberian Math. J. \textbf{12} (1971), no.~5, 690--705,
+  \url{https://doi.org/10.1007/BF00966507}.
+
+\bibitem{Belogrivov1973}
+\bysame, \emph{Transcendence and algebraic independence of the values of
+  {$E$}-functions of one class}, Siberian Math. J. \textbf{14} (1973), no.~1,
+  10--22, \url{https://doi.org/10.1007/BF00967261}.
+
+\bibitem{BertrandBeukers1985}
+Daniel Bertrand and Frits Beukers, \emph{{\'E}quations diff{\'e}rentielles
+  lin{\'e}aires et majorations de multiplicit{\'e}s}, Ann. Sci. {\'E}cole Norm.
+  Sup. (4) \textbf{18} (1985), no.~1, 181--192,
+  \url{https://doi.org/10.24033/asens.1488}.
+
+\bibitem{BertrandChirskiiYebbou2004}
+Daniel Bertrand, Vladimir Chirskii, and Johan Yebbou, \emph{Effective estimates
+  for global relations on {Euler}-type series}, Ann. Fac. Sci. Toulouse Math.
+  (6) \textbf{13} (2004), no.~2, 241--260,
+  \url{https://doi.org/10.5802/afst.1069}.
+
+\bibitem{Beukers2006}
+Frits Beukers, \emph{A refined version of the {Siegel--Shidlovskii} theorem},
+  Ann. of Math. (2) \textbf{163} (2006), no.~1, 369--379,
+  \url{https://doi.org/10.4007/annals.2006.163.369}.
+
+\bibitem{BBH1988}
+Frits Beukers, W.~Dale Brownawell, and Gert Heckman, \emph{{Siegel} normality},
+  Ann. of Math. (2) \textbf{127} (1988), no.~2, 279--308,
+  \url{https://doi.org/10.2307/2007054}.
+
+\bibitem{Borel1991}
+Armand Borel, \emph{Linear algebraic groups}, 2nd enlarged ed., Graduate Texts
+  in Mathematics, vol. 126, Springer, New York, 1991,
+  \url{https://doi.org/10.1007/978-1-4612-0941-6}.
+
+\bibitem{Bundschuh1979}
+Peter Bundschuh, \emph{Zwei {Bemerkungen} {\"u}ber transzendente {Zahlen}},
+  Monatshefte f{\"u}r Mathematik \textbf{88} (1979), 293--304,
+  \url{https://doi.org/10.1007/BF01534248}.
+
+\bibitem{Cohen1993}
+Henri Cohen, \emph{A course in computational algebraic number theory}, Graduate
+  Texts in Mathematics, vol. 138, Springer, Berlin, 1993,
+  \url{https://doi.org/10.1007/978-3-662-02945-9}.
+
+\bibitem{FeldmanNesterenko1998}
+N.~I. Fel'dman and Yu.~V. Nesterenko, \emph{Transcendental numbers},
+  Encyclopaedia of Mathematical Sciences, vol.~44, Springer, 1998, Number
+  Theory IV; translated by N. Koblitz.
+
+\bibitem{FischlerRivoal2016}
+St{\'e}phane Fischler and Tanguy Rivoal, \emph{Arithmetic theory of
+  {$E$}-operators}, Journal de l'{\'E}cole polytechnique -- Math{\'e}matiques
+  \textbf{3} (2016), 31--65, \url{https://doi.org/10.5802/jep.28}.
+
+\bibitem{FischlerRivoal2019}
+\bysame, \emph{Effective algebraic independence of values of {$E$}-functions},
+  Math. Z. \textbf{305} (2023), no.~3, 48,
+  \url{https://doi.org/10.1007/s00209-023-03373-9}; the arXiv version is
+  \url{https://arxiv.org/abs/1906.05589v1}.
+
+\bibitem{FischlerRivoal2024}
+\bysame, \emph{Values of {$E$}-functions are not {Liouville} numbers}, J.
+  {\'E}c. polytech. Math. \textbf{11} (2024), 1--18,
+  \url{https://doi.org/10.5802/jep.249}.
+
+\bibitem{Galochkin1968}
+A.~I. Galochkin, \emph{Estimate of the conjugate transcendence measure for the
+  values of {$E$}-functions}, Math. Notes \textbf{3} (1968), 240--246,
+  \url{https://doi.org/10.1007/BF01159938}.
+
+\bibitem{Gorelov2016}
+V.~A. Gorelov, \emph{On the algebraic properties of solutions of inhomogeneous
+  hypergeometric equations}, Math. Notes \textbf{99} (2016), no.~5--6,
+  663--675, \url{https://doi.org/10.1134/S0001434616050059}.
+
+\bibitem{Gorelov2019}
+\bysame, \emph{On algebraic identities between solution matrices of {Bessel}'s
+  and {Kummer}'s equations}, Sib. \`Elektron. Mat. Izv. \textbf{16} (2019),
+  258--262, \url{https://doi.org/10.33048/semi.2019.16.017}.
+
+\bibitem{Gorelov2020}
+\bysame, \emph{On algebraic identities between solution matrices of generalized
+  hypergeometric equations}, Chebyshevskii Sb. \textbf{21} (2020), no.~1,
+  135--144, \url{https://doi.org/10.22405/2226-8383-2020-21-1-135-144}.
+
+\bibitem{Gorelov2021}
+\bysame, \emph{On algebraic independence of solutions of generalized
+  hypergeometric equations}, Axioms \textbf{10} (2021), no.~4, 289,
+  \url{https://doi.org/10.3390/axioms10040289}.
+
+\bibitem{Gorelov2025}
+\bysame, \emph{On algebraic properties of functions related to hypergeometric
+  functions}, Math. Notes \textbf{117} (2025), no.~3, 383--391,
+  \url{https://doi.org/10.1134/S0001434625030046}.
+
+\bibitem{EGAIV2}
+Alexander Grothendieck, \emph{{\'E}l{\'e}ments de g{\'e}om{\'e}trie
+  alg{\'e}brique. {IV}. {{\'E}tude} locale des sch{\'e}mas et des morphismes de
+  sch{\'e}mas. {II}}, Publ. Math. IH{\'E}S \textbf{24} (1965), 5--231,
+  \url{https://doi.org/10.1007/BF02684322}.
+
+\bibitem{Humphreys1975}
+James~E. Humphreys, \emph{Linear algebraic groups}, Graduate Texts in
+  Mathematics, vol.~21, Springer, New York, 1975, Corrected fourth printing,
+  1995. \url{https://doi.org/10.1007/978-1-4684-9443-3}.
+
+\bibitem{Kolchin1973}
+Ellis~R. Kolchin, \emph{Differential algebra and algebraic groups}, Pure and
+  Applied Mathematics, vol.~54, Academic Press, New York, 1973.
+
+\bibitem{Kovacic1986}
+Jerald~J. Kovacic, \emph{An algorithm for solving second order linear
+  homogeneous differential equations}, J. Symbolic Comput. \textbf{2} (1986),
+  no.~1, 3--43, \url{https://doi.org/10.1016/S0747-7171(86)80010-4}.
+
+\bibitem{Mahler1968}
+Kurt Mahler, \emph{Applications of a theorem by {A. B. Shidlovski}}, Proc. Roy.
+  Soc. London Ser. A \textbf{305} (1968), no.~1481, 149--173,
+  \url{https://doi.org/10.1098/rspa.1968.0111}.
+
+\bibitem{Matsumura1989}
+Hideyuki Matsumura, \emph{Commutative ring theory}, Cambridge Studies in
+  Advanced Mathematics, vol.~8, Cambridge University Press, Cambridge, 1987,
+  \url{https://doi.org/10.1017/CBO9781139171762}.
+
+\bibitem{MurtySaradha2007}
+M.~Ram Murty and N.~Saradha, \emph{Transcendental values of the digamma
+  function}, Journal of Number Theory \textbf{125} (2007), 298--318,
+  \url{https://doi.org/10.1016/j.jnt.2006.09.017}.
+
+\bibitem{DLMF}
+\emph{{NIST Digital Library of Mathematical Functions}},
+  \url{https://dlmf.nist.gov/}, 2026, Release 1.2.8, September 15, 2026;
+  F.~W.~J. Olver et al., eds.
+
+\bibitem{Ostrowski1946}
+Alexandre Ostrowski, \emph{Sur les relations alg{\'e}briques entre les
+  int{\'e}grales ind{\'e}finies}, Acta Math. \textbf{78} (1946), 315--318,
+  \url{https://doi.org/10.1007/BF02421605}.
+
+\bibitem{Powers2026}
+Michael~R. Powers, \emph{Transcendence results for {$\Gamma^{(n)}(1)$} and
+  related sequences of generalized constants}, Preprint, arXiv:2511.01849v7,
+  2026, \url{https://doi.org/10.48550/arXiv.2511.01849}.
+
+\bibitem{Rivoal2012}
+Tanguy Rivoal, \emph{On the arithmetic nature of the values of the {Gamma}
+  function, {Euler}'s constant and {Gompertz}'s constant}, Michigan Math. J.
+  \textbf{61} (2012), 239--254, \url{https://doi.org/10.1307/mmj/1339011525};
+  author manuscript dated March 5, 2011,
+  \url{https://rivoal.perso.math.cnrs.fr/articles/gammater.pdf}.
+
+\bibitem{Shidlovskii1989}
+Andrei~B. Shidlovskii, \emph{Transcendental numbers}, De Gruyter Studies in
+  Mathematics, vol.~12, Walter de Gruyter, Berlin, 1989, Translated by Neal
+  Koblitz from the 1987 Russian original.
+  \url{https://doi.org/10.1515/9783110889055}.
+
+\bibitem{Siegel1929}
+Carl~Ludwig Siegel, \emph{{\"U}ber einige {Anwendungen} diophantischer
+  {Approximationen}}, Abh. Preuss. Akad. Wiss. Phys.-Math. Kl. (1929), no.~1,
+  1--70, Reprinted in C. L. Siegel, On Some Applications of Diophantine
+  Approximations, Edizioni della Normale, 2014, pp. 81--138,
+  \url{https://doi.org/10.1007/978-88-7642-520-2_2}.
+
+\bibitem{VanDerPutSinger2002Draft}
+Marius van~der Put and Michael~F. Singer, \emph{Galois theory of linear
+  differential equations}, July draft, 2002,
+  \url{https://singer.math.ncsu.edu/papers/dbook2.pdf}.
+
+\bibitem{VanDerPutSinger2003}
+\bysame, \emph{Galois theory of linear differential equations}, Grundlehren der
+  mathematischen Wissenschaften, vol. 328, Springer, Berlin, 2003,
+  \url{https://doi.org/10.1007/978-3-642-55750-7}.
+
+\end{thebibliography}

@@ -1,0 +1,62 @@
+\section{The degree and the relation ideal}\label{sec:main-statement}
+Put $r=\rho+\tau+3\#\mathcal C$, as in Theorem~\ref{thm:main}.
+A transcendence basis contains a first-level residue basis.
+It also contains all distinct levels $(\eta,k)$ with $k\ge2$.
+For each class it contains one triple:
+$(I_c,V_c,S_c)$, $(F_{s,a},F'_{s,a},\Sigma_{s,a})$, or
+$(f_{\nu,c},f'_{\nu,c},f_{-\nu,c})$. It stays independent over $T(L)$
+when $e_{(0,0)}\notin\mathcal V_{\rm res}$. Then $L$ is transcendental over
+$K_{\rm full}$. Otherwise $L\in K_{\rm full}$.
+
+Use the coordinate variables defined before Theorem~\ref{thm:main}.
+The full prime ideal $\mathfrak p\subset T[X]$ has dimension $r$.
+Its generators are:
+\begin{enumerate}\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}
+\item $X_e-t^{v_e}$ for listed exponentials of rate $\sum(v_e)_h\lambda_h$;
+\item for nonbasis first-level $F_j$,
+\begin{equation}\label{eq:residue-relations}
+F_j-\sum_i\kappa_{ji}F_i-r_j-c_j,\quad
+\operatorname{res}(F_j)=\sum_i\kappa_{ji}\operatorname{res}(F_i),\quad r_j\in\C(z)[t^{\pm1}],\ c_j\in\C;
+\end{equation}
+\item one representative determinant,
+\begin{equation}\label{eq:determinant-relations}
+\begin{array}{ll}
+\operatorname{Bess}(c,0):&z(IW-VS)-I^2+1,\\
+\operatorname{Kum}(s,a):&z(F\Sigma'-F'\Sigma)-F^2+e^{sz},\\
+\operatorname{Bess}(c,\nu):&z(f_\nu f'_{-\nu}-f'_\nu f_{-\nu})-2\nu f_\nu f_{-\nu}+2\nu;
+\end{array}
+\end{equation}
+\item every nonrepresentative coordinate minus its $T$-linear representative
+expression from Theorem~\ref{thm:linkage} and derivatives. The last determinant
+uses its own nonresonant representative order. \end{enumerate}
+Include $X_q-X_{\operatorname{rep}(q)}$ for every duplicate slot of any coordinate type.
+For each listed constant, include $X_c-c$.
+These monic graphs eliminate duplicate and constant slots.
+The degree is unchanged. Only distinct higher levels remain free.
+The data definitions preceding Theorem~\ref{thm:main} define $\operatorname{rep}$.
+For half-integer orders, add the exponential graphs ($\pm c\in\Gamma$)
+\[
+ X_{f_{1/2,c}}-\frac{\sinh(cz)}{cz},\qquad
+ X_{f_{-1/2,c}}-\cosh(cz),
+\]
+and add their derivatives and order shifts from \eqref{eq:link-order}.
+Write $\sinh,\cosh$ as Laurent polynomials in the basis exponentials.
+
+For the Laurent form, replace $t$ by $\Theta$ in all generators.
+Work over $\mathscr A_{\exp}=\C(z)[\Theta^{\pm1}]$.
+The generated prime ideal is exactly
+$\mathfrak P=\ker(\mathscr A_{\exp}[X]\to K_{\rm full})$ under $\Theta_h\mapsto t_h$,
+of dimension $d+r$. \mbox{Its} contraction to $\C(z)[X]$ is the full coordinate ideal.
+Laurent saturation and elimination compute it, including exponential toric relations.
+To replace $\Theta$-monomials by listed exponentials, first clear negative powers.
+Then saturate by their product. Let $k_1$ be any field containing
+the data, listed constants and fundamental $c_j$.
+The same generators give $\mathfrak P\cap k_1(z)[\Theta^{\pm1}][X]$.
+This ideal is prime of dimension $d+r$.
+The corresponding degree is $\trdeg_{k_1(z)}k_1(z)(t,\mathcal F)=d+r$.
+For the normalization-compatible input of Appendix~\ref{app:algorithm},
+the fundamental constants $c_j$ belong to $k_1$.
+Under Theorem~\ref{thm:values}, first-level coordinates vanish at zero.
+The generators lie in
+$\Qbar[z^{\pm1}][\Theta^{\pm1}][X]$.
+

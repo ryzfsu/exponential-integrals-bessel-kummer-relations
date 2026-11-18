@@ -1,0 +1,47 @@
+\section{Comparison of linear independence estimates}\label{sup:measure-comparison}
+Main-text Theorem~\ref{thm:measure} has an explicit threshold $H_0$.
+It is too large for practical small-height tests.
+Galochkin's measure \cite[theorem, p.~241]{Galochkin1968} applies to the
+algebraically independent pair $(e^{-z},\Ein(z))$. Multiplication of our
+form by $e^{-1}$ gives the polynomial of degree at most two $b+ax+cx^2+dxy$ at
+$(x,y)=(e^{-1},\Ein(1))$. This gives a power-type bound with unevaluated
+constant. Bertrand--Beukers \cite[Theorem~1, p.~182]{BertrandBeukers1985}
+give the multiplicity estimate for this four-function system;
+Bertrand--Chirskii--Yebbou \cite[Theorem~1.2, p.~245]{BertrandChirskiiYebbou2004}
+make its Shidlovskii constant effectively computable.
+These are inputs to effective measures.
+They give no numerical constants for this quadruple.
+Shidlovskii's linear independence measure
+\cite[Chapter~11, \S2, Theorem~1, (32), p.~357]{Shidlovskii1989}
+gives the following bound for the rational system $(1,e^z,e^{-z},\Ein(z))$
+at the ordinary point $1$: for every $\varepsilon>0$ there is
+$c_\varepsilon>0$, depending only on $\varepsilon$ and this fixed system
+and point, such that every $(a,b,c,d)\in\Z^4\setminus\{0\}$ satisfies
+$\lvert a+be+ce^{-1}+d\Ein(1)\rvert>c_\varepsilon H^{-3-\varepsilon}$,
+where $H=\max\{\lvert a\rvert,\lvert b\rvert,\lvert c\rvert,\lvert d\rvert\}\ge1$.
+Functional linear independence is required.
+The proof is on pp.~357--359.
+The book does not evaluate the positive constant.
+Fischler--Rivoal state the rational case as Theorem~A.
+Their extension is Theorem~1 \cite[pp.~2--3]{FischlerRivoal2024}.
+Page~3 discusses effectiveness in principle.
+It does not compute the constants.
+Their Theorem~1 assumes a nonzero linear form.
+For $(a,b,c,d)\in\Z^4\setminus\{0\}$, Theorem~\ref{thm:values}
+implies $a+be+ce^{-1}+d\Ein(1)\ne0$.
+Main-text Theorem~\ref{thm:measure} evaluates the constants.
+Its exponent $-60$ is weaker.
+The threshold $H_0=N^N$ is astronomically large.
+The displayed bound applies for $H\ge H_0$. Below $H_0$, scaling the coefficient vector
+gives only $|\Lambda|\ge H/(12(2H_0)^{61})$.
+Main-text Appendix~\ref{sec:measure} evaluates the $\nu=\mu=4$ polynomial-and-derivative
+construction of Adamczewski--Faverjon.
+A direct cyclic-vector Wronskian bound replaces a general zero estimate.
+This section records the comparison with Galochkin's measure
+and the multiplicity estimates of Bertrand--Beukers and
+Bertrand--Chirskii--Yebbou.
+For classical background, Fel'dman--Nesterenko's monograph
+\cite{FeldmanNesterenko1998} is a further reference. Beukers points to its
+Theorem~5.23 for the qualitative Siegel--Shidlovskii theorem
+\cite[p.~369]{Beukers2006}.
+This comparison attributes no further exponent or evaluated constant to the monograph.

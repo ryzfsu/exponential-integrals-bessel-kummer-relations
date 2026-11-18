@@ -1,0 +1,566 @@
+\section{Detailed proofs of the Galois-group and specialization steps}
+\label{app:detailed-proofs}
+
+\subsection{The full joint group}\label{app:joint-group}
+We expand the group argument in Proposition~\ref{prop:product}.
+All groups are reduced complex linear algebraic groups.
+
+\begin{lemma}\label{lem:app-group-interface}
+Let $\phi:G\to H$ be a group morphism.
+Its image is closed, $G^0$ is normal of finite index, and
+\begin{equation}\label{eq:app-group-interface}
+\begin{gathered}
+ \phi(G^0)=\phi(G)^0,\qquad \dim G=\dim\Lie G,\\
+ \Lie(\ker\phi)=\ker d\phi,\qquad
+ \Lie(\phi(G))=d\phi(\Lie G),\\
+ \Lie(A\cap B)=\Lie A\cap\Lie B
+ \quad(A,B\subset G\text{ closed}).
+\end{gathered}
+\end{equation}
+If $A$ is connected, then $\Lie A\subset\Lie B$ implies $A\subset B$.
+A closed subgroup of a connected group with equal dimension is the whole group.
+\end{lemma}
+\begin{proof}
+Closed images and identity components follow from
+\cite[Proposition~1.2(b), p.~46; Corollary~1.4(a)--(b), p.~47]{Borel1991}.
+Smoothness identifies group dimension with tangent-space dimension
+\cite[Proposition~1.2(a), p.~46]{Borel1991}
+\cite[\S9.1, p.~65]{Humphreys1975}.
+The kernel and intersection identities are
+\cite[\S12.5, Theorem, p.~85]{Humphreys1975}.
+The image identity uses characteristic-zero separability
+\cite[\S7.2, proof, p.~105]{Borel1991}.
+If $\Lie A\subset\Lie B$, then $A\cap B$ has dimension $\dim A$.
+Connected algebraic groups are irreducible
+\cite[Proposition~1.2 and following paragraph, \mbox{pp.}~46--47]{Borel1991}.
+Proper closed irreducible subsets have smaller dimension
+\cite[\S3.2, Proposition, p.~25]{Humphreys1975}.
+Apply this to $(A\cap B)^0\subset A$.
+It gives $A\subset B$; see also
+\cite[\S7.1(2), p.~105]{Borel1991}
+\cite[\S13.1, Theorem, p.~87]{Humphreys1975}.
+The last assertion follows by applying the same argument to $B^0\subset G$.
+\end{proof}
+
+\begin{lemma}\label{lem:app-pv-compositum}
+Let $E/K$ and $F/K$ be PV extensions with algebraically closed constants $\C$.
+Assume their compositum $M=EF$ has the same constants.
+Then $M/K$ and $M/F$ are PV, and restriction gives
+\begin{equation}\label{eq:app-pv-restriction}
+ \Gal(M/F)\simeq\Gal(E/(E\cap F)).
+\end{equation}
+The right side is normal in $\Gal(E/K)$.
+Its quotient is a quotient of $\Gal(F/K)$.
+The intersection $E\cap F$ is PV over $K$.
+The maps $\Gal(M/K)\to\Gal(E/K),\Gal(F/K)$ are onto.
+\end{lemma}
+\begin{proof}
+The block sum of fundamental matrices generates $M/K$.
+The matrix for $E$ also generates $M/F$.
+Both subfields $E,F$ are invariant under $\Gal(M/K)$.
+PV Galois correspondence gives the two surjections
+\cite[Proposition~1.34(1)--(2), p.~26]{VanDerPutSinger2002Draft}.
+The restriction $\Gal(M/F)\to\Gal(E/K)$ is injective: an automorphism
+in its kernel fixes $E$ and $F$, hence fixes $M=EF$, so it is the identity.
+Put $H=\operatorname{im}(\Gal(M/F)\to\Gal(E/K))$.
+It is closed by Lemma~\ref{lem:app-group-interface}.
+Surjectivity and conjugation show that $H$ is normal.
+Its fixed field is $E\cap F$, proving
+\eqref{eq:app-pv-restriction} by the same correspondence.
+Since $H$ is normal, the PV correspondence also makes $E\cap F$ PV over $K$
+\cite[Proposition~1.34(2), p.~26]{VanDerPutSinger2002Draft}.
+The map to $\Gal(E/K)/H$ kills $\Gal(M/F)$.
+It therefore factors through $\Gal(F/K)$.
+\end{proof}
+
+\begin{proof}[Detailed proof of Proposition~\ref{prop:product}]
+\emph{1. Base change.}
+Put $V=\mathsf G_{u,\mathcal U}$ and $H_0=\Gal(QT'/T')$.
+The matrices in \eqref{eq:core-unipotent-matrix} are lower unitriangular.
+Thus $V$ is a closed unitriangular subgroup, hence nilpotent.
+Every nonidentity unipotent has connected cyclic closure
+\cite[\S2.1, p.~56; \S7.3, Remark, p.~106]{Borel1991}.
+Each element therefore belongs to $V^0$.
+Hence $V$ is connected and solvable.
+
+The generators of $T'$ satisfy
+\[
+ t_h'=\lambda_ht_h,\qquad
+ (z^{1/\ell})'=\frac{z^{1/\ell}}{\ell z}.
+\]
+Thus $T'/k$ is PV with abelian group.
+For each block field $\mathcal P_i$, Lemma~\ref{lem:app-pv-compositum}
+identifies $\Gal(\mathcal P_iT'/T')$ with a normal subgroup of
+$\Gal(\mathcal P_i/k)$ having abelian quotient.
+The block group contains $\SL_2$ by Lemma~\ref{lem:groups}.
+Since $\SL_2=[\SL_2,\SL_2]$, the normal subgroup contains $\SL_2$.
+The group over $T'$ fixes the block Wronskian, which belongs to $T'$:
+\[
+ W_i\in\C^\times\{z^{-1},\ z^{-2\nu-1},\ e^{sz}/z\}.
+\]
+Thus the base-changed block group equals $\SL_2$.
+All composita have constants $\C$, by the standing constant-field hypothesis.
+
+\emph{2. Projective independence.}
+From \eqref{eq:core-block-transport},
+\[
+ w_i\mathbf1=Y_{\mathfrak c}^{-1}B_i^{-1}Y_iC_i^{-1}
+ \quad\Longrightarrow\quad w_i\in Q\cap T'.
+\]
+Thus \eqref{eq:core-character} holds on the full group $G_Q$.
+It gives $\psi(G_Q)\subset\bar P_{\mathrm{SL}}=\psi(P_{\mathrm{SL}})$,
+where $P_{\mathrm{SL}}$ is the subgroup denoted $P$ in the body, with its conjugated block embedding.
+Each representative projection is onto $\PGL_2$.
+Each block field is a PV subextension of $Q/k$.
+Lemma~\ref{lem:app-group-interface} makes
+$\Lie(\psi(G_Q)^0)$ subdirect in the representative factors.
+
+We use an elementary consequence of Lemma~\ref{lem:goursat}.
+A proper subdirect Lie algebra in $\mathfrak{sl}_2^r$ has a graph projection
+onto some pair of factors.
+For $r=2$, use Lemma~\ref{lem:goursat}.
+Proceed by induction on $r$.
+If the first $r-1$ projection is proper, apply induction.
+Otherwise it is $\mathfrak s=\mathfrak{sl}_2^{r-1}$.
+For $\mathfrak h\subset\mathfrak s\oplus\mathfrak{sl}_2$, put
+$\mathfrak j=\{b:(0,b)\in\mathfrak h\}$.
+It is an ideal in $\mathfrak{sl}_2$.
+If $\mathfrak j=\mathfrak{sl}_2$, subdirectness gives the full sum.
+Otherwise $\mathfrak j=0$, and $\mathfrak h$ is the graph of a surjection
+$\mathfrak s\to\mathfrak{sl}_2$.
+The factor images are commuting ideals.
+Exactly one is nonzero, giving the required pair.
+The standard brackets $[h,e]=2e$, $[h,f]=-2f$, and $[e,f]=h$
+show that $\mathfrak{sl}_2$ is simple.
+The calculation in (F4) shows that its automorphisms are inner.
+
+A graph pair corresponds to a rank-one twist by Lemma~\ref{lem:twist}.
+For completeness, let $G_Q=\Gal(Q/k)$ be the full joint group used in descent.
+The projective image of $G_Q^0$ in the $i,j$ factors is the graph group by
+Lemma~\ref{lem:app-group-interface}.
+Thus $\pi_j=\chi C_0\pi_iC_0^{-1}$ on $G_Q^0$.
+On $\operatorname{Hom}(V_i,V_j)$, the line $\C C_0$ is the unique invariant line:
+the other summand is the irreducible adjoint representation.
+Its invariant subspaces are ideals in $\mathfrak{sl}_2$.
+Normality of $G_Q^0$ makes this line $G_Q$-stable.
+PV descent gives a rational basis $B_0$ of that line.
+In the Hom system it has the form
+\[
+ B_0=vY_jC_0Y_i^{-1},\qquad
+ B_0'+B_0M_i-M_jB_0=rB_0,\qquad r=v'/v\in k.
+\]
+Here $C_0\in\GL_2(\C)$ is the graph matrix, and $M_i,M_j$ are the block
+system matrices.
+Thus $B_0$ is invertible.
+A scalar solution of $u'/u=-r$ turns it into an intertwiner.
+Distinct representatives belong to distinct linkage classes.
+They therefore have no graph pair.
+The induction gives the full direct-sum Lie algebra.
+The dimension criterion in Lemma~\ref{lem:app-group-interface} now yields
+\begin{equation}\label{eq:app-projective-full}
+ \psi(G_Q^0)=\psi(G_Q)=\bar P_{\mathrm{SL}}.
+\end{equation}
+
+\emph{3. The full group after base change.}
+Wronskians and \eqref{eq:core-character} give $H_0\subset P_{\mathrm{SL}}$.
+Restriction $\Gal(QT'/k)\to G_Q$ is onto.
+Lift any $g,h\in G_Q$ to this group.
+Their restrictions to $T'$ commute.
+Their commutator therefore fixes $T'$, giving $[g,h]\in H_0$.
+For $x,y\in P_{\mathrm{SL}}$, equation~\eqref{eq:app-projective-full} supplies $g,h\in G_Q$
+with the same respective projective images.
+Thus $g=xz_1$, $h=yz_2$, where $z_1,z_2\in\ker\psi$ are central.
+Hence $[x,y]=[g,h]\in H_0$.
+
+Put $u_+(b)=\left(\begin{smallmatrix}1&b\\0&1\end{smallmatrix}\right)$,
+$u_-(b)=\left(\begin{smallmatrix}1&0\\b&1\end{smallmatrix}\right)$ and
+$d(t)=\operatorname{diag}(t,t^{-1})$.
+Use the commutator convention $[x,y]=xyx^{-1}y^{-1}$.
+For $t^2\ne1$,
+\[
+ u_+(b)=[d(t),u_+(b/(t^2-1))],\qquad
+ u_-(b)=[d(t),u_-(b/(t^{-2}-1))].
+\]
+Row elimination shows that these elementary matrices generate $\SL_2(\C)$.
+Thus $P_{\mathrm{SL}}$ is perfect, and $P_{\mathrm{SL}}\subset H_0$.
+Consequently $H_0=P_{\mathrm{SL}}$, including all finite components.
+
+\emph{4. The unipotent factor.}
+Both $\mathcal U/T'$ and $QT'/T'$ are PV.
+Lemma~\ref{lem:app-pv-compositum} gives surjective restriction maps from
+$\Gal(\Omega/T')$ to both groups.
+Their product is injective since $\Omega=\mathcal U(QT')$.
+Write its image as $H\subset V\times P_{\mathrm{SL}}$ and put
+\[
+ H_V=\{v:(v,1)\in H\},\qquad H_P=\{p:(1,p)\in H\}.
+\]
+Conjugation by lifts proves normality in $V,P_{\mathrm{SL}}$, respectively.
+Multiplication of lifts gives the isomorphism
+\[
+ V/H_V\longrightarrow P_{\mathrm{SL}}/H_P,
+ \qquad vH_V\longmapsto pH_P
+ \quad((v,p)\in H).
+\]
+Two choices of $p$ differ by $H_P$. The map
+$V\to P_{\mathrm{SL}}/H_P$ has kernel $H_V$, so it induces the displayed
+isomorphism.
+The common quotient is solvable and perfect, hence trivial.
+Thus $H=V\times P_{\mathrm{SL}}$, proving \eqref{eq:core-product}.
+Also $\mathcal U\cap QT'=T'$: its PV group is the same common quotient,
+by Lemma~\ref{lem:app-pv-compositum}.
+\end{proof}
+
+
+\subsection{The tower induction}\label{app:tower-induction}
+Keep the hypotheses of Lemma~\ref{lem:tower}.
+The nodes $\eta_1,\ldots,\eta_m$ are distinct and nonzero.
+The heights $h_j$ are positive integers.
+Every rate in $\mathfrak S$ belongs to $\Gamma$.
+The finite support contains $(0,0)$ and every $(-\eta_j,0)$.
+Use $\Phi_{0,0}=L$ and $\Phi_{-\eta_j,0}=G_{\eta_j,1}$,
+as in \eqref{eq:core-G}.
+Put
+\begin{equation}\label{eq:appendix-tower-assertions}
+\begin{gathered}
+ H(h)=\sum_j(h_j-1),\qquad
+ \mathcal T_h(\mathbf p)=\sum_jp_j(L)G_{\eta_j,h_j}/z,\\
+ \trdeg_T\mathcal N_h=\#\mathfrak S+H(h),\qquad
+ \mathcal N_h^D=\C,\\
+ \mathcal T_h(\mathbf p)\notin D\mathcal N_h
+ \quad(0\ne\mathbf p\in\C[L]^m).
+\end{gathered}
+\end{equation}
+The degree assertion means independence of all displayed generators.
+We prove these assertions by induction on $H(h)$.
+
+\begin{lemma}\label{lem:appendix-primitive-extension}
+Let $K$ be a differential field of characteristic zero.
+Suppose $K^D=\C$, $a\in K\setminus DK$ and $Du=a$.
+Then $u$ is transcendental over $K$, and $K(u)^D=\C$.
+\end{lemma}
+\begin{proof}
+If $u$ were algebraic, put $n=[K(u):K]$.
+Derivation commutes with trace, as in Lemma~\ref{lem:primitive}.
+Thus
+\[
+ D\bigl(n^{-1}\operatorname{Tr}_{K(u)/K}u\bigr)=a,
+\]
+contrary to $a\notin DK$.
+For $Df=0$, write $f=P(u)/Q(u)$ in lowest terms.
+Take $Q$ monic.
+The identity $QDP=PDQ$ gives $Q\mid DQ$.
+Monicity gives $\deg_u DQ<\deg_u Q$, so $DQ=0$.
+If $\deg_u Q=r>0$, its next coefficient gives
+$Dq_{r-1}+ra=0$.
+Hence $Q=1$.
+If $\deg_u P=s>0$, then $p_s\in\C^\times$ and
+$Dp_{s-1}+sp_sa=0$.
+Both equations contradict $a\notin DK$.
+Thus $f\in\C$.
+\end{proof}
+
+For independent variables $Y_i$ over $K$, put $\partial_i=\partial/\partial Y_i$.
+Their common kernel in $K(Y_i)$ is $K$.
+A reduced numerator and denominator must divide their partial derivatives.
+Degree comparison makes those derivatives zero.
+If $DY_i\in K$, then $[D,\partial_i]=0$.
+This follows on $K$ and on each $Y_i$.
+
+\emph{1. Height zero.}
+The vectors $\operatorname{res}(\Phi_\sigma)$ are nonzero multiples
+of distinct unit vectors.
+Lemma~\ref{lem:primitive} gives independence and constant field $\C$.
+Put $\mathfrak U=\{(-\eta_j,0):1\le j\le m\}$ and
+$\mathfrak S_0=\mathfrak S\setminus\{(0,0)\}$.
+Suppose $Dy=\mathcal T_{\mathbf1}(\mathbf p)$.
+Take partial derivatives over $T(L)$ in the remaining $\Phi_\sigma$.
+They commute with $D$.
+The constant-field assertion gives
+\[
+ \partial_{-\eta_j,0}y=Q_j(L),\quad
+ \frac{dQ_j}{dL}=p_j,\qquad
+ \partial_\sigma y=c_\sigma\in\C
+ \quad(\sigma\in\mathfrak S_0\setminus\mathfrak U).
+\]
+Thus
+\[
+\begin{aligned}
+ y_0&=y-\sum_jQ_j(L)G_{\eta_j,1}
+       -\sum_{\sigma\in\mathfrak S_0\setminus\mathfrak U}
+           c_\sigma\Phi_\sigma\in T(L),\\
+ Dy_0&=-\sum_jQ_j(L)e^{-\eta_jz}/z
+       -\sum_{\sigma\in\mathfrak S_0\setminus\mathfrak U}
+           c_\sigma\phi_\sigma.
+\end{aligned}
+\]
+Lemma~\ref{lem:reduction} gives $y_0\in R_1$.
+Choose $j$ with $p_j\ne0$.
+The coefficient of weight $-\eta_j$ satisfies
+\[
+ Du-\eta_ju=-Q_j(L)/z+g(z),\qquad
+ u\in\C(z,L),\quad g\in\C(z).
+\]
+Here $Q_j$ is nonconstant.
+Distinct nodes give distinct weights.
+Lemma~\ref{lem:twisted-obstruction} excludes this equation.
+
+\emph{2. Independence and constants at positive height.}
+Assume \eqref{eq:appendix-tower-assertions} at every smaller height.
+Choose $j$ with $h_j\ge2$.
+Let $e_j$ be the $j$th unit vector.
+Put $\widetilde h=h-e_j$.
+For $K=\mathcal N_{\widetilde h}$, its obstruction gives
+\[
+ a=G_{\eta_j,h_j-1}/z\notin DK.
+\]
+Use coefficient $1$ at $j$ and $0$ elsewhere.
+Apply Lemma~\ref{lem:appendix-primitive-extension} to $Y=G_{\eta_j,h_j}$.
+Since $DY=a$, independence and constants follow at $h$.
+The fixed meromorphic domain also gives the constant assertion directly.
+
+\emph{3. The obstruction at positive height.}
+Put $\mathcal J_h=\{j:h_j\ge2\}$ and $h^-_j=\max(1,h_j-1)$.
+The independence just proved gives
+\[
+ \mathcal N_h=\mathcal N_{h^-}(Y_j:j\in\mathcal J_h),\qquad
+ Y_j=G_{\eta_j,h_j},\quad DY_j\in\mathcal N_{h^-}.
+\]
+Suppose $Dy=\mathcal T_h(\mathbf p)$ with $\mathbf p\ne0$.
+Take partials in the $Y_j$ for $j\in\mathcal J_h$, fixing $\mathcal N_{h^-}$.
+Their commutation with $D$ and the constant assertion give
+\[
+ \partial_jy=Q_j(L),\quad \frac{dQ_j}{dL}=p_j
+ \quad(j\in\mathcal J_h),\qquad
+ y_0=y-\sum_{j\in\mathcal J_h}Q_j(L)Y_j\in\mathcal N_{h^-}.
+\]
+Differentiation gives
+\begin{equation}\label{eq:appendix-tower-descent}
+ Dy_0=\mathcal T_{h^-}(R),\qquad
+ R_j=\begin{cases}
+ p_j,&h_j=1,\\
+ -Q_j,&h_j\ge2.
+ \end{cases}
+\end{equation}
+A nonzero $p_j$ at height one survives.
+Otherwise some $Q_j$ has nonzero derivative.
+Thus $R\ne0$, while $H(h^-)<H(h)$.
+The induction hypothesis excludes \eqref{eq:appendix-tower-descent}.
+
+\emph{4. The listed solvable coordinates.}
+Enlarge $\mathfrak S$ to contain their first-level supports.
+Put $\mathcal P=T(\Phi_\sigma:\sigma\in\mathfrak S)$.
+Choose a listed residue basis $B_1,\ldots,B_\rho$.
+Lemma~\ref{lem:primitive} gives, for every other first-level coordinate,
+\[
+ F_a=\sum_i\kappa_{ai}B_i+r_a+c_a,\qquad
+ \kappa_{ai},c_a\in\C,\quad r_a\in R_0.
+\]
+The higher $G_{\eta,k}$ are independent over $\mathcal P$.
+Since $L\in\mathcal P$, so are $\Ein_k(\eta z)=L^k/k!-G_{\eta,k}$.
+They remain independent over $T(B_1,\ldots,B_\rho)\subset\mathcal P$.
+Eliminating the affine graphs leaves a polynomial ring in the $B_i$
+and the $\tau$ distinct higher coordinates.
+Hence the degree is $\rho+\tau$ and these graphs generate the ideal.
+
+
+\subsection{The relation ideal}\label{app:ideal-details}
+Retain the hypotheses of Lemma~\ref{lem:ideal}.
+Put
+\[
+ \mathcal R=\C(z)[\Theta^{\pm1}],\qquad n=\rho+\tau,
+ \qquad m=\#\mathcal C.
+\]
+Let $\mathcal I$ be the ideal of the stated generators.
+The duplicate, constant, exponential, residue and linkage relations
+are monic graphs. Successive substitution eliminates each dependent
+variable. The fourth-coordinate shifts in \eqref{eq:core-quadric}
+then give the following quotient.
+\begin{equation}\label{eq:app-ideal-model}
+ B_{\mathcal R}=
+ \frac{\mathcal R[Z_1,\ldots,Z_n,(X_{\mathfrak c},Y_{\mathfrak c},
+ S_{\mathfrak c},W_{\mathfrak c})_{\mathfrak c\in\mathcal C}]}
+ {(X_{\mathfrak c}W_{\mathfrak c}-Y_{\mathfrak c}S_{\mathfrak c}
+       +v_{\mathfrak c}:\mathfrak c\in\mathcal C)},
+ \qquad v_{\mathfrak c}=u_{\mathfrak c}/z\in\mathcal R^\times.
+\end{equation}
+Here $W_{\mathfrak c}$ is the shifted fourth variable.
+The variable $X_{\mathfrak c}$ represents $y_{\mathfrak c}$.
+
+Lemma~\ref{lem:quadric} gives an $\mathcal R$-basis: use the $Z$-monomials
+and, in each block, monomials avoiding $X_{\mathfrak c}W_{\mathfrak c}$.
+Thus $B_{\mathcal R}$ is free over $\mathcal R$. It injects into its generic fibre.
+That fibre is geometrically integral by Lemma~\ref{lem:quadric}
+and \cite[Proposition~(4.6.5)(ii), p.~69]{EGAIV2}.
+Hence $B_{\mathcal R}$ is a domain.
+
+Put $M=\prod_{\mathfrak c}X_{\mathfrak c}$.
+The same basis shows $M\ne0$. Solving each determinant gives
+\begin{equation}\label{eq:app-ideal-chart}
+ B_{\mathcal R}[M^{-1}]
+ =\mathcal R[Z_1,\ldots,Z_n,
+      (X_{\mathfrak c}^{\pm1},Y_{\mathfrak c},S_{\mathfrak c})_
+        {\mathfrak c\in\mathcal C}],
+ \qquad
+ W_{\mathfrak c}=\frac{Y_{\mathfrak c}S_{\mathfrak c}-v_{\mathfrak c}}
+ {X_{\mathfrak c}}.
+\end{equation}
+The earlier degree proof makes these selected functions independent over
+$T$. Lemma~\ref{lem:exponential-log} identifies
+$\operatorname{Frac}\mathcal R$ with $T$.
+Evaluation on \eqref{eq:app-ideal-chart} is therefore injective.
+Its restriction to $B_{\mathcal R}$ is injective too.
+Consequently $\mathcal I$ is the full Laurent kernel and is prime.
+Localization in $\mathcal R\setminus\{0\}$ gives the kernel over $T$.
+
+Let $k_1\subset\C$ contain the generator data and residue constants.
+The same substitutions and monic divisions work over
+$\mathcal R_1=k_1(z)[\Theta^{\pm1}]$.
+Their monomial basis maps to the identical basis over $\mathcal R$.
+Thus $B_{\mathcal R_1}\hookrightarrow B_{\mathcal R}$.
+Evaluation remains injective, proving descent of the full kernel.
+Its fraction field is rational in the selected variables over
+$k_1(z)(\Theta)$. Its transcendence degree over $k_1(z)$ is $d+n+3m$.
+
+For ordinary polynomial variables, adjoin $V_h$ with
+$\Theta_hV_h-1=0$. Replace negative powers by $V_h$ and eliminate
+$\Theta,V$. The quotient is the Laurent quotient above.
+Hence contraction gives the full coordinate kernel.
+Equivalently, clear negative powers, saturate by
+$\prod_h\Theta_h$, and eliminate.
+Listed exponential variables require the corresponding saturation too.
+
+\subsection{Specialization at nonzero algebraic points}
+\label{app:specialization-details}
+Assume the hypotheses of Theorem~\ref{thm:values}.
+Thus the list is closed, normalized and saturated.
+Its rates, kernels, scales and constants are algebraic.
+Its Bessel orders are rational; its Kummer parameters are rational
+and nonintegral. Scales are nonzero.
+The primitives satisfy $(\mathrm{B2}^E)$, including $F(0)=0$.
+First replace integer-order blocks by their order-zero blocks.
+Put
+\[
+ R=\Qbar[z^{\pm1}][\Theta^{\pm1}],\qquad
+ \mathcal R_\alpha=\Qbar[\Theta^{\pm1}],\qquad
+ n_{\mathrm{val}}=d+\rho^E+\tau+3m,\quad m=\#\mathcal C.
+\]
+
+The residue vectors have algebraic entries. Hence their basis
+coefficients $\kappa_{ji}$ are algebraic.
+For $\mu\in\Qbar$, put $D_\mu g=g'+\mu g$.
+On $\Qbar[z^{\pm1}]$,
+\begin{equation}\label{eq:app-laurent-image}
+ \operatorname{im}D_\mu
+ =\ker\bigl(q\mapsto\Res_0 e^{\mu z}q(z)\,dz\bigr).
+\end{equation}
+The residue vanishes on $D_\mu g$ since
+$e^{\mu z}D_\mu g=(e^{\mu z}g)'$.
+For $\mu=0$, differentiate Laurent monomials.
+For $\mu\ne0$, $D_\mu$ is invertible on polynomials.
+Its negative-power reduction is
+$z^{-j-1}\equiv(\mu/j)z^{-j}$ for $j\ge1$.
+The remaining class is $z^{-1}$, with residue $1$.
+This proves \eqref{eq:app-laurent-image}.
+Apply it to each residue-zero first-level relation.
+It gives $r_j\in R$ in \eqref{eq:residue-relations}.
+Zero-origin normalization gives
+\[
+ c_j=-\lim_{z\to0}r_j(z,e^{\lambda_1z},\ldots,e^{\lambda_dz})
+     \in\Qbar.
+\]
+The limit exists because the corresponding primitive difference is entire.
+It is a finite Laurent--exponential constant coefficient.
+
+All other graph coefficients lie in $R$.
+For the shift $(f_\nu,f'_\nu)\mapsto(f_{\nu+1},f'_{\nu+1})$ and the shift
+$(f_{-\nu},f'_{-\nu})\mapsto(f_{-\nu-1},f'_{-\nu-1})$, respectively,
+the solution-coordinate determinants are
+\[
+ -\frac{4(\nu+1)^2}{c^2z^2},\qquad
+ -\frac{c^2z^2}{4\nu^2}.
+\]
+Their product is $(\nu+1)^2/\nu^2$.
+The normalized noninteger shifts have $\nu(\nu+1)\ne0$.
+Kummer contiguity has determinant $1$ on each diagonal block.
+The exponential links have unit determinants in $R$.
+Integer-order reduction has determinant $(-1)^n$ on each diagonal block
+by Lemma~\ref{lem:integer}.
+Scale and order signs use identities or permutations.
+Thus every required map and inverse specializes at $\alpha\ne0$.
+
+Appendix~\ref{app:arithmetic} supplies the $E$-function bounds.
+Use the vector in \eqref{eq:value-system} after order-zero reduction.
+Its primitive equations have Laurent-polynomial coefficients.
+Its tower equations are \eqref{eq:ein-tower}.
+The block equations are
+\[
+\begin{gathered}
+ I''=c^2I-I'/z,\qquad
+ S''=c^2S-S'/z+2I'/z,\\
+ F''=(s-z^{-1})F'+asF/z,\\
+ \Sigma''=(s-z^{-1})\Sigma'+as\Sigma/z+(2F'-sF)/z,\\
+ f''_{\nu,c}=c^2f_{\nu,c}-(2\nu+1)f'_{\nu,c}/z.
+\end{gathered}
+\]
+Consequently $f$ satisfies a first-order system with coefficient matrix
+in $\Qbar[z,z^{-1}]$.
+Every $\alpha\in\Qbar^\times$ is ordinary.
+Each component of $f$ has algebraic Taylor coefficients. Any polynomial
+relation over $\C(z)$ therefore descends to $\Qbar(z)$ by solving its
+coefficient equations over $\Qbar$; the two transcendence degrees agree.
+Lemma~\ref{lem:ideal} and the generic degree formula give
+\begin{equation}\label{eq:app-specialized-degree}
+ \trdeg_{\Qbar}\Qbar(f(\alpha))
+ =\trdeg_{\Qbar(z)}\Qbar(z)(f)=n_{\mathrm{val}}
+\end{equation}
+by \cite[Theorem~1.1, p.~370]{Beukers2006}.
+The extra system exponentials are Laurent monomials in the basis
+exponentials. Thus they leave both fields unchanged.
+
+Specialize the graph eliminations at $z=\alpha$.
+They give \eqref{eq:app-ideal-model} over $\mathcal R_\alpha$, with
+$n=\rho^E+\tau$ and
+\[
+ v_{\mathfrak c}\in
+ \{\alpha^{-1},\Theta^{v_s}\alpha^{-1},2\nu\alpha^{-1}\}
+ \subset \mathcal R_\alpha^\times.
+\]
+Write $B_\alpha$ for this quotient.
+The free-basis argument above makes $B_\alpha$ a domain.
+Its generators vanish on the values.
+
+Let $s_0$ count the blocks with $X_{\mathfrak c}(\alpha)=0$.
+In each such block,
+\[
+ Y_{\mathfrak c}(\alpha)S_{\mathfrak c}(\alpha)
+   =v_{\mathfrak c}(e^{\lambda_1\alpha},\ldots,e^{\lambda_d\alpha})
+   \ne0.
+\]
+Over the exponential-value field, this block needs two generators:
+$Y_{\mathfrak c}(\alpha),W_{\mathfrak c}(\alpha)$.
+Every other block needs three, by its determinant.
+All values are therefore generated by at most $n_{\mathrm{val}}-s_0$ numbers.
+Equation~\eqref{eq:app-specialized-degree} forces $s_0=0$.
+It then makes the $n_{\mathrm{val}}$ selected values, including basis exponentials,
+algebraically independent.
+
+Evaluation now extends to $B_\alpha[M^{-1}]$.
+By \eqref{eq:app-ideal-chart}, this is a Laurent polynomial ring
+in those selected variables. Its evaluation is injective.
+Since $B_\alpha\hookrightarrow B_\alpha[M^{-1}]$, evaluation on
+$B_\alpha$ is injective. Hence $I_\alpha=\mathfrak P_\alpha$.
+In particular $y_{\mathfrak c}(\alpha)\ne0$.
+Nonvanishing was established before localization.
+The system denominators are powers of $z$; all coordinate maps have
+unit determinants in $R$. These facts account for every excluded point.
+
+For several points put $\widetilde q_i(z)=q_i(\alpha_i z)$.
+Primitive kernels become $\alpha_iq_{i,\mu}(\alpha_i z)$.
+Residues retain their values under
+$(\mu,p)\mapsto(\alpha_i\mu,p/\alpha_i)$.
+Tower pairs become $(\alpha_i\eta_i,k)$.
+Derivative coordinates acquire the nonzero factors $\alpha_i$.
+Close and normalize the combined list; saturate its rates.
+Test residues, tower pairs and linkage classes on this list.
+The one-point result at $1$ gives the several-point assertions.
+

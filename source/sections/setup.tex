@@ -1,0 +1,96 @@
+\section{Setup}\label{sec:setup}
+The data conventions preceding Theorem~\ref{thm:main} fix $k,D$,
+the meromorphic domain, base point, logarithm branch and primitive
+normalizations. They also define residues \eqref{eq:residue-vector},
+the rate field \eqref{eq:exponential-field} and ranks \eqref{eq:rank-data}.
+This section gives the coordinate dictionary used there.
+
+\subsection{Admissible blocks}\label{subsec:blocks}
+The five block types below have complex parameters $\lambda,\mu,c,s$,
+with $c,s\ne0$.
+\begin{description}\setlength{\itemsep}{0pt}\setlength{\parsep}{0pt}
+\item[(B1)] $e^{\lambda z}$, $\lambda\in\C$.
+\item[(B2)] A specified primitive of $\sum_{\mu\in M}q_\mu e^{\mu z}$,
+$M$ finite, $q_\mu\in\C(z)$, with arbitrary complex additive constant.
+The subclass $(\mathrm{B2}^E)$ consists of primitives with algebraic
+rates, kernels $q_\mu\in\Qbar[z,z^{-1}]$, entire derivative and $F(0)=0$.
+\par\noindent
+The extension $(\mathrm{B2}^\tau)$ also permits finite towers. For each
+$\eta\ne0$ and integer $h\ge1$, include levels $1\le k\le h$ defined by
+\begin{equation}\label{eq:ein-tower}
+\Ein_k(u)=\sum_{n\ge1}\frac{(-1)^{n+1}u^n}{n^kn!},\quad
+D\Ein_k(\eta z)=\Ein_{k-1}(\eta z)/z\ (k\ge2).
+\end{equation}
+$D\Ein_1(\eta z)=(1-e^{-\eta z})/z$. Write $\Ein=\Ein_1$.
+\item[(B3)] $\operatorname{Bess}(c,\nu)$, $c\ne0$, $\nu\in\Q$.
+An integer Bessel order is \emph{resonant}. The local homogeneous equation has a logarithmic solution at zero. For order zero take $(I_c,V_c,S_c,W_c)$, where
+\begin{equation}\label{eq:bessel-zero}
+\begin{gathered}
+I_c=\sum_{n\ge0}\frac{(cz/2)^{2n}}{(n!)^2},\quad
+S_c=\sum_{n\ge0}\frac{\mathsf H_n(cz/2)^{2n}}{(n!)^2},\\
+V_c=I_c',\ W_c=S_c',\ \mathsf H_n=\sum_{j=1}^n1/j,\ \mathsf H_0=0.
+\end{gathered}
+\end{equation}
+As a function of its own argument, write $\mathsf S(u)=S_1(u)$; thus
+$S_c(z)=\mathsf S(cz)$.
+The operator $\mathscr B_{c,0}=zD^2+D-c^2z$ satisfies
+$\mathscr B_{c,0}I_c=0$ and $\mathscr B_{c,0}S_c=2I_c'$. Thus $J_c=S_c-I_cL$
+is a homogeneous solution. To define the other integer orders, put $R_n=a_n+b_nD$ for $n\ge0$, with
+$(a_0,b_0)=(1,0)$, $(a_1,b_1)=(0,c^{-1})$ and
+$(a_{n+1},b_{n+1})=(a_{n-1},b_{n-1})-2n(a_n,b_n)/(cz)$. Then
+\begin{equation}\label{eq:bessel-integer}
+I_{n,c}=R_nI_c=I_n(cz),\quad P_{n,c}=R_nS_c-b_nI_c/z,\quad
+R_nJ_c=P_{n,c}-I_{n,c}L,
+\end{equation}
+with their derivatives, define the integer block. Use $I_{-n}=I_n$ and $P_{-n,c}=P_{n,c}$;
+$P_{n,c}$ may have a pole at zero, e.g. $P_{1,c}=(W_c-I_c/z)/c$.
+For every rational $\nu$ that is not a negative integer put
+\begin{equation}\label{eq:bessel-nonresonant}
+f_{\nu,c}=\sum_{n\ge0}\frac{(cz/2)^{2n}}{n!(\nu+1)_n},\qquad
+\mathscr B_{c,\nu}=zD^2+(2\nu+1)D-c^2z.
+\end{equation}
+For every $\nu\in\Q\setminus\Z$, use the coordinate quadruple
+$(f_{\nu,c},f'_{\nu,c},f_{-\nu,c},f'_{-\nu,c})$.
+An order $\nu\notin\tfrac12\Z$ is \emph{nonresonant}: its two local
+monodromy eigenvalues at zero are distinct.
+The two solutions in this case are
+$f_{\nu,c}=\Gamma(\nu+1)(cz/2)^{-\nu}I_\nu(cz)$ and
+$z^{-2\nu}f_{-\nu,c}$. Half-integer orders reduce to exponentials.
+The starting identities are
+\[ f_{1/2,c}=\frac{\sinh(cz)}{cz},\qquad f_{-1/2,c}=\cosh(cz). \]
+\item[(B4)] $\operatorname{Kum}(s,a)$, $s\ne0$, $a\notin\Z$, is resonant, with a
+logarithmic homogeneous solution at zero. Its coordinates are
+\[ (F,F',\Sigma,\Sigma')=(f_a(sz),D[f_a(sz)],S_a(sz),D[S_a(sz)]). \]
+Here $f_a={}_1F_1(a;1;\cdot)$; the second Kummer parameter is fixed to one.
+\begin{equation}\label{eq:kummer-block}
+f_a(u)=\sum_{n\ge0}\frac{(a)_nu^n}{(n!)^2},\quad
+S_a(u)=\sum_{n\ge0}\frac{(a)_nh_nu^n}{(n!)^2},\quad
+h_n=2\mathsf H_n-\sum_{j<n}\frac1{j+a}.
+\end{equation}
+Here $(a)_0=1$ and $(a)_n=a(a+1)\cdots(a+n-1)$.
+The operator $\mathscr K_{s,a}=zD^2+(1-sz)D-as$ satisfies
+$\mathscr K_{s,a}F=0$ and $\mathscr K_{s,a}\Sigma=2F'-sF$. Thus $J=\Sigma-FL$ is
+homogeneous. In the arithmetic statements we require $a\in\Q\setminus\Z$.
+\item[(B5)] $L$, the primitive of $1/z$.
+\end{description}
+The tower at $\eta\ne0$ has depth $h_\eta$ in \eqref{eq:ein-tower};
+closure is defined before Theorem~\ref{thm:main}.
+
+The following are $E$-coordinates: listed exponentials with algebraic
+rates, $(\mathrm{B2}^E)$ primitives, and tower levels $\Ein_k(\eta z)$
+with $\eta\in\Qbar^\times$.
+For Bessel blocks, require algebraic $c$ and rational order.
+Include noninteger-order coordinates and the order-zero coordinates
+$(I_c,V_c,S_c,W_c)$.
+Other integer-order blocks contribute only the regular coordinates
+$I_{n,c},I'_{n,c}$.
+Kummer coordinates have algebraic $s$ and rational nonintegral $a$;
+listed algebraic constants are also allowed. The integer-order
+companions $P_{n,c},P'_{n,c}$ for $n\ge1$ are excluded and are handled
+by order-zero reduction. The functions $L$, $G_{\eta,k}$ and
+the logarithmic solutions $J$ are not $E$-coordinates.
+
+Normalization, saturation, coordinate variables, duplicate/constant
+graphs and Laurent elimination are defined together before
+Theorem~\ref{thm:main}. Lemma~\ref{lem:exponential-log} proves
+exponential independence.
